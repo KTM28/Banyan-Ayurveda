@@ -35,22 +35,28 @@
 
     {% block extra_js %}
     {% endblock %}
+
     <title>Banyan Ayurveda{% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
 
+    <header>
+        {% comment %} {% include ''%} {% endcomment %}
+    </header>
 
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
+    <footer>
+        {% comment %} {% include ''%} {% endcomment %}
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
+
 </body>
 
 </html>
