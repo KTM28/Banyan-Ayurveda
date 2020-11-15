@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;1,100&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rokkitt', serif;
+  background: url('../img/body-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ------NAVBAR------ */
+
+.navbar-brand img {
+  width: 11.5rem;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.3125rem;
+}
+
+.navbar {
+  padding: 1em 0 !important;
+  font-size: larger;
+  background-color: #f3725ec5;
+  position: static;
+  font-weight: 800;
+}
+
+.bg-nav {
+  background-color: #f3725ec5;
+}
+
+.bg-nav a:hover {
+  color:azure;
+  background-color: #f3725ec5;
+  background-image: linear-gradient(62deg,#f3725ec5 0%, #F7AE68 100%);
+}
+
+.navbar-light .navbar-nav .nav-link, 
+.navbar-light .navbar-nav .nav-link:focus {
+  color: azure;
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color:azure;
+  background-color: #f3725ec5;
+  background-image: linear-gradient(62deg,#f3725ec5 0%, #F7AE68 100%);
+}
+
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-brand img {
+  margin-top: -2.188em;
+}
+
+@media (max-width: 991px) {
+  .navbar-brand img {
+    margin-top: 0.625em;
+  }
+}
+
