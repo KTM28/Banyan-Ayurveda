@@ -1,0 +1,592 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123456",
+         "name":"Organic India Lemon Ginger Tea",
+         "description":"Pungent Ginger, accented with Lemon essence combines with Tulsi to create transformative energy that will awaken your senses! At the heart of Organic India is our commitment to be living embodiment of love & consciousness in action.",
+         "price":4.05,
+         "category":1,
+         "rating":4.9,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/OI_Lemon_Ginger.jpg",
+         "image_url":"https://i.ibb.co/hFfjH86/OI-Lemon-Ginger.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123457",
+         "name":"Organic India Masala Chai Tea",
+         "description":"Tulsi Masala Chai is an everyday encounter with the exotic. Less caffeine plus great taste and aroma make this a healthy, tasty, daily delight.",
+         "price":5.50,
+         "category":1,
+         "rating":4.6,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/OI_Masala_Chai.jpg",
+         "image_url":"https://i.ibb.co/F7zfDT2/OI-Masala-Chai.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123458",
+         "name":"Organic India Original Tulsi Tea",
+         "description":"Tulsi, ‘The Queen of Herbs’ encourages tranquility, clarity, relief from stress, robust immunity and stamina. With its fresh taste and astonishing array of health benefits, The Tulsi Original is, quite simply... Perfect.",
+         "price":5.50,
+         "category":1,
+         "rating":4.9,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/OI_Original_Tulsi.jpg",
+         "image_url":"https://i.ibb.co/FX2TyCp/OI-Original-Tulsi.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123459",
+         "name":"Organic India Peppermint Tea",
+         "description":"Refreshing and restorative; our ambrosial Peppermint blends perfectly with the soft, spicy and pleasing taste of 'The Queen of Herbs' Tulsi. This combo creates a cooling and invigorating delight, perfect for enlivening your whole day.",
+         "price":4.80,
+         "category":1,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/OI_Peppermint.jpg",
+         "image_url":"https://i.ibb.co/KWKD53M/OI-Peppermint.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123460",
+         "name":"Pukka Chamomile, Vanilla & Manuka Honey Tea",
+         "description":"In the midst of chaos and clutter, there's a pool that's still. Finding your way there is easy - fresh water and heat awaken the magic of nature's finest gifts: silky golden chamomile, exotic vanilla pod, and the golden balm of manuka honey. With a sip, stillness takes over. Enjoy your blissful moments.",
+         "price":5.20,
+         "category":1,
+         "rating":4.8,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/pukka-cham-van-manuka-honey.jpg",
+         "image_url":"https://i.ibb.co/pwxpJLh/pukka-cham-van-manuka-honey.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123461",
+         "name":"Pukka Detox Tea",
+         "description":"Prepare to spring clean, fill the kettle and take up your cup: a splash of sweet aniseed and crisp fennel come alive with lush cardamom and licorice root - purity at its best. Shrug off the old and embrace the new. Here's to new beginnings",
+         "price":3.10,
+         "category":1,
+         "rating":4.8,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/pukka-detox.jpg",
+         "image_url":"https://i.ibb.co/ccSLMNj/pukka-detox.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123462",
+         "name":"Pukka Lemon Ginger & Manuka Tea",
+         "description":"This a moment of bliss- a veritable hug to keep your spirits warm. Take your seat and settle in to savour the spicy-sweet zest of sun-ripe lemons and slow-dried ginger root with FairWild elderflowers. Then, as your heart begins to sing, comes the velvet kiss of manuka honey. Isn't this heaven? Stay well.",
+         "price":5.10,
+         "category":1,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/pukka-lemon-ginger-manuka.jpg",
+         "image_url":"https://i.ibb.co/jhS1py2/pukka-lemon-ginger-manuka.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Pukka Love Tea",
+         "description":"This is nature's gift of FairWild flowers that will love you every step of the way. A tender touch of rose fills your heart. The soft embrace of chamomile and lavender soothe your soul. It's true: love changes everything. To love.",
+         "price":3.50,
+         "category":1,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/pukka-love.jpg",
+         "image_url":"https://i.ibb.co/RHSTfdz/pukka-love.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Mother India Buddha Nagchampa Incense",
+         "description":"Incense Nag Champa Agarbatti is an amazingly beautifully scented incense made from a mixture of herbs, floral extracts and oils and then hand rolled into a bamboo stick. Its heady aroma is a perfect combination of sweet, floral and spicy.",
+         "price":2.80,
+         "category":2,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/mothers-india-buddha-nagchampa_672x672.jpg",
+         "image_url":"https://i.ibb.co/P5CyBjw/mothers-india-buddha-nagchampa-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Mother India Laxmi Nagchampa Incense",
+         "description":"Incense Nag Champa Agarbatti is an amazingly beautifully scented incense made from a mixture of herbs, floral extracts and oils and then hand rolled into a bamboo stick. Its heady aroma is a perfect combination of sweet, floral and spicy.",
+         "price":3.80,
+         "category":2,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/mothers-india-lakshmi-nagchampa_672x672.jpg",
+         "image_url":"https://i.ibb.co/sRyTzC7/mothers-india-lakshmi-nagchampa-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Nag Champa",
+         "description":"Incense Nag Champa Agarbatti is an amazingly beautifully scented incense made from a mixture of herbs, floral extracts and oils and then hand rolled into a bamboo stick. Its heady aroma is a perfect combination of sweet, floral and spicy.",
+         "price":3.50,
+         "category":2,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/nag-champa_672x672.jpg",
+         "image_url":"https://i.ibb.co/fCj6f9C/nag-champa-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Satya Sai Baba Nag Champa Incense",
+         "description":"Incense Satya Sai Baba Nag Champa Agarbatti is an amazingly beautifully scented incense made from a mixture of herbs, floral extracts and oils and then hand rolled into a bamboo stick. Its heady aroma is a perfect combination of sweet, floral and spicy.",
+         "price":3.50,
+         "category":2,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/nag-champa-sai-baba_672x672.jpg",
+         "image_url":"https://i.ibb.co/wdVvGS8/nag-champa-sai-baba-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"Triple Amber Incense",
+         "description":"Triple Amber an amazingly beautifully scented incense made from a mixture of herbs, floral extracts and oils and then hand rolled into a bamboo stick. Its heady aroma is a perfect combination of sweet, floral and spicy..",
+         "price":3.50,
+         "category":2,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/triple-amber-incense-works_672x672.jpg",
+         "image_url":"https://i.ibb.co/y4rsB8q/triple-amber-incense-works-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"SIDHA SOMA SUPREME SUPER NASYA OIL (1 OZ)",
+         "description":"May help to relieve congestion, tension, tightness in the neck, and clear the mind. Use 3 to 5 drops in each nostril, twice a day, or as directed by your Ayurvedic healthcare professional. Consult with your Healthcare professional prior to use. Not recommended for children under 10 years of age.",
+         "price":14.00,
+         "category":3,
+         "rating":5.0,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/SuperNasyaOil_672x672.jpg",
+         "image_url":"https://i.ibb.co/2sYkHX5/Super-Nasya-Oil-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"SIDHA SOMA SUPREME BHRINGARAJ OIL (4 OZ)",
+         "description":"Traditionally is massaged into the scalp and feet before bed. Its used is said to promote sound sleep and help to maintain healthy hair and bones. A good general massage oil for pitta; can be diluted with sunflower oil. Massage into your scalp and feet before bed for a better night's sleep, or as directed by your Ayurvedic healthcare professional.",
+         "price":18.50,
+         "category":3,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/sss-bringraj-oil_672x672.jpg",
+         "image_url":"https://i.ibb.co/x629KjP/sss-bringraj-oil-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"MUZDA ENTERPRISES MAHANARAYAN BALM (2 OZ)",
+         "description":"Pain Relief Balm with Mahanarayan oil, beeswax, eucalytus essential oil, camphore essential oil, peppermint essential oil, wintergreen essential oil, frankincence essential oil, menthol essential oil, lemongrass essential oil.",
+         "price":12.25,
+         "category":3,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/muzda-mahanarayan-oil-4oz_672x672.jpg",
+         "image_url":"https://i.ibb.co/g7J6bHs/muzda-mahanarayan-oil-4oz-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"MUZDA ENTERPRISES VATA MASSAGE OIL",
+         "description":"Balancing for vata types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Ashwagandha, Bala, Vidari, Brahmi, Tulsi, Haritaki, Myrhh, Dashamula, Cinnamon oil, Nutmeg oil, Lavender oil.",
+         "price":22.50,
+         "category":3,
+         "rating":5.0,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/vata-massage-oil-3355-lightbox-web-v001_672x672.jpg",
+         "image_url":"https://i.ibb.co/nnc8C5Q/vata-massage-oil-3355-lightbox-web-v001-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":18,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"MUZDA ENTERPRISES KAPHA MASSAGE OIL",
+         "description":"Balancing for kapha types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Punarnava, Bibhitaki, Mint, Chamomile, Turmeric, Tulsi, Basil, Cinnamon, Clove oil.",
+         "price":18.50,
+         "category":3,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/kapha-massage-oil-3371-01_672x672.jpg",
+         "image_url":"https://i.ibb.co/gjZXBKf/kapha-massage-oil-3371-01-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":19,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"SIDHA SOMA SUPREME SIDHA SOMA OIL (1 OZ)",
+         "description":"Balancing for kapha types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Punarnava, Bibhitaki, Mint, Chamomile, Turmeric, Tulsi, Basil, Cinnamon, Clove oil.",
+         "price":13.50,
+         "category":3,
+         "rating":4.8,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/SidhaSomaOil_672x672.jpg",
+         "image_url":"https://i.ibb.co/VDqNkF5/Sidha-Soma-Oil-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":20,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS MAHANARAYAN OIL (4 OZ)",
+         "description":"Our Mahanarayan Oil is based on an ancient Ayurvedic recipe that delivers powerful muscle and joint targeting herbs in a base of certified organic sesame oil. A nourishing and strengthening oil with rejuvenating qualities, it is used by gently massaging into sore muscles and tendons to bring warmth to the area.",
+         "price":12.00,
+         "category":3,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Banyan_Mahanarayan_Oil_4oz_front_672x672.jpg",
+         "image_url":"https://i.ibb.co/L0YxDnC/Banyan-Mahanarayan-Oil-4oz-front-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":21,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS ASHWAGANDHA TABLETS",
+         "description":"Rejuvenative for vata and kapha types; promotes vitality and strength. 90 tablets [500 mg] Each 500 mg tablet contains: Organic Ashwagandha root (Withania somnifera).",
+         "price":22.00,
+         "category":4,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Ashwagandha_672x672.jpg",
+         "image_url":"https://i.ibb.co/KzQ7dGj/Ashwagandha-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":22,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS JOINT SUPPORT TABLETS",
+         "description":"The main ingredients in Joint Support, guggulu and boswellia, have been used for hundreds of years to support joint health. These herbs are deeply-penetrating resins that detoxify, lubricate, and soothe the joint tissues. Joint Support also contains nourishing herbs that help rejuvenate the bones, cartilage, and muscles.",
+         "price":19.00,
+         "category":4,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Joint_Support_672x672.jpg",
+         "image_url":"https://i.ibb.co/H2JmQNd/Joint-Support-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":23,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS LIVER FORMULA TABLETS",
+         "description":"Liver Formula is an excellent detoxifier and rejuvenative for the liver. It is a powerful combination of bitter herbs that acts as a natural purgative to cleanse the liver of accumulated natural toxins. This energetically cooling formula pacifies pitta and helps support the healthy production of bile. These herbs nourish and strengthen the liver tissues, promoting proper digestion of fat and a healthy metabolism. Liver Formula supports optimal liver function, which is an important component in overall health and well-being.",
+         "price":19.00,
+         "category":4,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Liver_Formula_672x672.jpg",
+         "image_url":"https://i.ibb.co/hKNLDMc/Liver-Formula-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":24,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS MENTAL CLARITY TABLETS",
+         "description":"Promotes memory and intelligence. Each 500 mg tablet contains: Brahmi leaf (Centella asiatica)**, Bacopa herb (Bacopa monniera)**, Bhringaraj leaf (Eclipta alba)*, Passionflower herb (Passiflora incarnata)**, Shankhapushpi herb (Evolvulus alsinoides)**, Ashwagandha root (Withania somnifera)**, Vidari Kanda root (Ipomoea digitata)**, Skullcap herb (Scutellaria lateriflora)**, Pippali fruit (Piper longum)**, Nutmeg seed (Myristica fragrans)**, Cardamom seed (Elettaria cardomomum)**",
+         "price":19.00,
+         "category":4,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Mental_Clarity_672x672.jpg",
+         "image_url":"https://i.ibb.co/N1DhnpB/Mental-Clarity-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":25,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS TRIPHALA TABLETS",
+         "description":"Assists natural cleansing *Gently maintains regularity * Nourishes and rejuvenates the tissues * Supports healthy digestion and absorption *Supports the proper functions of the digestive, circulatory, and respiratory systems *Natural antioxidant*.Triphala is recommended and used more than any other Ayurvedic herbal formulation. Popular for its unique ability to gently cleanse and detoxify the system while simultaneously replenishing and nourishing it, this traditional formula supports the proper functions of the digestive, circulatory, and respiratory systems.",
+         "price":18.00,
+         "category":4,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Triphala_90ct_672x672.jpg",
+         "image_url":"https://i.ibb.co/D8SHzMn/Triphala-90ct-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":26,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS KUTKI TINCTURE (1 OZ)",
+         "description":"Supports proper function of the liver and immune system.",
+         "price":12.00,
+         "category":5,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Kutki_672x672.jpg",
+         "image_url":"https://i.ibb.co/qBLxFMH/Kutki-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":27,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS NEEM TINCTURE (1 OZ)",
+         "description":"Detoxification for pitta and kapha",
+         "price":12.00,
+         "category":5,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Neem_672x672.jpg",
+         "image_url":"https://i.ibb.co/GntRbs1/Neem-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":28,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"SIDHA SOMA SUPREME SWEET MEMORY EXTRACT (1 FL OZ)",
+         "description":"Promotes clarity of perception, conscious capacity and learning ability.",
+         "price":14.00,
+         "category":5,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/SweetMemory_672x672.jpg",
+         "image_url":"https://i.ibb.co/VLq3Dpy/Sweet-Memory-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk":29,
+      "model":"products.product",
+      "fields":{
+         "sku":"AT123463",
+         "name":"BANYAN BOTANICALS TRIPHALA TINCTURE (1 OZ)",
+         "description":"Assists natural cleansing *Gently maintains regularity * Nourishes and rejuvenates the tissues * Supports healthy digestion and absorption *Supports the proper functions of the digestive, circulatory, and respiratory systems *Natural antioxidant*",
+         "price":14.00,
+         "category":5,
+         "rating":4.5,
+         "has_weight":"True",
+         "is_a_treatment":"False",
+         "image":"img/products/Triphala_672x672.jpg",
+         "image_url":"https://i.ibb.co/VBwwRGX/Triphala-672x672.jpg",
+         "discontinued":"False"
+      }
+   },
+   {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "name": "FACIAL REJUVENTATION MASSAGE",
+        "description": "Over time dietary & lifestyle choices, tension and expression lines from habitual thoughts and emotions can take their toll on our skin. This treatment encourages the flow of oxygen & nutrients to the skin, stimulates the production of collagen and elastin and frees constrictions within the facial muscles and connective tissue.treatment-01Each session begins with relaxation and activation of specific acupressure points on the face. Then massage movements with varying degrees of pressure detect areas of tension and encourage letting go of habitual facial expressions. Smoothing techniques remove dead skin cells and ‘iron out’ fine lines and wrinkles. Deeper techniques release restrictions in the connective tissue of the dermis, lift the underlying facial muscles and encourage the flow of nutrients to skin. The session concludes with lymphatic drainage and scalp massage. Some rose serum can be applied at this stage. The gentle, repetitive and targeted moves induce a rapid relaxation response making this a profoundly relaxing treatment, helping to restore balance to the nervous system",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Lessens fine and habitual expression lines</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Reduces under-eye bags and puffiness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Tones and firms facial muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Increases elasticity and improves skin tone</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
+        "price": 70.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "1",
+        "image": "img/services/facial-rejuventaion-massage.jpg",
+        "image_url": "https://i.ibb.co/cD1nmMC/facial-rejuventaion-massage.jpg",
+        "discontinued": "False"
+      }   
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "name": "ABHYANGA MASSAGE - WARM HERBAL OIL MASSAGE",
+        "description": "According to the Ayurveda aches, pain and stiffness occur when energy is blocked, through this massage blockages are removed enabling the body to come bactreatment-01k into harmony, to detoxify and function normally. During this full body massage warm therapeutic oils suited to your unique constitution will be lavishly applied. This flowing massage stimulates blood and lymphatic circulation, strengthens the immune system, nourishes muscles and joints, decongests and detoxifies, and soothes and rejuvenates the nervous system. Treatment concludes with a soothing head and neck massage",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Lower blood pressure</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Improve skin health</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Reduce muscle stiffness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes lymphatic drainage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*increase energy and alertness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*delay age-related changes</span></li>\r\n\t</ul>",
+        "price": 90.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "2",
+        "image": "img/services/abhyanga-massage.jpg",
+        "image_url": "https://i.ibb.co/JrgkWcK/abhyanga-massage.jpg",
+        "discontinued": "False"
+      }   
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "name": "MARMA MASSAGE - PRESSURE POINT MASSAGE",
+        "description": "Marma massage is the most direct method of harmonizing prana/energy in the physical body of another person: it has the ability to awaken the healing power. This is a deeply nourishing and grounding treatment; it releases deep seated tension allowing the energies of the body to come back into harmony.During this full body massage special emphasis is given to the marma points, pressure points that transmit electro-magnetic energy through all the organs and systems of the body.  Using warm therapeutic oils, invigorating strokes will simultaneously awaken and relax the muscles while a more precise pressure stimulates the “marmas” (points throughout the body where nerves, blood, vessels, muscles, ligaments, joints and bones unite).",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*All the benefit of traditional massage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Strengthens the organ systems and tissues</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Regenerates tissue</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves physical and mental blockages of energy</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps remove excess ama (toxins)</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Encourages good sleep</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps to release blocked energy helping prevent disease</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps easy flow of energy through the energy channels.</span></li>\r\n\t</ul>",
+        "price": 75.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "1",
+        "image": "img/services/pressure-massage.jpg",
+        "image_url": "https://i.ibb.co/sK9Fnss/pressure-massage.jpg",
+        "discontinued": "False"
+      }   
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "name": "SHIRODHARA HEAD MASSAGE",
+        "description": "This is a great treatment for most ailments but especially those related to the head, nervous and endocrine systems. It has been traditionally shown to help with fatigue, mental exhaustion, depression, stress, anxiety, insomnia, headache and excessive thinking. It restores the nerves, releases stored emotions, and purifies the mind.In conjunction with a head and neck massage this treatment is administered by gently and methodically pouring warm herbal oil over the forehead and third eye. This continuous flow of oil is profoundly relaxing and calming to the mind, body and spirit. It is one of the most powerful of all the ancient ayurvedic treatments as it touches deep into the spirit and helps us to connect with our soul",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Counteracts the Effects of Stress</span></li>\r\n\t<li><span style=\"line-height:1.4em\">* Reduces Anxiety</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Awakens Intuition</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Improves Sleep Quality</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Pacifies Vata Dosha</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
+        "price": 80.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "1",
+        "image": "img/services/sirodhara.jpg",
+        "image_url": "https://i.ibb.co/g90KSyN/sirodhara.jpg",
+        "discontinued": "False"
+      }   
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "name": "PINDA SWEDA - WARM BOLUS MASSAGE",
+        "description": "Pinda loosens toxins and relieves disorders such as arthritis, emaciation, weakness of muscular functions, paralysis, dry skin, loss of memory, insomnia, stress, anxiety and stiffness of joints, anaemia, obesity, water retention, heaviness and lethargy of body. It is an excellent relief for many imbalances especially those related to bone, joints, muscles and vata disorders.A heated bolus made either from fresh or dried herbs or rice is used to firmly massage warm herbal oil into the entire body. Like most sweating therapies, pinda sweda helps to awaken cellular memory and facilitate healing through the intense stimulation caused by sweating. In addition to relieving the conditions listed above, pinda sweda will leave you feeling relaxed and blissful. It helps revitalise the entire body, increase energy and mobility, reduce stress and restore appetite and sleep patterns.",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Reduction in stress and insomnia</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Soothe and restore dry skin</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Stress relief</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Management of inflammation, swelling and pain</span></li>\r\n\t</ul>",
+        "price": 95.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "2",
+        "image": "img/services/pinda-sweda.jpg",
+        "image_url": "https://i.ibb.co/dj7qKTH/pinda-sweda.jpg",
+        "discontinued": "False"
+      }   
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "name": "NASYA - HEAD & SINUS TREATMENT WITH FACE MASSAGE",
+        "description": "All imbalances which manifest as anxiety, mental disorders, physical tension, eye problems, headaches, congestion or sinusitis are eliminated through the nose. This treatment enhances activity of sense organs and nourishes the mucus membranes in the nasal passages, making them more resilient to allergens and irritants.After a facial steam, face massage and marma point stimulation, a few drops of herbal oil will be applied to each nostril and massaged into the sinuses. The nose is the gateway to the head; therefore this is one of the best ways to bring the effects of herbs to the brain and nervous system.",
+        "benefit":"<ul>\r\n\t<li><span style=\"line-height:1.4em\">*By regular and proper Nasya therapy, the skin, shoulder, neck, face and chest becomes thick, strong, well developed and bright</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*The body part and sense organs become strong and greying of hair is stopped</span></li>\r\n\t</ul>",
+        "price": 50.00,
+        "rating": 5.0,
+        "is_a_treatment": "True",
+        "duration": "1",
+        "image": "img/services/nasya",
+        "image_url": "https://i.ibb.co/LdZ0PPK/nasya.jpg",
+        "discontinued": "False"
+      }   
+    }
+                                                                                                                                                                                                                                                             
+]
