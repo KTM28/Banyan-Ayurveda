@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}- Products{% endblock %}
+{% block extra_title %}- Services{% endblock %}
 
 
 <!--Main content-->
@@ -9,11 +9,10 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-        {% include 'products/includes_products/delivery_banner.html' %}
         {% include 'includes/search_form.html' %}
-            <h1>Products</h1>
+            <h1>Services</h1>
             <hr>
-            {{ products }}
+            {{ services }}
         </div>
     </div>
 </div>
