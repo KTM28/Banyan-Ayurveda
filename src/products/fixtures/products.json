@@ -10,7 +10,7 @@
          "rating": 4.9,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/OI_Lemon_Ginger.jpg",
+         "image": "OI_Lemon_Ginger.jpg",
          "image_url": "https://i.ibb.co/hFfjH86/OI-Lemon-Ginger.jpg",
          "discontinued": "False"
       }
@@ -27,7 +27,7 @@
          "rating": 4.6,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/OI_Masala_Chai.jpg",
+         "image": "OI_Masala_Chai.jpg",
          "image_url": "https://i.ibb.co/F7zfDT2/OI-Masala-Chai.jpg",
          "discontinued": "False"
       }
@@ -44,7 +44,7 @@
          "rating": 4.9,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/OI_Original_Tulsi.jpg",
+         "image": "OI_Original_Tulsi.jpg",
          "image_url": "https://i.ibb.co/FX2TyCp/OI-Original-Tulsi.jpg",
          "discontinued": "False"
       }
@@ -61,7 +61,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/OI_Peppermint.jpg",
+         "image": "OI_Peppermint.jpg",
          "image_url": "https://i.ibb.co/KWKD53M/OI-Peppermint.jpg",
          "discontinued": "False"
       }
@@ -78,7 +78,7 @@
          "rating": 4.8,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/pukka-cham-van-manuka-honey.jpg",
+         "image": "pukka-cham-van-manuka-honey.jpg",
          "image_url": "https://i.ibb.co/pwxpJLh/pukka-cham-van-manuka-honey.jpg",
          "discontinued": "False"
       }
@@ -95,7 +95,7 @@
          "rating": 4.8,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/pukka-detox.jpg",
+         "image": "pukka-detox.jpg",
          "image_url": "https://i.ibb.co/ccSLMNj/pukka-detox.jpg",
          "discontinued": "False"
       }
@@ -112,7 +112,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/pukka-lemon-ginger-manuka.jpg",
+         "image": "pukka-lemon-ginger-manuka.jpg",
          "image_url": "https://i.ibb.co/jhS1py2/pukka-lemon-ginger-manuka.jpg",
          "discontinued": "False"
       }
@@ -129,7 +129,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/pukka-love.jpg",
+         "image": "pukka-love.jpg",
          "image_url": "https://i.ibb.co/RHSTfdz/pukka-love.jpg",
          "discontinued": "False"
       }
@@ -146,7 +146,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/mothers-india-buddha-nagchampa_672x672.jpg",
+         "image": "mothers-india-buddha-nagchampa_672x672.jpg",
          "image_url": "https://i.ibb.co/P5CyBjw/mothers-india-buddha-nagchampa-672x672.jpg",
          "discontinued": "False"
       }
@@ -163,7 +163,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/mothers-india-lakshmi-nagchampa_672x672.jpg",
+         "image": "mothers-india-lakshmi-nagchampa_672x672.jpg",
          "image_url": "https://i.ibb.co/sRyTzC7/mothers-india-lakshmi-nagchampa-672x672.jpg",
          "discontinued": "False"
       }
@@ -180,7 +180,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/nag-champa_672x672.jpg",
+         "image": "nag-champa_672x672.jpg",
          "image_url": "https://i.ibb.co/fCj6f9C/nag-champa-672x672.jpg",
          "discontinued": "False"
       }
@@ -197,7 +197,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/nag-champa-sai-baba_672x672.jpg",
+         "image": "nag-champa-sai-baba_672x672.jpg",
          "image_url": "https://i.ibb.co/wdVvGS8/nag-champa-sai-baba-672x672.jpg",
          "discontinued": "False"
       }
@@ -214,7 +214,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/triple-amber-incense-works_672x672.jpg",
+         "image": "triple-amber-incense-works_672x672.jpg",
          "image_url": "https://i.ibb.co/y4rsB8q/triple-amber-incense-works-672x672.jpg",
          "discontinued": "False"
       }
@@ -231,7 +231,7 @@
          "rating": 5.0,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/SuperNasyaOil_672x672.jpg",
+         "image": "SuperNasyaOil_672x672.jpg",
          "image_url": "https://i.ibb.co/2sYkHX5/Super-Nasya-Oil-672x672.jpg",
          "discontinued": "False"
       }
@@ -248,7 +248,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/sss-bringraj-oil_672x672.jpg",
+         "image": "sss-bringraj-oil_672x672.jpg",
          "image_url": "https://i.ibb.co/x629KjP/sss-bringraj-oil-672x672.jpg",
          "discontinued": "False"
       }
@@ -265,7 +265,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/muzda-mahanarayan-oil-4oz_672x672.jpg",
+         "image": "muzda-mahanarayan-oil-4oz_672x672.jpg",
          "image_url": "https://i.ibb.co/g7J6bHs/muzda-mahanarayan-oil-4oz-672x672.jpg",
          "discontinued": "False"
       }
@@ -282,7 +282,7 @@
          "rating": 5.0,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/vata-massage-oil-3355-lightbox-web-v001_672x672.jpg",
+         "image": "vata-massage-oil-3355-lightbox-web-v001_672x672.jpg",
          "image_url": "https://i.ibb.co/nnc8C5Q/vata-massage-oil-3355-lightbox-web-v001-672x672.jpg",
          "discontinued": "False"
       }
@@ -299,7 +299,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/kapha-massage-oil-3371-01_672x672.jpg",
+         "image": "kapha-massage-oil-3371-01_672x672.jpg",
          "image_url": "https://i.ibb.co/gjZXBKf/kapha-massage-oil-3371-01-672x672.jpg",
          "discontinued": "False"
       }
@@ -316,7 +316,7 @@
          "rating": 4.8,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/SidhaSomaOil_672x672.jpg",
+         "image": "SidhaSomaOil_672x672.jpg",
          "image_url": "https://i.ibb.co/VDqNkF5/Sidha-Soma-Oil-672x672.jpg",
          "discontinued": "False"
       }
@@ -333,7 +333,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Banyan_Mahanarayan_Oil_4oz_front_672x672.jpg",
+         "image": "Banyan_Mahanarayan_Oil_4oz_front_672x672.jpg",
          "image_url": "https://i.ibb.co/L0YxDnC/Banyan-Mahanarayan-Oil-4oz-front-672x672.jpg",
          "discontinued": "False"
       }
@@ -350,7 +350,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Ashwagandha_672x672.jpg",
+         "image": "Ashwagandha_672x672.jpg",
          "image_url": "https://i.ibb.co/KzQ7dGj/Ashwagandha-672x672.jpg",
          "discontinued": "False"
       }
@@ -367,7 +367,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Joint_Support_672x672.jpg",
+         "image": "Joint_Support_672x672.jpg",
          "image_url": "https://i.ibb.co/H2JmQNd/Joint-Support-672x672.jpg",
          "discontinued": "False"
       }
@@ -384,7 +384,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Liver_Formula_672x672.jpg",
+         "image": "Liver_Formula_672x672.jpg",
          "image_url": "https://i.ibb.co/hKNLDMc/Liver-Formula-672x672.jpg",
          "discontinued": "False"
       }
@@ -401,7 +401,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Mental_Clarity_672x672.jpg",
+         "image": "Mental_Clarity_672x672.jpg",
          "image_url": "https://i.ibb.co/N1DhnpB/Mental-Clarity-672x672.jpg",
          "discontinued": "False"
       }
@@ -418,7 +418,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Triphala_90ct_672x672.jpg",
+         "image": "Triphala_90ct_672x672.jpg",
          "image_url": "https://i.ibb.co/D8SHzMn/Triphala-90ct-672x672.jpg",
          "discontinued": "False"
       }
@@ -435,7 +435,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Kutki_672x672.jpg",
+         "image": "Kutki_672x672.jpg",
          "image_url": "https://i.ibb.co/qBLxFMH/Kutki-672x672.jpg",
          "discontinued": "False"
       }
@@ -452,7 +452,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Neem_672x672.jpg",
+         "image": "Neem_672x672.jpg",
          "image_url": "https://i.ibb.co/GntRbs1/Neem-672x672.jpg",
          "discontinued": "False"
       }
@@ -469,7 +469,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/SweetMemory_672x672.jpg",
+         "image": "SweetMemory_672x672.jpg",
          "image_url": "https://i.ibb.co/VLq3Dpy/Sweet-Memory-672x672.jpg",
          "discontinued": "False"
       }
@@ -486,7 +486,7 @@
          "rating": 4.5,
          "has_weight": "True",
          "is_a_treatment": "False",
-         "image": "img/products/Triphala_672x672.jpg",
+         "image": "Triphala_672x672.jpg",
          "image_url": "https://i.ibb.co/VBwwRGX/Triphala-672x672.jpg",
          "discontinued": "False"
       }
@@ -502,7 +502,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "img/services/facial-rejuventaion-massage.jpg",
+         "image": "facial-rejuventaion-massage.jpg",
          "image_url": "https://i.ibb.co/cD1nmMC/facial-rejuventaion-massage.jpg",
          "discontinued": "False"
       }
@@ -518,7 +518,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "2",
-         "image": "img/services/abhyanga-massage.jpg",
+         "image": "abhyanga-massage.jpg",
          "image_url": "https://i.ibb.co/JrgkWcK/abhyanga-massage.jpg",
          "discontinued": "False"
       }
@@ -534,7 +534,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "img/services/pressure-massage.jpg",
+         "image": "pressure-massage.jpg",
          "image_url": "https://i.ibb.co/sK9Fnss/pressure-massage.jpg",
          "discontinued": "False"
       }
@@ -550,7 +550,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "img/services/sirodhara.jpg",
+         "image": "sirodhara.jpg",
          "image_url": "https://i.ibb.co/g90KSyN/sirodhara.jpg",
          "discontinued": "False"
       }
@@ -566,7 +566,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "2",
-         "image": "img/services/pinda-sweda.jpg",
+         "image": "pinda-sweda.jpg",
          "image_url": "https://i.ibb.co/dj7qKTH/pinda-sweda.jpg",
          "discontinued": "False"
       }
@@ -582,7 +582,7 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "img/services/nasya",
+         "image": "nasya.jpg",
          "image_url": "https://i.ibb.co/LdZ0PPK/nasya.jpg",
          "discontinued": "False"
       }
