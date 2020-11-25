@@ -502,8 +502,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "facial-rejuventaion-massage.jpg",
-         "image_url": "https://i.ibb.co/cD1nmMC/facial-rejuventaion-massage.jpg",
+         "image": "facial-rejuventaion-massage-512x341.jpg",
+         "image_url": "https://i.ibb.co/YbG5DsJ/facial-rejuventaion-massage-512x341.jpg",
          "discontinued": "False"
       }
    },
@@ -518,8 +518,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "2",
-         "image": "abhyanga-massage.jpg",
-         "image_url": "https://i.ibb.co/JrgkWcK/abhyanga-massage.jpg",
+         "image": "abhyanga-massage-512x341.jpg",
+         "image_url": "https://i.ibb.co/SyhnxVN/abhyanga-massage-512x341.jpg",
          "discontinued": "False"
       }
    },
@@ -534,8 +534,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "pressure-massage.jpg",
-         "image_url": "https://i.ibb.co/sK9Fnss/pressure-massage.jpg",
+         "image": "pressure-massage-512x341.jpg",
+         "image_url": "https://i.ibb.co/Bj4fvyW/pressure-massage-512x341.jpg",
          "discontinued": "False"
       }
    },
@@ -550,8 +550,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "sirodhara.jpg",
-         "image_url": "https://i.ibb.co/g90KSyN/sirodhara.jpg",
+         "image": "sirodhara-512x341.jpg",
+         "image_url": "https://i.ibb.co/CbKPpyJ/sirodhara-512x341.jpg",
          "discontinued": "False"
       }
    },
@@ -566,8 +566,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "2",
-         "image": "pinda-sweda.jpg",
-         "image_url": "https://i.ibb.co/dj7qKTH/pinda-sweda.jpg",
+         "image": "pinda-sweda-512x341.jpg",
+         "image_url": "https://i.ibb.co/pW7vsF7/pinda-sweda-512x341.jpg",
          "discontinued": "False"
       }
    },
@@ -582,8 +582,8 @@
          "rating": 5.0,
          "is_a_treatment": "True",
          "duration": "1",
-         "image": "nasya.jpg",
-         "image_url": "https://i.ibb.co/LdZ0PPK/nasya.jpg",
+         "image": "nasya-512x341.jpg",
+         "image_url": "https://i.ibb.co/yhxdDWM/nasya-512x341.jpg",
          "discontinued": "False"
       }
    }
