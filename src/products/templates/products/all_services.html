@@ -20,14 +20,10 @@
             <div class="row no-gutters">
                 <div class="col-md-4">
                     {% if service.image %}
-                    <a href="">
                         <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
-                    </a>
                     {% else %}
-                    <a href="">
                         <img class="card-img-top img-responsive" src="{% static 'img/no-img.jpg' %}"
                             alt="{{ service.name }}">
-                    </a>
                     {% endif %}
                 </div>
                 <div class="col-md-8">
@@ -56,47 +52,3 @@
 
 
 
-{% comment %} <div class="container">
-    <div class="row">
-        <div class="col-12">
-            {% include 'includes/search_form.html' %}
-            <h1>Treatments</h1>
-            <hr>
-        </div>
-    </div>
-    <div class="row" id="productAll">
-        {% for service in services %}
-        <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="card rounded mb-3">
-                <div class="card-image">
-                    {% if service.image %}
-                    <a href="">
-                        <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-responsive" src="{% static 'img/no-img.jpg' %}"
-                            alt="{{ service.name }}">
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="card-image-overlay m-auto">
-                    <span class="card-detail-badge">€{{ service.price }}</span>
-                    {% if service.rating %}
-                    <small class="text-success"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5</small>
-                    {% else %}
-                    <small class="text-success">No Rating</small>
-                    {% endif %}
-                </div>
-                <div class="card-body text-center">
-                    <div class="m-auto">
-                        <h5>{{ service.name }}</h5>
-                    </div>
-                    <a class="product-btn" href="#">Learn More</a>
-                </div>
-            </div>
-
-        </div>
-        {% endfor %}
-    </div>
-</div> {% endcomment %}

@@ -20,15 +20,11 @@
                     <div class="card rounded mb-2">
                         <div class="card-image">
                             {% if product.image %}
-                            <a href="">
                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}"
                                     alt="{{ product.name }}">
-                            </a>
                             {% else %}
-                            <a href="">
                                 <img class="card-img-top img-fluid" src="{% static 'img/no-img.jpg' %}"
                                     alt="{{ product.name }}">
-                            </a>
                             {% endif %}
                         </div>
                         <div class="card-image-overlay m-auto">
