@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product, Category
 
 def all_products(request):
@@ -9,9 +11,23 @@ def all_products(request):
     
     query = None
     categories = None
+    
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            # display error message if the query is blank
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+            # Allow search by name or description through query
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
+            # pass quieries to the filter method to filter products
+            active_products = active_products.filter(queries)
 
     context = {
-        'products': all_products,
+        'products': active_products,
+        'search_term': query,
     }
 
     return render(request, 'products/all_products.html', context)
