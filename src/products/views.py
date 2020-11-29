@@ -60,3 +60,15 @@ def all_services(request):
 
     return render(request, 'products/all_services.html', context)
 
+
+def service_details(request, treatment_id):
+    """ View to display individual service detail """
+
+    all_treatments = Product.objects.filter(is_a_treatment=True)
+    treatment = get_object_or_404(all_treatments, pk=treatment_id)
+
+    context = {
+        'treatment' : treatment,
+    }
+
+    return render(request, 'products/service_details.html', context)
