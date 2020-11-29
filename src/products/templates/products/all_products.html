@@ -5,48 +5,44 @@
 
 <!--Main content-->
 {% block content %}
-
 <div class="container">
-    <div class="row" id="productAll">
+    <div class="row">
         <div class="col-12">
             {% include 'products/includes_products/delivery_banner.html' %}
-            {% include 'includes/search_form.html' %}
-            <h1>Products</h1>
+            <h1 class="text-center shop-header">Banyan Shop</h1>
             {% include 'products/includes_products/product_categories.html' %}
+            {% include 'includes/search_form.html' %}
             <hr>
-
-            <div class="row">
-                {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card rounded mb-2">
-                        <div class="card-image">
-                            {% if product.image %}
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
-                                    alt="{{ product.name }}">
-                            {% else %}
-                                <img class="card-img-top img-fluid" src="{% static 'img/no-img.jpg' %}"
-                                    alt="{{ product.name }}">
-                            {% endif %}
-                        </div>
-                        <div class="card-image-overlay m-auto">
-                            <span class="card-detail-badge">€{{ product.price }}</span>
-                            {% if product.rating %}
-                            <small class="text-success"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                            {% else %}
-                            <small class="text-success">No Rating</small>
-                            {% endif %}
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="m-auto">
-                                <h5>{{ product.name }}</h5>
-                            </div>
-                            <a class="product-btn" href="{% url 'product_details' product.id %}">View</a>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <div class="row" id="productAll">
+        {% for product in products %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card rounded mb-2">
+                <div class="card-image">
+                    {% if product.image %}
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                    <img class="card-img-top img-fluid" src="{% static 'img/no-img.jpg' %}" alt="{{ product.name }}">
+                    {% endif %}
                 </div>
-                {% endfor %}
+                <div class="card-image-overlay m-auto">
+                    <span class="card-detail-badge">€{{ product.price }}</span>
+                    {% if product.rating %}
+                    <small class="text-success"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-success">No Rating</small>
+                    {% endif %}
+                </div>
+                <div class="card-body text-center">
+                    <div class="m-auto">
+                        <h5>{{ product.name }}</h5>
+                    </div>
+                    <a class="product-btn" href="{% url 'product_details' product.id %}">View</a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock content %}

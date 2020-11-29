@@ -1,2 +1,46 @@
 {% load static %}
 
+{% comment %} <div class="container d-block d-lg-none mb-3">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <a href="{% url 'products' %}" class="btn btn-outline-secondary filter-button" data-filter="all">All</a>
+            <a href="{% url 'products' %}?category=tea" class="btn btn-outline-secondary filter-button"
+                data-filter="tea">Tea</a>
+            <a href="{% url 'products' %}?category=incense" class="btn btn-outline-secondary filter-button"
+                data-filter="incense">Incense</a>
+            <a href="{% url 'products' %}?category=oil" class="btn btn-outline-secondary filter-button"
+                data-filter="oil">Oil</a>
+            <a href="{% url 'products' %}?category=tablet" class="btn btn-outline-secondary filter-button"
+                data-filter="tablet">Tablet</a>
+            <a href="{% url 'products' %}?category=tincture" class="btn btn-outline-secondary filter-button"
+                data-filter="tincture">Tincture</a>
+        </div>
+        <br />
+    </div>
+</div> {% endcomment %}
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <ul class="nav justify-content-center uppercase">
+                <li class="nav-item border border-dark mr-3 dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" id="categories_dropdown" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true" href="#">
+                        <i class="fas fa-filter mr-3 "></i> Select Categories
+                    </a>
+                    <ul class="dropdown-menu dropdown-tea-columns" aria-labelledby="categories_dropdown">
+                        <li><a href="{% url 'products' %}?category=tea" class="dropdown-item">Tea</a>
+                        </li>
+                        <li><a href="{% url 'products' %}?category=incense" class="dropdown-item">Incense</a></li>
+                        <li><a href="{% url 'products' %}?category=oil" class="dropdown-item">Oil</a></li>
+                        <li> <a href="{% url 'products' %}?category=tablet" class="dropdown-item">Tablet</a></li>
+                        <li> <a href="{% url 'products' %}?category=tincture" class="dropdown-item">Tincture</a>
+                        </li>
+                        <div class="dropdown-divider my-0"></div>
+                        <li> <a href="{% url 'products' %}"class="dropdown-item">All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

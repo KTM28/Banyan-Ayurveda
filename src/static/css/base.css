@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700;1,800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
@@ -89,10 +92,10 @@ body {
 }
 
 
-.btn,
-.btn:hover,
-.btn:active,
-.btn:focus {
+.btn-landing,
+.btn-landing:hover,
+.btn-landing:active,
+.btn-landing:focus {
   color: #ffffff;
   background-color: #0000005b;
   border: 1px solid#ffd700;
@@ -130,6 +133,13 @@ div .carousel-text {
 /* -----All products view----- */
 
 /* source: demonguru18 bootsnippet */
+.shop-header {
+  font-family: 'Playfair Display', serif;
+  color: #f2d900;
+}
+
+
+
 #productAll .card-detail-badge {
   background: #f2d900;
   text-align: center;
@@ -189,3 +199,30 @@ div .carousel-text {
   font-size: 18px;
 }
 
+/* ---Product Categories filter--- */
+
+.filter-button {
+  font-size: 18px;
+  /* border: 1px solid #f8f9fa; */
+  border-radius: 5px;
+  text-align: center;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #f2d900;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f2d900;
+
+}
+
+.btn-default:active .filter-button:active {
+  background-color: #f2d900;
+  color: white;
+}

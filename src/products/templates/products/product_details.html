@@ -3,11 +3,13 @@
 {% block extra_title %}- Product details {% endblock %}
 
 {% block content %}
+<!-- Delivery banner -->
+<div class="">
+    {% include 'products/includes_products/delivery_banner.html' %}
+</div>
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <!-- Delivery banner -->
-            {% include 'products/includes_products/delivery_banner.html' %}
             <!--Search form-->
             {% include 'includes/search_form.html' %}
         </div>
