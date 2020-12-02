@@ -61,14 +61,14 @@ def services(request):
     return render(request, 'products/services.html', context)
 
 
-def service_details(request, treatment_id):
+def service_details(request, service_id):
     """ View to display individual service detail """
 
-    all_treatments = Product.objects.filter(is_a_treatment=True)
-    treatment = get_object_or_404(all_treatments, pk=treatment_id)
+    all_services = Product.objects.filter(is_a_treatment=True)
+    service = get_object_or_404(all_services, pk=service_id)
 
     context = {
-        'treatment' : treatment,
+        'service' : service,
     }
 
     return render(request, 'products/service_details.html', context)
