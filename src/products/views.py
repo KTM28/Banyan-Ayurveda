@@ -49,16 +49,16 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
-def all_services(request):
+def services(request):
     """ A view to show all the services """
 
-    all_services = Product.objects.filter(is_a_treatment=True)
+    services = Product.objects.filter(is_a_treatment=True)
 
     context = {
-        'services': all_services,
+        'services': services,
     }
 
-    return render(request, 'products/all_services.html', context)
+    return render(request, 'products/services.html', context)
 
 
 def service_details(request, treatment_id):
