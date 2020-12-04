@@ -3,5 +3,81 @@
 {% block extra_title %}- Service details {% endblock %}
 
 {% block content %}
-<h1>Service details</h1>
+<div class="container">
+    <div class="row my-3">
+        <div class="col-12 col-md-6 col-lg-6 my-4">
+            {% if service.image %}
+            <a href="{{ service.image.url }}" target="_blank">
+                <img class="img-fluid service-detail-img" src="{{ service.image.url }}" alt="{{ service.name }}">
+            </a>
+            {% else %}
+            <a href="#">
+                <img class="img-fluid service-detail-img" src="{% static 'img/no-img.jpg' %}" alt="{{ service.name }}">
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="product-pr-container">
+                <h3 class="mb-0">{{ service.name }}</h3>
+                <p class="lead mb-0 text-left font-weight-bold">€{{ service.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold bg-light">
+                    Duration:<span>&nbsp{{ service.duration }}&nbspHour</span></p>
+                {% if service.rating %}
+                <span class="text-success"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5</span>
+                {% else %}
+                <span class="text-muted">No Rating</span>
+                {% endif %}
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-toggle="tab">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile" data-toggle="tab">Benefit</a>
+                    </li>
+                </ul>
+                <div class="tab-content my-tab">
+                    <div class="tab-pane active" id="home">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>
+                                    Description</h3>
+                                <p>
+                                    {{ service.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>
+                                    Benefit</h3>
+                                <p>
+                                    {{ service.benefit|safe }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row float-right">
+        <form class="form" action="" method="POST">
+            <h6 class="font-weight-bold mt-4">Please select the time:</h6>
+
+            <div class="input-group date" id="datetime" data-target-input="nearest">
+                <input type="text" name="datetime" class="form-control datetimepicker-input" data-target="#datetime"
+                    required />
+                <div class="input-group-append" data-target="#datetime" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 input-icons mb-3">
+                <input type="submit" class="btn add-cart text-uppercase fa" value="&#xf217;Add to Cart" />
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content %}

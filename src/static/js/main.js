@@ -3,4 +3,13 @@ $(document).ready(function () {
         var newstr = $(this).text().substring(0, 350);
         $(this).text(newstr + '.....');
     });
+    const dateTimePickerInit = () => {
+        $('#datetime').datetimepicker({
+            format: 'DD/MM/YYYY HH:mm',
+            minDate: new Date(),
+            enabledHours: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            stepping: 30,
+        });
+    };
+    dateTimePickerInit();
 });
