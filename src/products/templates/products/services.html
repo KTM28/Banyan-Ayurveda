@@ -8,8 +8,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            {% include 'includes/search_form.html' %}
+        <div class="col-12 text-center">
             <h1>Treatments</h1>
             <hr>
         </div>
@@ -20,10 +19,10 @@
             <div class="row no-gutters">
                 <div class="col-md-4">
                     {% if service.image %}
-                        <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
+                    <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
                     {% else %}
-                        <img class="card-img-top img-responsive" src="{% static 'img/no-img.jpg' %}"
-                            alt="{{ service.name }}">
+                    <img class="card-img-top img-responsive" src="{% static 'img/no-img.jpg' %}"
+                        alt="{{ service.name }}">
                     {% endif %}
                 </div>
                 <div class="col-md-8">
@@ -31,15 +30,18 @@
                         <h5 class="card-title">{{ service.name }}</h5>
                         <p class="card-text service-info">{{ service.description }}</p>
                     </div>
-                    <div class="card-image-overlay ml-2">
+                    <div class="card-image-overlay mx-2 my-2">
                         <span class="card-detail-badge">€{{ service.price }}</span>
                         {% if service.rating %}
                         <small class="text-success"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5</small>
                         {% else %}
                         <small class="text-success">No Rating</small>
                         {% endif %}
+                        <a class="btn product-btn float-right" href="{% url 'service_details' service.id %}">
+                            Learn More
+                        </a>
                     </div>
-                    <a class="product-btn mt-2 mr-4" href="{% url 'service_details' service.id %}">Learn More</a>
+
                 </div>
             </div>
         </div>
@@ -48,7 +50,3 @@
 </div>
 
 {% endblock content %}
-
-
-
-

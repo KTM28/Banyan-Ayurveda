@@ -38,8 +38,13 @@
                     <div class="m-auto">
                         <h5>{{ product.name }}</h5>
                     </div>
-                    <a class="product-btn" href="{% url 'product_details' product.id %}">View</a>
-                    <input type="submit" class="btn add-cart fa rounded" value="&#xf217;Add to Cart" />
+                    <a href="{% url 'product_details' product.id %}" class="btn btn-sm product-btn d-block m-auto">
+                        <span class="icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                        <span class="text-uppercase">View</span>
+                    </a>
+                    <input type="submit" class="btn add-cart-btn mt-2 fa rounded" value="&#xf217 &nbsp;Add to Cart" />
                 </div>
             </div>
         </div>

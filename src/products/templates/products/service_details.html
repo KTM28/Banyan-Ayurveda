@@ -64,8 +64,9 @@
     </div>
     <hr />
     <div class="row float-right">
+        <!--form-->
         <form class="form" action="" method="POST">
-            <h6 class="font-weight-bold mt-4">Please select the time:</h6>
+            <h6 class="font-weight-bold mt-4">Appointment Date and Time:</h6>
 
             <div class="input-group date" id="datetime" data-target-input="nearest">
                 <input type="text" name="datetime" class="form-control datetimepicker-input" data-target="#datetime"
@@ -74,8 +75,15 @@
                     <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 input-icons mb-3">
-                <input type="submit" class="btn add-cart text-uppercase fa" value="&#xf217;Add to Cart" />
+            <div class="col-12 mb-3">
+                <a href="{% url 'services' %}" class="btn btn-outline-success mt-3">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Services</span>
+                </a>
+                <input type="submit" class="btn add-cart-btn text-uppercase fa mt-3"
+                    value="&#xf217 &nbsp;Add to Cart" />
             </div>
         </form>
     </div>

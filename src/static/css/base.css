@@ -133,13 +133,10 @@ div .carousel-text {
 
 /* -----All products view----- */
 
-/* source: demonguru18 bootsnippet */
 .shop-header {
   font-family: 'Playfair Display', serif;
   color: #f2d900;
 }
-
-
 
 #productAll .card-detail-badge {
   background: #f2d900;
@@ -160,39 +157,27 @@ div .carousel-text {
 
 #productAll .card-image-overlay {
   font-size: 20px;
-
 }
 
 #productAll .card-image-overlay span {
   display: inline-block;
 }
 
-
-#productAll .product-btn {
-  text-transform: uppercase;
-  width: 150px;
-  height: 40px;
-  border-radius: 80px;
-  font-size: 16px;
-  line-height: 35px;
-  text-align: center;
-  border: 3px solid#28a745;
-  display: block;
-  text-decoration: none;
-  margin: 20px auto 1px auto;
+.product-btn {
+  background-color: #f3725ec5;
   color: #ffffff;
-  overflow: hidden;
-  position: relative;
-  background-color: #28a745;
+  border-radius: 80px;
+  width: 110px;
 }
 
-#productAll .product-btn:hover {
-  background-color: #28a745;
-  color: #1e1717;
-  border: 2px solid #28a745;
-  background: transparent;
-  transition: all 0.3s ease;
+.product-btn:hover,
+.product-btn:active,
+.product-btn:focus,
+.product-btn:active:focus {
+  background-color: #F7AE68;
+  color: #ffffff;
   box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+  transition: all 0.3s ease;
 }
 
 #productAll h5 {
@@ -236,10 +221,9 @@ div .carousel-text {
   margin: 5px;
 }
 
-.add-cart {
+.add-cart-btn {
   background-color: #ff9d05;
   color: #ffffff;
-  margin-top: 10px;
   font-weight: 900;
   height: 39px;
   padding-top: 9px;
@@ -248,10 +232,10 @@ div .carousel-text {
 }
 
 
-.add-cart:hover,
-.add-cart:active,
-.add-cart:focus,
-.add-cart:active:focus {
+.add-cart-btn:hover,
+.add-cart-btn:active,
+.add-cart-btn:focus,
+.add-cart-btn:active:focus {
   background-color: #ffc505;
-  color:  #ffffff;
+  color: #ffffff;
 }
