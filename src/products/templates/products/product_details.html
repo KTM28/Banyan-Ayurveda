@@ -23,14 +23,14 @@
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{% static 'img/no-img.jpg' %}" alt="{{ product.name }}">
+                    <img class="card-img-top img-fluid" src="{% static 'img/no-image.jpg' %}" alt="{{ product.name }}">
                 </a>
                 {% endif %}
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
-                <h6 class="mb-0">{{ product.name }}</h6>
+                <h6 class="mb-0 text-uppercase">{{ product.name }}</h6>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                 {% if product.rating %}
                 <small class="text-success"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
