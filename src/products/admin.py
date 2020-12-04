@@ -8,7 +8,6 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
-        'has_weight',
         'image',
         'image_url',
         'discontinued',

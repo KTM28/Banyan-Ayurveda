@@ -32,7 +32,6 @@ class Product(models.Model):
     discontinued = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    has_weight = models.BooleanField(default=False, null=True, blank=True)
     duration = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(1), MaxValueValidator(24)])
 
 
