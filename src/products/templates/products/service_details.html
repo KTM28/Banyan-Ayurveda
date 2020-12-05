@@ -66,7 +66,7 @@
     <hr />
     <div class="row float-right">
         <!--form-->
-        <form class="form" action="" method="POST">
+        <form class="form" action="{% url 'add_to_cart' service.id %}" method="POST">
             {% csrf_token %}
             <h6 class="font-weight-bold mt-4">Appointment Date and Time:</h6>
 
@@ -84,8 +84,10 @@
                     </span>
                     <span class="text-uppercase">Services</span>
                 </a>
+                <input class="form-control" name="quantity" type="hidden" value="1">
                 <input type="submit" class="btn add-cart-btn text-uppercase fa mt-3"
                     value="&#xf217 &nbsp;Add to Cart" />
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </div>
         </form>
     </div>
