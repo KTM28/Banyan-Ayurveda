@@ -12,7 +12,8 @@
             </a>
             {% else %}
             <a href="#">
-                <img class="img-fluid service-detail-img" src="{% static 'img/no-image.jpg' %}" alt="{{ service.name }}">
+                <img class="img-fluid service-detail-img" src="{% static 'img/no-image.jpg' %}"
+                    alt="{{ service.name }}">
             </a>
             {% endif %}
         </div>
@@ -66,6 +67,7 @@
     <div class="row float-right">
         <!--form-->
         <form class="form" action="" method="POST">
+            {% csrf_token %}
             <h6 class="font-weight-bold mt-4">Appointment Date and Time:</h6>
 
             <div class="input-group date" id="datetime" data-target-input="nearest">
