@@ -186,6 +186,22 @@ div .carousel-text {
   font-size: 18px;
 }
 
+/* --Search Form-- */
+
+.search-btn {
+  color: #ffffff;
+  background-color: #f3725ec5;
+  /* border-radius: 80px; */
+}
+
+.search-btn:hover,
+.search-btn:active, 
+.search-btn:focus,
+.search-btn:active:focus  {
+  background-color: #F7AE68;
+  color: #ffffff;
+}
+
 /* --Delivery Bannner-- */
 
 .delivery-font {
