@@ -265,4 +265,23 @@ div .carousel-text {
 /* -----Shopping Cart------ */
 #BackToProduct {
   text-decoration: none;
+  color: #ff9d05;
+}
+
+thead {
+  background-color: #f3725ec5;
+  color: #ffffff;
+}
+
+.btn-checkout {
+  color: #ffffff;
+  background-color: #f3725ec5;
+}
+
+.btn-checkout:hover,
+.btn-checkout:active,
+.btn-checkout:focus,
+.btn-checkout:active:focus {
+  color: #ffffff;
+  background-color: #ffc505;
 }

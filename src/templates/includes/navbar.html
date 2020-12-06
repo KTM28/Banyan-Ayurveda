@@ -45,7 +45,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light mr-auto my-0">
-    <a class="navbar-brand" href="#"><img src="{% static 'img/logo2.png' %}" alt="brand logo"></a>
+    <a class="navbar-brand" href="{% url 'landing' %}"><img src="{% static 'img/logo2.png' %}" alt="brand logo"></a>
     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
     <div class="collapse navbar-collapse list-inline list-unstyled" id="navbarNav">
         <ul class="navbar-nav ml-1">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'landing' %}">About</a>
+                <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'products' %}">Shop</a>
