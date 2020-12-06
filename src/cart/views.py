@@ -34,6 +34,5 @@ def add_to_cart(request, item_id):
     
     # Overwrite the variable in the session with the updated version
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
     

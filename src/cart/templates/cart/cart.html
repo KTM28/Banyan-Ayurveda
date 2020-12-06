@@ -2,6 +2,7 @@
 {% load static %}
 {% block extra_title %}- Shopping Cart{% endblock %}
 {% block content%}
+{% include 'products/includes_products/delivery_banner.html' %}
 <div class="container mb-2">
     <div class="row">
         <div class="col">
@@ -14,7 +15,9 @@
     <div class="row">
         <div class="col">
             {% if cart_items %}
-            <div class="table-responsive rounded"></div>
+            <div class="table-responsive rounded">
+                {{ cart_items }}
+            </div>
             {% else %}
             <p class="lead mb-5">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="text-info" id="BackToProduct">
