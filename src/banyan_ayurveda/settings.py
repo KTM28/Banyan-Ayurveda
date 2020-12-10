@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     
+    'tempus_dominus', # Required by Bootstrap tempus_dominus datetime picker
     'landing',
     'products',
     'cart',

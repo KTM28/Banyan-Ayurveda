@@ -3,26 +3,27 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
-def cart_contents(request):
 
+def cart_contents(request):
+    """ function to display the cart contents across the site """
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-
-    for item_id, product_data in cart.items():
-        if isinstance(product_data, int):
+    # Source: Logic from Code institute Boutique ado project
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
-            total += product_data  * product.price
-            product_count += product_data 
+            total += item_data  * product.price
+            product_count += item_data 
             cart_items.append({
                 'item_id': item_id,
-                'quantity': product_data,
+                'quantity': item_data,
                 'product': product,
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for datetime, quantity in product_data['items_by_datetime'].items():
+            for datetime, quantity in item_data['items_by_datetime'].items():
                 total += quantity * product.price
                 product_count += quantity
                 cart_items.append({
