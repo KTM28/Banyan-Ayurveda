@@ -23,20 +23,34 @@
             </td>
             <td class="py-3">
                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                {% if item.product.is_a_treatment %}
-                <br />
-                <p class="small font-weight-bold">Appointment Date and Time:</p>
-                <div class="input-group date" id="cart_datetime-{{ forloop.counter }}" data-value="{{ item.datetime }}"
-                    data-target-input="nearest">
-                    <input type="text" name="datetime" class="form-control datetimepicker-input"
-                        value="{{ item.datetime }}" data-target="#cart_datetime-{{ forloop.counter }}" required />
-                    <div class="input-group-append" data-target="#cart_datetime-{{ forloop.counter }}" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                <form class="form update-form" method="POST" action="">
+                    {% csrf_token %}
+
+                    {% if item.product.is_a_treatment %}
+                    <br />
+                    <p class="small font-weight-bold">Appointment Date and Time:</p>
+                    <div class="input-group date w-50" id="cart_datetime-{{ forloop.counter }}"
+                        data-value="{{ item.datetime }}" data-target-input="nearest">
+                        <input type="text" name="datetime" class="form-control datetimepicker-input"
+                            value="{{ item.datetime }}" data-target="#cart_datetime-{{ forloop.counter }}" required />
+                        <div class="input-group-append" data-target="#cart_datetime-{{ forloop.counter }}"
+                            data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
                     </div>
+                    {% else %}
+                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                    <p class="mt-3"><strong>Quantity:</strong></p>
+                    <div class="input-group w-50">
+                        <input class="form-control" type="number" name="quantity" value="1" min="1" max="99"
+                            value="{{ item.quantity }}" data-item_id="{{ item.item_id }}" required>
+                    </div>
+                    {% endif %}
+                </form>
+                <div class="update-btn mt-3">
+                    <a class="update-link text-info btn"><small>Update</small></a>
+                    <a class="remove-item text-danger float-right btn" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                 </div>
-                {% else %}
-                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                {% endif %}
             </td>
             <td class="py-3">
                 <p class="my-0">€{{ item.product.price }}</p>
@@ -51,11 +65,11 @@
         {% endfor %}
         <tr>
             <td colspan="5" class="pt-5 text-right">
-                <h6><strong>Subtotal: €{{ total|floatformat:2 }}</strong></h6>
+                <h6><strong>Cart total: €{{ total|floatformat:2 }}</strong></h6>
                 <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                 <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                 {% if free_delivery_delta > 0 %}
-                <p class="mb-1 text-danger">
+                <p class="mb-1 text-danger font-weight-bold">
                     You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                 </p>
                 {% endif %}
@@ -79,3 +93,4 @@
         </tr>
     </table>
 </div>
+
