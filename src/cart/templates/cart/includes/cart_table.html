@@ -26,11 +26,11 @@
                 {% if item.product.is_a_treatment %}
                 <br />
                 <p class="small font-weight-bold">Appointment Date and Time:</p>
-                <div class="input-group date" id="datetime" data-value="{{ item.product.datetime }}"
+                <div class="input-group date" id="cart_datetime-{{ forloop.counter }}" data-value="{{ item.datetime }}"
                     data-target-input="nearest">
                     <input type="text" name="datetime" class="form-control datetimepicker-input"
-                        value="{{ item.product.datetime }}" data-target="#datetime" required />
-                    <div class="input-group-append" data-target="#datetime" data-toggle="datetimepicker">
+                        value="{{ item.datetime }}" data-target="#cart_datetime-{{ forloop.counter }}" required />
+                    <div class="input-group-append" data-target="#cart_datetime-{{ forloop.counter }}" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
                     </div>
                 </div>
