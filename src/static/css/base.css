@@ -271,6 +271,7 @@ div .carousel-text {
 thead {
   background-color: #f3725ec5;
   color: #ffffff;
+  width: max-content;
 }
 
 .btn-checkout {
