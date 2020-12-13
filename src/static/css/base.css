@@ -286,3 +286,20 @@ thead {
   color: #ffffff;
   background-color: #ffc505;
 }
+
+/* -------Toasts------ */
+
+.message-container {
+  position: fixed;
+  top: 82px;
+  right: 17px;
+  z-index: 99999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 4px;
+}
