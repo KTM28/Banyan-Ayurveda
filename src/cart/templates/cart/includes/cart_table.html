@@ -1,4 +1,5 @@
 {% load static %}
+{% load cart_tools %}
 
 <div class="table-responsive rounded">
     <table class="table table-sm border">
@@ -23,10 +24,10 @@
             </td>
             <td>
                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-               
+
                 <!--Cart Update Form-->
                 {% include 'cart/includes/cart_update_form.html' %}
-                
+
                 <a class="update-link text-info btn my-4"><i class="fas fa-sync"></i>&nbsp<small>Update</small></a>
                 <a class="remove-item text-danger float-right btn my-4" id="remove_{{ item.item_id }}"><i
                         class="fas fa-trash-alt"></i>&nbsp<small>Remove</small></a>
@@ -38,20 +39,20 @@
                 <p class="my-0">{{ item.quantity }}</p>
             </td>
             <td class="py-3">
-                <p class="my-0 font-weight-bold">€{{ item.product.price }}</p>
+                <p class="my-0 font-weight-bold">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
             </td>
         </tr>
         {% endfor %}
         <tr>
             <td colspan="5" class="pt-5 text-right">
-             <!--Cart Total-->
-               {% include 'cart/includes/cart_total.html' %}
+                <!--Cart Total-->
+                {% include 'cart/includes/cart_total.html' %}
             </td>
         </tr>
         <tr>
             <td colspan="5" class="text-right">
-             <!--Checkout Buttons-->
-               {% include 'cart/includes/checkout_btn.html' %}
+                <!--Checkout Buttons-->
+                {% include 'cart/includes/checkout_btn.html' %}
             </td>
         </tr>
     </table>
