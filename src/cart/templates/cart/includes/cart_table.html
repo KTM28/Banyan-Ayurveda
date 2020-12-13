@@ -13,7 +13,7 @@
         </thead>
 
         {% for item in cart_items %}
-        <tr class="">
+        <tr>
             <td class="p-3 w-25 ">
                 {% if item.product.image %}
                 <img class="img-fluid rounded" src="{{ item.product.image.url }}">
@@ -21,41 +21,15 @@
                 <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}">
                 {% endif %}
             </td>
-            <td class="py-3">
+            <td>
                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                    {% csrf_token %}
-
-                    {% if item.product.is_a_treatment %}
-                    <br />
-                    <p class="small font-weight-bold">Appointment Date and Time:</p>
-                    <div class="input-group date w-50" id="cart_datetime-{{ forloop.counter }}"
-                        data-value="{{ item.datetime }}" data-target-input="nearest">
-                        <input type="text" name="datetime" class="form-control datetimepicker-input"
-                            value="{{ item.datetime }}" data-target="#cart_datetime-{{ forloop.counter }}" required />
-                        <div class="input-group-append" data-target="#cart_datetime-{{ forloop.counter }}"
-                            data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                        </div>
-                    </div>
-                    <div class="input-group w-100">
-                        <input name="quantity" type="hidden" min="1" max="100" class="form-control"
-                            value="{{ item.quantity }}" required>
-                    </div>
-                    {% else %}
-                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                    <p class="mt-3"><strong>Quantity:</strong></p>
-                    <div class="input-group w-50">
-                        <input class="form-control" type="number" name="quantity" min="1" max="99"
-                            value="{{ item.quantity }}" required>
-                    </div>
-                    {% endif %}
-                </form>
-                <div class="mt-4">
-                    <a class="update-link text-info"><i class="fas fa-sync"></i>&nbsp<small>Update</small></a>
-                    <a class="remove-item text-danger float-right btn" id="remove_{{ item.item_id }}"><i
-                            class="fas fa-trash-alt"></i>&nbsp<small>Remove</small></a>
-                </div>
+               
+                <!--Cart Update Form-->
+                {% include 'cart/includes/cart_update_form.html' %}
+                
+                <a class="update-link text-info btn my-4"><i class="fas fa-sync"></i>&nbsp<small>Update</small></a>
+                <a class="remove-item text-danger float-right btn my-4" id="remove_{{ item.item_id }}"><i
+                        class="fas fa-trash-alt"></i>&nbsp<small>Remove</small></a>
             </td>
             <td class="py-3">
                 <p class="my-0">€{{ item.product.price }}</p>
@@ -70,30 +44,14 @@
         {% endfor %}
         <tr>
             <td colspan="5" class="pt-5 text-right">
-                <h6><strong>Cart total: €{{ total|floatformat:2 }}</strong></h6>
-                <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                {% if free_delivery_delta > 0 %}
-                <p class="mb-1 text-danger font-weight-bold">
-                    You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
-                </p>
-                {% endif %}
+             <!--Cart Total-->
+               {% include 'cart/includes/cart_total.html' %}
             </td>
         </tr>
         <tr>
             <td colspan="5" class="text-right">
-                <a href="{% url 'products' %}" class="text-info" id="BackToProduct">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="lead">Continue Shopping</span>
-                </a>
-                <a href="#" class="ml-2 btn btn-checkout rounded-0 btn-lg">
-                    <span class="text-uppercase">Secure Checkout</span>
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </a>
+             <!--Checkout Buttons-->
+               {% include 'cart/includes/checkout_btn.html' %}
             </td>
         </tr>
     </table>
