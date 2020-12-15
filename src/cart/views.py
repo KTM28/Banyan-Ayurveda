@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
 
@@ -13,7 +13,7 @@ def add_to_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     # get the cart variable or create if it doesn't exist in the session 
     cart = request.session.get('cart', {})
     datetime = None
@@ -23,17 +23,20 @@ def add_to_cart(request, item_id):
 
     if datetime:
         if item_id in list(cart.keys()):
+            messages.error(request, f'{product.name} already in your cart!\
+            Review your cart to continue booking.')
             return redirect(redirect_url)
         else:
             cart[item_id] = {'items_by_datetime': {datetime: quantity}}
+            messages.success(request, f'Added {product.name} to your cart')
     else:
         # Add or update the quantity in the cart
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
+            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = quantity
             messages.success(request, f'Added {product.name} to your cart')
-    
     # Overwrite the variable in the session with the updated version
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -43,7 +46,7 @@ def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
     datetime = None
     if 'datetime' in request.POST:
@@ -51,29 +54,39 @@ def adjust_cart(request, item_id):
     if datetime:
         if quantity > 0:
             cart[item_id] = {'items_by_datetime': {datetime: quantity}}
+            messages.success(request,
+                            (f'Appointment Date Successfully Updated for {product.name}'))
         else:
             del cart[item_id]['items_by_datetime'][datetime]
             if not cart[item_id]['items_by_datetime']:
                 cart.pop(item_id)
+                messages.success(request, f'Removed {product.name} from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
+            messages.success(request, f'Updated {product.name}\
+                quantity to {cart[item_id]}')
         else:
             cart.pop(item_id)
+            messages.success(request, (f'Removed {product.name}\
+                                    from your cart'))
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
 
     try:
         cart = request.session.get('cart', {})
         cart.pop(item_id)
+        messages.success(request, (f'Removed {product.name}\
+                                    from your cart'))
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item from the cart: {e}')
         return HttpResponse(status=500)
