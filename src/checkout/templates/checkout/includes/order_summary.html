@@ -47,13 +47,15 @@
             </div>
         </div>
         <hr>
-        <div class="order-sum-total m-auto">
-            <a href="{% url 'view_cart' %}" class="btn btn-info">
+        <div class="mx-2">
+            <a href="{% url 'view_cart' %}" class="btn text-info">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
                 <span class="font-weight-bold">Adjust Cart</span>
             </a>
+        </div>
+        <div class="m-auto">
             <p class="small mt-1 mb-1 text-muted">Delivery Cost: €{{ delivery|floatformat:2 }}</p>
             <p class="lead">Grand Total:
                 <span class="font-weight-bold">€{{ grand_total|floatformat:2 }}</span>

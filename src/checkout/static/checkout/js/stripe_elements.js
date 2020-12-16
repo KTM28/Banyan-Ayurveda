@@ -1,6 +1,16 @@
-// Create a Stripe client.
-var stripe = Stripe('pk_test_51HZbr6FBSfP9XloYNNpmZ0mt7Xd4F0Ulc11uLqYf9AUE6RzB9MUzrtD6tTWRIWQFmmT9x6CloqN6sn73SUzow8xL00uf42xnIp');
+/*
+    Core logic/payment flow for this comes from here:
+    https://stripe.com/docs/payments/accept-a-payment
+    
+    CSS from here: 
+    https://stripe.com/docs/stripe-js
+*/
 
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+var clientSecret = $('#id_client_secret').text().slice(1, -1);
+
+// Create a Stripe client.
+var stripe = Stripe(stripePublicKey);
 // Create an instance of Elements.
 var elements = stripe.elements();
 
