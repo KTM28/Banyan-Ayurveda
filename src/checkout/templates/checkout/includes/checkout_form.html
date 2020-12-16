@@ -1,63 +1,57 @@
 {% load static %}
-{% load cart_tools %}
 
-<div class="col-12 col-md-5 col-lg-4 ml-lg-3">
-    <div class="card order-summary-card">
-        <div class="card-body">
-            <h5 class="card-title text-center">Order Summary ({{ product_count }})</h5>
-            <hr>
-            <div class="scrollable order-summary-items">
-                {% for item in cart_items %}
-                <div class="row">
-                    <div class="col-4 ">
-                        {% if item.product.is_a_treatment %}
-                        <a href="{% url 'service_details' item.product.id %}">
-                            {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_details' item.product.id %}">
-                            {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}"
-                                alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
-                        {% endif %}
-                    </div>
-                    <div class="col-8">
-                        <p class="font-weight-bold">{{ item.product.name }}</p>
-                        {% if item.product.is_a_treatment %}
-                        <p class="small font-weight-bold">Appointment Date and Time:</p>
-                        <p class="small mt-0 bg-light">{{ item.datetime }}</p>
-                        {% else %}
-                        <p class="small font-weight-bold">Qty: {{ item.quantity }}</p>
-                        {% endif %}
-                        <p class="small"><span class="font-weight-bold text-info">Subtotal:
-                            </span> €{{ item.product.price | calc_subtotal:item.quantity }}
-                        </p>
-                    </div>
-                </div>
-                <hr />
-                {% endfor %}
+<div class="col-12 col-md-6 col-lg-6 offset-lg-1  ">
+    <p class="text-muted">Please fill out the form below to complete your order</p>
+    <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+        {% csrf_token %}
+        <fieldset class="rounded px-3 mb-5">
+            <legend class="small badge badge-info ">Details</legend>
+            {{ order_form.full_name | as_crispy_field }}
+            {{ order_form.email | as_crispy_field }}
+        </fieldset>
+        <fieldset class="rounded px-3 mb-5">
+            <legend class="small badge badge-info ">Delivery</legend>
+            {{ order_form.phone_number | as_crispy_field }}
+            {{ order_form.country | as_crispy_field }}
+            {{ order_form.postcode | as_crispy_field }}
+            {{ order_form.town_or_city | as_crispy_field }}
+            {{ order_form.address_line1 | as_crispy_field }}
+            {{ order_form.address_line2 | as_crispy_field }}
+            {{ order_form.county | as_crispy_field }}
+            <div class="form-check form-check-inline float-right mr-0">
+                {% if user.is_authenticated %}
+                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                {% else %}
+                <label class="form-check-label" for="id-save-info">
+                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                </label>
+                {% endif %}
             </div>
-        </div>
-        <hr>
-        <div class="order-sum-total m-auto">
-            <a href="{% url 'view_cart' %}" class="btn btn-info">
+        </fieldset>
+        <fieldset class="px-3">
+            <legend class="small badge badge-info">Payment</legend>
+            <!-- A Stripe card element will go here -->
+            <div class="mb-3" id="card-element"></div>
+
+            <!-- Used to display form errors -->
+            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+        </fieldset>
+
+        <div class="submit-button text-right mt-5 mb-2">
+            <button id="submit-button" class="btn btn-checkout rounded-0 btn-block">
+                <span class="font-weight-bold">Complete Order</span>
                 <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-lock"></i>
                 </span>
-                <span class="font-weight-bold">Adjust Cart</span>
-            </a>
-            <p class="small mt-1 mb-1 text-muted">Delivery Cost: €{{ delivery|floatformat:2 }}</p>
-            <p class="lead">Grand Total:
-                <span class="font-weight-bold">€{{ grand_total|floatformat:2 }}</span>
+            </button>
+            <p class="small text-warning my-0">
+                <span class="icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </span>
+                <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
             </p>
         </div>
-    </div>
+    </form>
 </div>
