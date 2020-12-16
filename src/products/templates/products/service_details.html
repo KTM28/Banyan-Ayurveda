@@ -12,7 +12,7 @@
             </a>
             {% else %}
             <a href="#">
-                <img class="img-fluid service-detail-img" src="{% static 'img/no-image.jpg' %}"
+                <img class="img-fluid service-detail-img" src="{{ MEDIA_URL }}no-image.jpg"
                     alt="{{ service.name }}">
             </a>
             {% endif %}

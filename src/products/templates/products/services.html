@@ -21,7 +21,7 @@
                     {% if service.image %}
                     <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
                     {% else %}
-                    <img class="card-img-top img-responsive" src="{% static 'img/no-image.jpg' %}"
+                    <img class="card-img-top img-responsive" src="{{ MEDIA_URL }}no-image.jpg"
                         alt="{{ service.name }}">
                     {% endif %}
                 </div>
