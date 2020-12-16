@@ -195,9 +195,9 @@ div .carousel-text {
 }
 
 .search-btn:hover,
-.search-btn:active, 
+.search-btn:active,
 .search-btn:focus,
-.search-btn:active:focus  {
+.search-btn:active:focus {
   background-color: #F7AE68;
   color: #ffffff;
 }
@@ -302,4 +302,19 @@ thead {
 
 .toast-capper {
   height: 4px;
+}
+
+/* ----Checkout------ */
+
+.order-summary-card {
+  height: fit-content;
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+}
+
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 300px;
 }
