@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% load static %}
+{% load cart_tools %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block extra_title %}- Checkout{% endblock %}
+{% block content %}
+
+<!--Delivery info-->
+{% include 'products/includes_products/delivery_banner.html' %}
+
+<!--Checkout Header-->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-uppercase main-heading text-center">Checkout</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        {% include 'checkout/includes/checkout_form.html' %}
+        {% include 'checkout/includes/order_summary.html' %}
+    </div>
+</div>
+{% endblock %}
