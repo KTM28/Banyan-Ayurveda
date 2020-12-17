@@ -1,0 +1,64 @@
+{% load static %}
+
+<div class="col-12 col-md-5 col-lg-4 ml-lg-3">
+    <div class="card order-summary-card">
+        <div class="card-body">
+            <h5 class="card-title text-center text-success">Order Summary ({{ product_count }})</h5>
+            <hr>
+            <div class="scrollable order-summary-items">
+                {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-4 ">
+                        {% if item.product.is_a_treatment %}
+                        <a href="{% url 'service_details' item.product.id %}">
+                            {% if item.product.image %}
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_details' item.product.id %}">
+                            {% if item.product.image %}
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}"
+                                alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-8">
+                        <p class="font-weight-bold">{{ item.product.name }}</p>
+                        {% if item.product.is_a_treatment %}
+                        <p class="small font-weight-bold">Appointment Date and Time:</p>
+                        <p class="small mt-0 bg-light">{{ item.datetime }}</p>
+                        {% else %}
+                        <p class="small font-weight-bold">Qty: {{ item.quantity }}</p>
+                        {% endif %}
+                        <p class="small"><span class="font-weight-bold text-info">Subtotal:
+                            </span> €{{ item.product.price | calc_subtotal:item.quantity }}
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                {% endfor %}
+            </div>
+        </div>
+        <hr>
+        <div class="mx-2">
+            <a href="{% url 'view_cart' %}" class="btn text-info">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="font-weight-bold">Adjust Cart</span>
+            </a>
+        </div>
+        <div class="m-auto">
+            <p class="small mt-1 mb-1 text-muted">Delivery Cost: €{{ delivery|floatformat:2 }}</p>
+            <p class="lead">Grand Total:
+                <span class="font-weight-bold">€{{ grand_total|floatformat:2 }}</span>
+            </p>
+        </div>
+    </div>
+</div>

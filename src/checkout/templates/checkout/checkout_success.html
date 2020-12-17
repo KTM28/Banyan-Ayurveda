@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block extra_title %}- Checkout success{% endblock %}
+{% block content %}
+
+
+<!--Checkout_success Header-->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center"><i class="far fa-check-circle"></i>Thank You for your order</h2>
+            <hr>
+            <h4 class="text-uppercase text-center">Order Confirmation</h4>
+            <p class="text-center">A confirmation email with the details of your order has been sent to <strong>{{ order.email }}</strong></p>
+            <p class="lead">Your order information is below:</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
