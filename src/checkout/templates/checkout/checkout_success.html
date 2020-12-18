@@ -28,11 +28,14 @@
         <div class="col-12 col-lg-6">
             <!--Order info-->
             {% include 'checkout/includes_checkout_success/order_info.html' %}
+            <!--Shipping info-->
             {% include 'checkout/includes_checkout_success/shipping_details.html' %}
         </div>
         <!--Order Summary-->
         <div class="col-12 col-lg-6">
             {% include 'checkout/includes_checkout_success/order_summary.html' %}
+
+            <!--Back to Product Buttons-->
             <div class="my-2">
                 <a href="{% url 'products' %}" class="btn btn-info rounded-0">
                     <span class="icon">
