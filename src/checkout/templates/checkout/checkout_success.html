@@ -12,21 +12,38 @@
 <!--Checkout_success Header-->
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <h2 class="text-center"><i class="far fa-check-circle"></i>Thank You for your order</h2>
-            <hr>
+        <div class="col-12 mt-2">
+            <h2 class="text-center"><i class="far fa-check-circle">&nbsp</i>Thank You for your order</h2>
+            <hr class="mx-auto" style="background-color: #17a2b8; width: 100px; height: 5px;">
             <h4 class="text-uppercase text-center">Order Confirmation</h4>
-            <p class="text-center">A confirmation email with the details of your order has been sent to <strong>{{ order.email }}</strong></p>
-            <p class="lead">Your order information is below:</p>
+            <p class="text-center">A confirmation email with the details of your order has been sent to
+                <strong>{{ order.email }}</strong></p>
+            <p class="lead text-center">Your order information is below</p>
+            <p class="text-center"><i class="fas fa-chevron-down fa-3x text-info"></i></p>
         </div>
     </div>
 
+    <!--Order details-->
     <div class="row">
-        <div class="col-12">
-        
+        <div class="col-12 col-lg-6">
+            <!--Order info-->
+            {% include 'checkout/includes_checkout_success/order_info.html' %}
+            {% include 'checkout/includes_checkout_success/shipping_details.html' %}
+        </div>
+        <!--Order Summary-->
+        <div class="col-12 col-lg-6">
+            {% include 'checkout/includes_checkout_success/order_summary.html' %}
+            <div class="my-2">
+                <a href="{% url 'products' %}" class="btn btn-info rounded-0">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-{% endblock %}
 
+{% endblock %}

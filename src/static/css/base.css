@@ -301,7 +301,7 @@ thead {
   height: 4px;
 }
 
-/* ----Checkout------ */
+/* ----Checkout and Checkout_Success------ */
 
 .order-summary-card {
   height: fit-content;
@@ -325,3 +325,8 @@ thead {
 .btn-info:hover, .btn-info:active, .btn-info:focus, .btn-checkout:active:focus {
   background-color: #F7AE68 !important;
 }
+
+/* .checkout-card-header {
+  background-color: #f3725ec5 !important;
+  color:#ffffff !important;
+} */

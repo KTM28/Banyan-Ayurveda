@@ -211,7 +211,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123469",
-         "name": "SIDHA SOMA SUPREME SUPER NASYA OIL (1 OZ)",
+         "name": "Sidha Soma Supreme Super Nasya Oil (1 Oz)",
          "description": "May help to relieve congestion, tension, tightness in the neck, and clear the mind. Use 3 to 5 drops in each nostril, twice a day, or as directed by your Ayurvedic healthcare professional. Consult with your Healthcare professional prior to use. Not recommended for children under 10 years of age.",
          "price": 14.00,
          "category": 3,
@@ -227,7 +227,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123470",
-         "name": "SIDHA SOMA SUPREME BHRINGARAJ OIL (4 OZ)",
+         "name": "Sidha Soma Supreme Bhringaraj Oil (4 Oz)",
          "description": "Traditionally is massaged into the scalp and feet before bed. Its used is said to promote sound sleep and help to maintain healthy hair and bones. A good general massage oil for pitta; can be diluted with sunflower oil. Massage into your scalp and feet before bed for a better night's sleep, or as directed by your Ayurvedic healthcare professional.",
          "price": 18.50,
          "category": 3,
@@ -243,7 +243,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123471",
-         "name": "MUZDA ENTERPRISES MAHANARAYAN BALM (2 OZ)",
+         "name": "Muzda Enterprises Mahanarayan Balm (2 Oz)",
          "description": "Pain Relief Balm with Mahanarayan oil, beeswax, eucalytus essential oil, camphore essential oil, peppermint essential oil, wintergreen essential oil, frankincence essential oil, menthol essential oil, lemongrass essential oil.",
          "price": 12.25,
          "category": 3,
@@ -259,7 +259,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123472",
-         "name": "MUZDA ENTERPRISES VATA MASSAGE OIL",
+         "name": "Muzda Enterprises Vata Massage Oil",
          "description": "Balancing for vata types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Ashwagandha, Bala, Vidari, Brahmi, Tulsi, Haritaki, Myrhh, Dashamula, Cinnamon oil, Nutmeg oil, Lavender oil.",
          "price": 22.50,
          "category": 3,
@@ -275,7 +275,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123473",
-         "name": "MUZDA ENTERPRISES KAPHA MASSAGE OIL",
+         "name": "Muzda Enterprises Kapha Massage Oil",
          "description": "Balancing for kapha types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Punarnava, Bibhitaki, Mint, Chamomile, Turmeric, Tulsi, Basil, Cinnamon, Clove oil.",
          "price": 18.50,
          "category": 3,
@@ -291,7 +291,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123474",
-         "name": "SIDHA SOMA SUPREME SIDHA SOMA OIL (1 OZ)",
+         "name": "Sidha Soma Supreme Sidha Soma Oil (1 Oz)",
          "description": "Balancing for kapha types, this herbalized oil is in a sesame and almond oil base with Sesame oil, Almond oil, Punarnava, Bibhitaki, Mint, Chamomile, Turmeric, Tulsi, Basil, Cinnamon, Clove oil.",
          "price": 13.50,
          "category": 3,
@@ -307,7 +307,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123475",
-         "name": "BANYAN BOTANICALS MAHANARAYAN OIL (4 OZ)",
+         "name": "Banyan Botanicals Mahanarayan Oil (4 Oz)",
          "description": "Our Mahanarayan Oil is based on an ancient Ayurvedic recipe that delivers powerful muscle and joint targeting herbs in a base of certified organic sesame oil. A nourishing and strengthening oil with rejuvenating qualities, it is used by gently massaging into sore muscles and tendons to bring warmth to the area.",
          "price": 12.00,
          "category": 3,
@@ -323,7 +323,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123476",
-         "name": "BANYAN BOTANICALS ASHWAGANDHA TABLETS",
+         "name": "Banyan Botanicals Ashwagandha Tablets",
          "description": "Rejuvenative for vata and kapha types; promotes vitality and strength. 90 tablets [500 mg] Each 500 mg tablet contains: Organic Ashwagandha root (Withania somnifera).",
          "price": 22.00,
          "category": 4,
@@ -339,7 +339,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123477",
-         "name": "BANYAN BOTANICALS JOINT SUPPORT TABLETS",
+         "name": "Banyan Botanicals Joint Support Tablets",
          "description": "The main ingredients in Joint Support, guggulu and boswellia, have been used for hundreds of years to support joint health. These herbs are deeply-penetrating resins that detoxify, lubricate, and soothe the joint tissues. Joint Support also contains nourishing herbs that help rejuvenate the bones, cartilage, and muscles.",
          "price": 19.00,
          "category": 4,
@@ -355,7 +355,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123478",
-         "name": "BANYAN BOTANICALS LIVER FORMULA TABLETS",
+         "name": "Banyan Botanicals Liver Formula Tablets",
          "description": "Liver Formula is an excellent detoxifier and rejuvenative for the liver. It is a powerful combination of bitter herbs that acts as a natural purgative to cleanse the liver of accumulated natural toxins. This energetically cooling formula pacifies pitta and helps support the healthy production of bile. These herbs nourish and strengthen the liver tissues, promoting proper digestion of fat and a healthy metabolism. Liver Formula supports optimal liver function, which is an important component in overall health and well-being.",
          "price": 19.00,
          "category": 4,
@@ -371,8 +371,8 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123479",
-         "name": "BANYAN BOTANICALS MENTAL CLARITY TABLETS",
-         "description": "Promotes memory and intelligence. Each 500 mg tablet contains: Brahmi leaf (Centella asiatica)**, Bacopa herb (Bacopa monniera)**, Bhringaraj leaf (Eclipta alba)*, Passionflower herb (Passiflora incarnata)**, Shankhapushpi herb (Evolvulus alsinoides)**, Ashwagandha root (Withania somnifera)**, Vidari Kanda root (Ipomoea digitata)**, Skullcap herb (Scutellaria lateriflora)**, Pippali fruit (Piper longum)**, Nutmeg seed (Myristica fragrans)**, Cardamom seed (Elettaria cardomomum)**",
+         "name": "Banyan Botanicals Mental Clarity Tablets",
+         "description": "Promotes memory and intelligence. Each 500 mg tablet contains: Brahmi leaf (Centella asiatica), Bacopa herb (Bacopa monniera), Bhringaraj leaf (Eclipta alba), Passionflower herb (Passiflora incarnata), Shankhapushpi herb (Evolvulus alsinoides), Ashwagandha root (Withania somnifera), Vidari Kanda root (Ipomoea digitata), Skullcap herb (Scutellaria lateriflora), Pippali fruit (Piper longum), Nutmeg seed (Myristica fragrans), Cardamom seed (Elettaria cardomomum)",
          "price": 19.00,
          "category": 4,
          "rating": 4.5,
@@ -387,8 +387,8 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123480",
-         "name": "BANYAN BOTANICALS TRIPHALA TABLETS",
-         "description": "Assists natural cleansing *Gently maintains regularity * Nourishes and rejuvenates the tissues * Supports healthy digestion and absorption *Supports the proper functions of the digestive, circulatory, and respiratory systems *Natural antioxidant*.Triphala is recommended and used more than any other Ayurvedic herbal formulation. Popular for its unique ability to gently cleanse and detoxify the system while simultaneously replenishing and nourishing it, this traditional formula supports the proper functions of the digestive, circulatory, and respiratory systems.",
+         "name": "Banyan Botanicals Triphala Tablets",
+         "description": "Assists natural cleansing Gently maintains regularity  Nourishes and rejuvenates the tissues  Supports healthy digestion and absorption Supports the proper functions of the digestive, circulatory, and respiratory systems Natural antioxidant.Triphala is recommended and used more than any other Ayurvedic herbal formulation. Popular for its unique ability to gently cleanse and detoxify the system while simultaneously replenishing and nourishing it, this traditional formula supports the proper functions of the digestive, circulatory, and respiratory systems.",
          "price": 18.00,
          "category": 4,
          "rating": 4.5,
@@ -403,7 +403,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123481",
-         "name": "BANYAN BOTANICALS KUTKI TINCTURE (1 OZ)",
+         "name": "Banyan Botanicals Kutki Tincture (1 Oz)",
          "description": "Supports proper function of the liver and immune system.",
          "price": 12.00,
          "category": 5,
@@ -419,7 +419,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123482",
-         "name": "BANYAN BOTANICALS NEEM TINCTURE (1 OZ)",
+         "name": "Banyan Botanicals Neem Tincture (1 Oz)",
          "description": "Detoxification for pitta and kapha",
          "price": 12.00,
          "category": 5,
@@ -435,7 +435,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123483",
-         "name": "SIDHA SOMA SUPREME SWEET MEMORY EXTRACT (1 FL OZ)",
+         "name": "Sidha Soma Supreme Sweet Memory Extract (1 Fl Oz)",
          "description": "Promotes clarity of perception, conscious capacity and learning ability.",
          "price": 14.00,
          "category": 5,
@@ -451,8 +451,8 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123484",
-         "name": "BANYAN BOTANICALS TRIPHALA TINCTURE (1 OZ)",
-         "description": "Assists natural cleansing *Gently maintains regularity * Nourishes and rejuvenates the tissues * Supports healthy digestion and absorption *Supports the proper functions of the digestive, circulatory, and respiratory systems *Natural antioxidant*",
+         "name": "Banyan Botanicals Triphala Tincture (1 Oz)",
+         "description": "Assists natural cleansing Gently maintains regularity  Nourishes and rejuvenates the tissues  Supports healthy digestion and absorption Supports the proper functions of the digestive, circulatory, and respiratory systems Natural antioxidant",
          "price": 14.00,
          "category": 5,
          "rating": 4.5,
@@ -466,9 +466,9 @@
       "pk": 30,
       "model": "products.product",
       "fields": {
-         "name": "FACIAL REJUVENTATION MASSAGE",
+         "name": "Facial Rejuventation Massage",
          "description": "Over time dietary & lifestyle choices, tension and expression lines from habitual thoughts and emotions can take their toll on our skin. This treatment encourages the flow of oxygen & nutrients to the skin, stimulates the production of collagen and elastin and frees constrictions within the facial muscles and connective tissue.treatment-01Each session begins with relaxation and activation of specific acupressure points on the face. Then massage movements with varying degrees of pressure detect areas of tension and encourage letting go of habitual facial expressions. Smoothing techniques remove dead skin cells and ‘iron out’ fine lines and wrinkles. Deeper techniques release restrictions in the connective tissue of the dermis, lift the underlying facial muscles and encourage the flow of nutrients to skin. The session concludes with lymphatic drainage and scalp massage. Some rose serum can be applied at this stage. The gentle, repetitive and targeted moves induce a rapid relaxation response making this a profoundly relaxing treatment, helping to restore balance to the nervous system",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Lessens fine and habitual expression lines</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Reduces under-eye bags and puffiness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Tones and firms facial muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Increases elasticity and improves skin tone</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">Lessens fine and habitual expression lines</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Reduces under-eye bags and puffiness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Tones and firms facial muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Increases elasticity and improves skin tone</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
          "price": 70.00,
          "rating": 5.0,
          "is_a_treatment": "True",
@@ -482,9 +482,9 @@
       "pk": 31,
       "model": "products.product",
       "fields": {
-         "name": "ABHYANGA MASSAGE - WARM HERBAL OIL MASSAGE",
+         "name": "Abhyanga Massage - Warm Herbal Oil Massage",
          "description": "According to the Ayurveda aches, pain and stiffness occur when energy is blocked, through this massage blockages are removed enabling the body to come bactreatment-01k into harmony, to detoxify and function normally. During this full body massage warm therapeutic oils suited to your unique constitution will be lavishly applied. This flowing massage stimulates blood and lymphatic circulation, strengthens the immune system, nourishes muscles and joints, decongests and detoxifies, and soothes and rejuvenates the nervous system. Treatment concludes with a soothing head and neck massage",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Lower blood pressure</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Improve skin health</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Reduce muscle stiffness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes lymphatic drainage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*increase energy and alertness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*delay age-related changes</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">Lower blood pressure</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Releases tension form surrounding muscles</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Improve skin health</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Reduce muscle stiffness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Promotes lymphatic drainage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">increase energy and alertness</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">delay age-related changes</span></li>\r\n\t</ul>",
          "price": 90.00,
          "rating": 5.0,
          "is_a_treatment": "True",
@@ -498,9 +498,9 @@
       "pk": 32,
       "model": "products.product",
       "fields": {
-         "name": "MARMA MASSAGE - PRESSURE POINT MASSAGE",
+         "name": "Marma Massage - Pressure Point Massage",
          "description": "Marma massage is the most direct method of harmonizing prana/energy in the physical body of another person: it has the ability to awaken the healing power. This is a deeply nourishing and grounding treatment; it releases deep seated tension allowing the energies of the body to come back into harmony.During this full body massage special emphasis is given to the marma points, pressure points that transmit electro-magnetic energy through all the organs and systems of the body.  Using warm therapeutic oils, invigorating strokes will simultaneously awaken and relax the muscles while a more precise pressure stimulates the “marmas” (points throughout the body where nerves, blood, vessels, muscles, ligaments, joints and bones unite).",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*All the benefit of traditional massage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Strengthens the organ systems and tissues</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Regenerates tissue</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves physical and mental blockages of energy</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps remove excess ama (toxins)</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Encourages good sleep</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps to release blocked energy helping prevent disease</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Helps easy flow of energy through the energy channels.</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">All the benefit of traditional massage</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Strengthens the organ systems and tissues</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Regenerates tissue</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Relieves physical and mental blockages of energy</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Helps remove excess ama (toxins)</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Encourages good sleep</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Helps to release blocked energy helping prevent disease</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Helps easy flow of energy through the energy channels.</span></li>\r\n\t</ul>",
          "price": 75.00,
          "rating": 5.0,
          "is_a_treatment": "True",
@@ -514,9 +514,9 @@
       "pk": 33,
       "model": "products.product",
       "fields": {
-         "name": "SHIRODHARA HEAD MASSAGE",
+         "name": "Shirodhara Head Massage",
          "description": "This is a great treatment for most ailments but especially those related to the head, nervous and endocrine systems. It has been traditionally shown to help with fatigue, mental exhaustion, depression, stress, anxiety, insomnia, headache and excessive thinking. It restores the nerves, releases stored emotions, and purifies the mind.In conjunction with a head and neck massage this treatment is administered by gently and methodically pouring warm herbal oil over the forehead and third eye. This continuous flow of oil is profoundly relaxing and calming to the mind, body and spirit. It is one of the most powerful of all the ancient ayurvedic treatments as it touches deep into the spirit and helps us to connect with our soul",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Counteracts the Effects of Stress</span></li>\r\n\t<li><span style=\"line-height:1.4em\">* Reduces Anxiety</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Awakens Intuition</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Improves Sleep Quality</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Pacifies Vata Dosha</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">Counteracts the Effects of Stress</span></li>\r\n\t<li><span style=\"line-height:1.4em\"> Reduces Anxiety</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Awakens Intuition</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Improves Sleep Quality</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Pacifies Vata Dosha</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Enhances supply of nutrients to skin cells and promotes better blood and lymphatic circulation</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Generates a glowing look with brighter and more alert eyes</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Promotes a relaxed, more mobile and youthful appearance</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Relieves stress-related symptoms such as headaches, eyestrain and insomnia</span></li>\r\n\t</ul>",
          "price": 80.00,
          "rating": 5.0,
          "is_a_treatment": "True",
@@ -530,9 +530,9 @@
       "pk": 34,
       "model": "products.product",
       "fields": {
-         "name": "PINDA SWEDA - WARM BOLUS MASSAGE",
+         "name": "Pinda Sweda - Warm Bolus Massage",
          "description": "Pinda loosens toxins and relieves disorders such as arthritis, emaciation, weakness of muscular functions, paralysis, dry skin, loss of memory, insomnia, stress, anxiety and stiffness of joints, anaemia, obesity, water retention, heaviness and lethargy of body. It is an excellent relief for many imbalances especially those related to bone, joints, muscles and vata disorders.A heated bolus made either from fresh or dried herbs or rice is used to firmly massage warm herbal oil into the entire body. Like most sweating therapies, pinda sweda helps to awaken cellular memory and facilitate healing through the intense stimulation caused by sweating. In addition to relieving the conditions listed above, pinda sweda will leave you feeling relaxed and blissful. It helps revitalise the entire body, increase energy and mobility, reduce stress and restore appetite and sleep patterns.",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*Reduction in stress and insomnia</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Soothe and restore dry skin</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Stress relief</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*Management of inflammation, swelling and pain</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">Reduction in stress and insomnia</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Soothe and restore dry skin</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Stress relief</span></li>\r\n\t<li><span style=\"line-height:1.4em\">Management of inflammation, swelling and pain</span></li>\r\n\t</ul>",
          "price": 95.00,
          "rating": 5.0,
          "is_a_treatment": "True",
@@ -546,9 +546,9 @@
       "pk": 35,
       "model": "products.product",
       "fields": {
-         "name": "NASYA - HEAD & SINUS TREATMENT WITH FACE MASSAGE",
+         "name": "Nasya - Head & Sinus Treatment With Face Massage",
          "description": "All imbalances which manifest as anxiety, mental disorders, physical tension, eye problems, headaches, congestion or sinusitis are eliminated through the nose. This treatment enhances activity of sense organs and nourishes the mucus membranes in the nasal passages, making them more resilient to allergens and irritants.After a facial steam, face massage and marma point stimulation, a few drops of herbal oil will be applied to each nostril and massaged into the sinuses. The nose is the gateway to the head; therefore this is one of the best ways to bring the effects of herbs to the brain and nervous system.",
-         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">*By regular and proper Nasya therapy, the skin, shoulder, neck, face and chest becomes thick, strong, well developed and bright</span></li>\r\n\t<li><span style=\"line-height:1.4em\">*The body part and sense organs become strong and greying of hair is stopped</span></li>\r\n\t</ul>",
+         "benefit": "<ul>\r\n\t<li><span style=\"line-height:1.4em\">By regular and proper Nasya therapy, the skin, shoulder, neck, face and chest becomes thick, strong, well developed and bright</span></li>\r\n\t<li><span style=\"line-height:1.4em\">The body part and sense organs become strong and greying of hair is stopped</span></li>\r\n\t</ul>",
          "price": 70.00,
          "rating": 5.0,
          "is_a_treatment": "True",

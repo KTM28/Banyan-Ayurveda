@@ -1,0 +1,12 @@
+{% load static %}
+
+<div class="card mb-2">
+    <div class="card-header bg-info text-white">
+        <i class="fas fa-info-circle"></i>
+        Order Info
+    </div>
+    <div class="card-body">
+        <p class="card-text"><strong>Order number:</strong>&nbsp{{ order.order_number }}</p>
+        <p class="card-text"><strong>Date:</strong>&nbsp{{ order.purchase_date }}</p>
+    </div>
+</div>

@@ -1,64 +1,127 @@
 {% load static %}
+{% load cart_tools %}
 
-<div class="col-12 col-md-5 col-lg-4 ml-lg-3">
-    <div class="card order-summary-card">
-        <div class="card-body">
-            <h5 class="card-title text-center text-success">Order Summary ({{ product_count }})</h5>
-            <hr>
-            <div class="scrollable order-summary-items">
-                {% for item in cart_items %}
-                <div class="row">
-                    <div class="col-4 ">
-                        {% if item.product.is_a_treatment %}
-                        <a href="{% url 'service_details' item.product.id %}">
-                            {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
+<div class="card mb-3">
+    <div class="card-title card-header bg-info text-white">
+        <h5><i class="far fa-list-alt"></i> Order Summary </h5>
+    </div>
+    <div class="card-body">
+        <div class="scrollable">
+            {% for item in order.lineitems.all %}
+            <div class="row">
+                <div class="col-4 ">
+                    {% if item.product.is_a_treatment %}
+                    <a href="{% url 'service_details' item.product.id %}">
+                        {% if item.product.image %}
+                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         {% else %}
-                        <a href="{% url 'product_details' item.product.id %}">
-                            {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}"
-                                alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
+                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
                         {% endif %}
-                    </div>
-                    <div class="col-8">
-                        <p class="font-weight-bold">{{ item.product.name }}</p>
-                        {% if item.product.is_a_treatment %}
-                        <p class="small font-weight-bold">Appointment Date and Time:</p>
-                        <p class="small mt-0 bg-light">{{ item.datetime }}</p>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_details' item.product.id %}">
+                        {% if item.product.image %}
+                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         {% else %}
-                        <p class="small font-weight-bold">Qty: {{ item.quantity }}</p>
+                        <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}" alt="{{ product.name }}">
                         {% endif %}
-                        <p class="small"><span class="font-weight-bold text-info">Subtotal:
-                            </span> €{{ item.product.price | calc_subtotal:item.quantity }}
-                        </p>
-                    </div>
+                    </a>
+                    {% endif %}
                 </div>
-                <hr />
-                {% endfor %}
+                <div class="col-8">
+                    <p class="font-weight-bold">{{ item.product.name }}</p>
+                    {% if item.product.is_a_treatment %}
+                    <p class="small font-weight-bold">Appointment Date and Time:</p>
+                    <p class="small mt-0 bg-light">{{ item.datetime }}</p>
+                    {% else %}
+                    <p class="small font-weight-bold">Qty: {{ item.quantity }}</p>
+                    {% endif %}
+                    <p class="small"><span class="font-weight-bold text-info">Subtotal:
+                        </span> €{{ item.product.price | calc_subtotal:item.quantity }}
+                    </p>
+                </div>
             </div>
-        </div>
-        <hr>
-        <div class="mx-2">
-            <a href="{% url 'view_cart' %}" class="btn text-info">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="font-weight-bold">Adjust Cart</span>
-            </a>
-        </div>
-        <div class="m-auto">
-            <p class="small mt-1 mb-1 text-muted">Delivery Cost: €{{ delivery|floatformat:2 }}</p>
-            <p class="lead">Grand Total:
-                <span class="font-weight-bold">€{{ grand_total|floatformat:2 }}</span>
-            </p>
+            <hr />
+            {% endfor %}
         </div>
     </div>
+    <hr>
+    <div class="ml-2">
+        {% if order.delivery_cost > 0 %}
+        <p class="small mt-1 mb-1 text-muted">Delivery Cost: €{{ order.delivery_cost|floatformat:2 }}</p>
+        {% else %}
+        <p class="small mt-1 mb-1 ">Delivery Cost: €0</p>
+        {% endif %}
+        <p class="lead">Grand Total:
+            <span class="font-weight-bold">€{{ order.grand_total|floatformat:2 }}</span>
+        </p>
+    </div>
 </div>
+
+
+{% comment %} <div class="card mb-3">
+    <div class="card-title card-header bg-info text-white">
+        <h5><i class="far fa-list-alt"></i> Order Summary </h5>
+    </div>
+    <div class="table-responsive rounded">
+        <div class="card-body">
+            <table class="table table-sm border">
+                <thead class="bg-light text-dark">
+                    <tr>
+                        <th scope="col">Product Info</th>
+                        <th scope="col"></th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                    </tr>
+                </thead>
+                <div class="scrollable">
+                    {% for item in order.lineitems.all %}
+                    <tr>
+                        <td class="p-2 w-25">
+                            {% if item.product.is_a_treatment %}
+                            <a href="{% url 'service_details' item.product.id %}">
+                                {% if item.product.image %}
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                    alt="{{ product.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg"
+                                    alt="{{ product.name }}">
+                                {% endif %}
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_details' item.product.id %}">
+                                {% if item.product.image %}
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                    alt="{{ product.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{% static 'img/no-image.jpg' %}"
+                                    alt="{{ product.name }}">
+                                {% endif %}
+                            </a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="font-weight-bold">{{ item.product.name }}</p>
+                            {% if item.product.is_a_treatment %}
+                            <p class="small font-weight-bold">Appointment Date and Time:</p>
+                            <p class="small mt-0 bg-light">{{ item.datetime }}</p>
+                            {% else %}
+                            <p class="small font-weight-bold">Qty: {{ item.quantity }}</p>
+                            {% endif %}
+                            <p class="small"><span class="font-weight-bold text-info">Subtotal:
+                                </span> €{{ item.product.price | calc_subtotal:item.quantity }}
+                            </p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </div>
+        </div>
+        </table>
+    </div>
+</div> {% endcomment %}
