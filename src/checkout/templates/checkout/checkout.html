@@ -27,11 +27,15 @@
         {% include 'checkout/includes/order_summary.html' %}
     </div>
 </div>
+
+<div id="loader-wrapper">
+    <span class="loader"><i class="fas fa-5x fa-sync-alt fa-spin text-light"></i></span>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script type="text/javascript" src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
