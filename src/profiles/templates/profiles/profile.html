@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+{% load static %}
+{% block extra_title %}- My Profile {% endblock %}
+
+{% block content%}
+
+<div class="container">
+    <div class="row my-2">
+        <div class="col-12 text-center">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <h6 class="lead text-center">Profile Admin</h6>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <h6 class="lead text-center">My Blogs</h6>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <h6 class="lead text-center">Order History</h6>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
