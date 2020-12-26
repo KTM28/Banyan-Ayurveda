@@ -326,3 +326,96 @@ thead {
   background-color: #F7AE68 !important;
 }
 
+/* --login/register FORM-- */
+
+.main {
+  font-family: 'Playfair+Display', serif;
+  max-width: 95%;
+  width: 500px;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  background-color: #f3725ec5;
+  color: #fff;
+  display: flex;
+  box-shadow: 2px 2px 5px #555;
+}
+
+
+.login-box,
+.register-box {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 30px 30px 30px;
+  box-shadow: 2px 2px 5px #555;
+}
+
+.allauth-form-content input::placeholder {
+  color: #aab7c4;
+}
+
+.allauth-form-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border: 2px solid #f3725ec5;
+  border-bottom: 5px solid #f3725ec5;
+  background-color: #fff;
+  color: #000;
+}
+
+.allauth-form-content input:active,
+.allauth-form-content input:focus,
+.allauth-form-content input:hover {
+  border: 2px solid #f3725ec5;
+  border-bottom: 5px solid #f3725ec5;
+  box-shadow: none;
+}
+
+.allauth-form-content a {
+  text-decoration: none !important;
+  color: #17a2b8;
+}
+
+.allauth-form-content input[type='submit'] {
+  /* --bootstrap button-info properties-- */
+  display: flex;
+  width: min-content;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #17a2b8;
+  color:#fff;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.allauth-form-content label:not([for='id_remember']) {
+  display: none;
+}
+
+.allauth-form-content p {
+  margin-top: 1.5rem;
+}
+
+/* ---Media Queries */
+
+@media (max-width: 991px) {
+  .login-box {
+    padding: 20px 10px 20px 10px;
+  }
+}
+
