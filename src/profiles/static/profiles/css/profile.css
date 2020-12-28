@@ -1,0 +1,42 @@
+/* --Profile-- */
+.border-org {
+    border: 2px solid #f3725ec5;
+}
+
+.bg-minor-theme {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.bg-major-theme {
+    background-color: #f3725ec5;
+    color: #fff;
+}
+
+.border-r {
+    border-radius: 10px;
+}
+
+.profile-info li,
+a {
+    text-decoration: none !important;
+    list-style: none;
+    color: #17a2b8;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#shipping-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+.order-history {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.minor-color {
+    color: #ffc505;
+}
