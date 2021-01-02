@@ -334,6 +334,25 @@ thead {
   width: 500px;
 }
 
+.btn-social {
+  color: #343a40 !important;
+  background-color:#f8f9fa!important;
+  box-shadow: 0 1px 2px 1px #ddd;
+}
+
+#social-link {
+  list-style: none;
+}
+
+
+.btn-social:hover,
+.btn-social:active,
+.btn-social:focus {
+  background-color: #cccccc !important;
+  color:#ffffff !important;
+}
+
+
 .login-header {
   display: flex;
   justify-content: center;

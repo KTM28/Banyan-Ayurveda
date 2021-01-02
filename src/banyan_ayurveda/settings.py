@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = [os.getenv('HOSTNAME'), '787ca0924b09.ngrok.io']
+ALLOWED_HOSTS = [os.getenv('HOSTNAME')]
 
 
 # Application definition
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     
     'tempus_dominus', # Required by Bootstrap tempus_dominus datetime picker
     'landing',

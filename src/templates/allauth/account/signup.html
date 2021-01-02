@@ -6,9 +6,21 @@
 
 {% block inner_content %}
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+
+
+
 <div class="main">
-  <div class="login-header rounded-top">
+
+  <p class="lead">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in <span class="text-success">here</span></a>.{% endblocktrans %}</p>
+  <!--Social account ballot-->
+  <div class="socialaccount_ballot">
+
+    <ul class="socialaccount_providers">
+      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </ul>
+  </div>
+  <div class="login-header rounded-top ">
     <h3 class="text-uppercase text-center my-3">Sign Up</h3>
   </div>
   <!--Register Form-->
@@ -21,6 +33,8 @@
       {% endif %}
       <button class="btn btn-checkout btn-block my-2" type="submit">{% trans "Sign Up" %} &raquo;</button>
     </form>
+
+
   </div>
 </div>
 {% endblock %}
