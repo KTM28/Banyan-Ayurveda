@@ -367,7 +367,7 @@ thead {
 	margin-bottom: 10px;
 }
 
-.contact-form-input
+.contact-form input
 {
 	width: 100%;
 	height: 40px;
@@ -381,12 +381,12 @@ thead {
   border-bottom: 5px solid #f3725ec5;
 }
 
-.contact-form-input::placeholder
+.contact-form input::placeholder
 {
 	color: #aaa;
 }
 
-.contact-form-textarea
+.contact-form textarea
 {
 	width: 100%;
 	height: 130px;
@@ -401,7 +401,7 @@ thead {
 	font-family: 'Poppins', sans-serif;
 }
 
-.contact-form-textarea::placeholder
+.contact-form textarea::placeholder
 {
 	color: #aaa;
 }
