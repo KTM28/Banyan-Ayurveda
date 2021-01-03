@@ -9,19 +9,16 @@
 
 {% get_providers as socialaccount_providers %}
 
-{% if socialaccount_providers %}
-<p class="lead">{% blocktrans with site.name as site_name %}Login below or Create an account <a
-    href="{{ signup_url }}"><span class="text-success">here</span></a>{% endblocktrans %}</p>
 
-
-
-
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
 <div class="main">
+
+  {% if socialaccount_providers %}
+  <p class="lead">{% blocktrans with site.name as site_name %}Login below or Create an account <a
+      href="{{ signup_url }}"><span class="text-success">here</span></a>{% endblocktrans %}</p>
+  {% else %}
+  <p>{% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  {% endif %}
   <!--Social account ballot-->
   <div class="socialaccount_ballot">
 
