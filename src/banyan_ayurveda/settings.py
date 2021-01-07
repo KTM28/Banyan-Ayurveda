@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
+    'blog',
 
     # Other
     'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -170,6 +172,21 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# 3rd party apps settings
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'lineheight'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'Image', 'Table'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        'width': 'auto'
+    }
+}
 
 
 # Stripe
