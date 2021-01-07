@@ -31,4 +31,4 @@ class BlogUpdateView(UpdateView):
 
 class BlogDeleteView(DeleteView):
     model = Blog
-    
+    success_url = '/blog'
