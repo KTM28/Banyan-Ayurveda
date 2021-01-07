@@ -93,8 +93,12 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'banyanayurveda@somemail.com'
+
+# Email Settings
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'banyanayurveda@somemail.com'
+
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 

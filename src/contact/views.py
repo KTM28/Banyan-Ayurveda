@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from .forms import ContactForm
 
+
 def contact(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
@@ -25,7 +26,7 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     else:
-            contact_form = ContactForm()
+        contact_form = ContactForm()
     context = {
             'contact_form': contact_form,
             'api_key': settings.GOOGLE_MAP_API_KEY,
