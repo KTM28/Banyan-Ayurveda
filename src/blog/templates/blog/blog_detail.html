@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}- Blog| {{ view_type|title }} {% endblock %}
+{% block content %}
+
+
+<h1>Blog Detail View</h1>
+{{object.title}}
+{{object.content | safe}}
+
+{% endblock content  %}
