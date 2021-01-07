@@ -1,5 +1,8 @@
 from django.db import models
+from django.utils.text import slugify
+from django.db.models.signals import pre_save
 from profiles.models import User
+from django.shortcuts import reverse
 
 from ckeditor.fields import RichTextField
 
@@ -23,6 +26,35 @@ class Blog(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True)
 
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('blog:detail', kwargs={'slug': self.slug})
+
+def create_slug(instance, new_slug=None):
+    """Slugifys the title, if slug exists it adds a id to make it unique
+    (Logic source: 
+    https://www.codingforentrepreneurs.com/blog/a-unique-slug-generator-for-django.)"""
+    
+    if new_slug is not None:
+        slug = new_slug
+    else:
+        slug = slugify(instance.title)
+    query_set = Blog.objects.filter(slug=slug)
+    query_set_exists = query_set.exists()
+    if query_set_exists:
+        new_slug = str.format (slug, query_set.first().id)
+        return create_slug(instance, new_slug=new_slug)
+    return slug
+
+
+def post_save_blog_receiver(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = create_slug(instance)
+
+
+pre_save.connect(post_save_blog_receiver, sender=Blog)
 
 
 
