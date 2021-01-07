@@ -27,7 +27,16 @@ class BlogCreateView(CreateView):
         return context
 
 class BlogUpdateView(UpdateView):
+    form_class = BlogForm
     model = Blog
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            'view_type': 'update'
+        })
+        return context
+
 
 class BlogDeleteView(DeleteView):
     model = Blog
