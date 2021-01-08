@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import UserProfile
 from .forms import  UserProfileForm
-
+from blog.models import Blog
+from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
 
@@ -12,15 +14,20 @@ def profile(request):
 
     form = UserProfileForm(instance=profile)
     orders=profile.orders.all().order_by('-purchase_date')
-    
+    user_blog = Blog.objects.filter(
+            author=request.user).order_by('-publish_date')
+
+
     template = 'profiles/profile.html'
     context = {
         'profile': profile,
         'orders': orders,
+        'user_blog': user_blog,
     }
 
     return render(request, template, context)
 
+@login_required
 def shipping_info(request):
     """Display User Shipping details"""
     
@@ -42,7 +49,7 @@ def shipping_info(request):
 
     return render(request, template, context)
 
-
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 

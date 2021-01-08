@@ -7,6 +7,7 @@ from blog.views import (
     BlogDeleteView,
     CategoryView,
     BlogSearchView,
+    BlogAuthorProfileView,
 )
 
 app_name = 'blog'
@@ -19,4 +20,5 @@ urlpatterns = [
     path('<slug>/update/', BlogUpdateView.as_view(), name='update'),
     path('<slug>/delete/',  BlogDeleteView.as_view(), name='delete'),
     path('category/<str:category>/', CategoryView, name='category'),
+    path('author/<int:pk>/', BlogAuthorProfileView.as_view(), name='author'),
 ]

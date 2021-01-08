@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.models import User
+from profiles.models import UserProfile
 from django.contrib import messages
 from django.db.models import Q
 from django.views import View
@@ -72,6 +74,7 @@ class BlogDeleteView(DeleteView):
 
 
 class BlogSearchView(View):
+        template_name = 'blog/blog_search.html'
 
         def get(self, request, *args, **kwargs):
             blogs = Blog.objects.all()
@@ -92,3 +95,18 @@ class BlogSearchView(View):
                 'blog_category_menu': blog_category_menu,
             }
             return render(request, 'blog/blog_search.html', context)
+
+class BlogAuthorProfileView(View):
+    model = UserProfile
+    template_name = 'blog/blog_author.html'
+    context_object_name = 'user'
+
+    def get(self, request, *args, **kwargs):
+        page_user = get_object_or_404(User, id=self.kwargs['pk'])
+        user_blog = Blog.objects.filter(
+            author=page_user.id).order_by('-publish_date')
+        context = {
+            'page_user': page_user,
+            'user_blog': user_blog,
+        }
+        return render(request, 'blog/blog_author.html', context)

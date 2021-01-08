@@ -40,14 +40,17 @@
         </div>
 
         <!--Blog category display-->
-        <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
             <ul>
                 {% for blog in blog_category %}
                 <a href="{{ blog.get_absolute_url }}">
                     <div class="card blog-card mb-3 text-dark">
                         <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ blog.title }} | {{ blog.category}}</h5>
+                        <div class="card-body blog-content">
+                            <h5 class="card-title text-center text-info">{{ blog.title }} |
+                                <small>{{ blog.category }}</small></h5>
+                            <a href="{% url 'blog:author' blog.author.id %}" class="card-text text-success"><i
+                                    class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}</a>
                             <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
                             <p class="card-text">
                                 <span>View</span>

@@ -22,9 +22,7 @@ body {
   display: grid;
 }
 
-a {
-  text-decoration: none !important;
-}
+
 
 /* ------NAVBAR------ */
 
@@ -539,7 +537,7 @@ thead {
 }
 
 
-#blog-container a {
+.blog-container a {
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
 }
@@ -573,9 +571,6 @@ thead {
   width: 23%;
 }
 
-.list-group li {
-
-}
 
 /* ---Media Queries */
 

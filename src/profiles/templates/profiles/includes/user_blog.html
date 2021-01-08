@@ -1,0 +1,15 @@
+ {% load static %}
+
+ <div class="card" style="width: 18rem;">
+     <ul class="list-group list-group-flush">
+         {% for blog in user_blog %}
+         <li class="list-group-item">
+             <div class="card-body">
+                 <a href="{{ blog.get_absolute_url }}"><h6>{{ blog.title|title }} <small><i class="fas fa-tag"></i>&nbsp{{ blog.category }}</small></h6></a><br>
+                 <small class="card-text">Comment</small>
+                 <small class="card-text">Like</small>
+             </div>
+         </li>
+         {% endfor %}
+     </ul>
+ </div>
