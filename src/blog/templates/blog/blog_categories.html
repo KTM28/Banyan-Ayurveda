@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}- Blog|categories{% endblock %}
+{% block content %}
+
+<div class="container my-2">
+    <div class="row">
+
+        <!--Blog Category Menu-->
+        <div class="col-lg-4 col-md-4 col-sm-12 mb-2 ">
+            <div class="">
+                <ul class="list-group list-inline">
+                    <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
+                        aria-current="true">
+                        Categories
+                    </li>
+                    {% for item in blog_category_menu %}
+                    <li><a href="{% url 'blog:category' item %}"
+                            class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!--Blog category display-->
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <ul>
+                {% for blog in blog_category %}
+                <a href="{{ blog.get_absolute_url }}">
+                    <div class="card blog-card mb-3">
+                        <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ blog.title }} | {{ blog.category}}</h5>
+                            <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
+                            <p class="card-text">
+                                <span>View</span>
+                                <span>Likes</span>
+                                <span>Comment</span>
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

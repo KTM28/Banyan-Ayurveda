@@ -2,25 +2,46 @@
 {% load static %}
 {% block extra_title %}- Blog{% endblock %}
 {% block content %}
-
-<div class="container">
-    <div class="b-container">
-        <h1 class="text-center">blog</h1>
-        {% for object in object_list %}
-        <a href="{{ object.get_absolute_url }}">
-            <div class="card blog-card mb-3">
-                <img src="{{ object.thumbnail.url}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ object.title }}</h5>
-                    <p class="card-text">{{ object.content|safe |truncatechars:120 }}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+<div class="container my-2">
+    <div class="row">
+        <!--Blog Category Menu-->
+        <div class="col-lg-4 col-md-4 col-sm-12 mb-2 ">
+            <div>
+                <ul class="list-group list-inline">
+                    <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
+                        aria-current="true">
+                        Categories
+                    </li>
+                    {% for item in blog_category_menu %}
+                    <li><a href="{% url 'blog:category' item %}"
+                            class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
-        </a>
-        {% endfor %}
+        </div>
+        <!--Blog List-->
+        <div id="blog-container" class="col-lg-8 col-md-8 col-sm-12">
+            {% for blog in blogs %}
+            <a href="{{ blog.get_absolute_url }}">
+                <div class="card blog-card mb-3 text-dark">
+                    <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ blog.title }} | <small>{{ blog.category }}</small></h5>
+                        <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
+                        <p class="card-text">
+                            <span>View</span>
+                            <span>Likes</span>
+                            <span>Comment</span>
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
 
+        </div>
     </div>
-
 </div>
 
 {% endblock %}
