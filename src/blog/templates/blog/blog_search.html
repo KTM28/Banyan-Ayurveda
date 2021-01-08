@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}- Blog|categories{% endblock %}
+{% block extra_title %}- Blog|Search{% endblock %}
 {% block content %}
+<div class="container">
 
-<div class="container my-2">
     <!--Search Form-->
     <div class="col-sm-12 col-md-6 mx-auto col-lg-4 my-3 py-1 py-lg-0">
         <form method="GET" action="{% url 'blog:search' %}">
@@ -20,11 +20,12 @@
             </div>
         </form>
     </div>
+    <h3 class="text-center">Search Results</h3>
 
     <div class="row">
         <!--Blog Category Menu-->
         <div class="col-lg-4 col-md-4 col-sm-12 mb-2 ">
-            <div class="">
+            <div>
                 <ul class="list-group list-inline">
                     <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
                         aria-current="true">
@@ -38,29 +39,38 @@
                 </ul>
             </div>
         </div>
-
-        <!--Blog category display-->
-        <div class="col-lg-8 col-md-8 col-sm-12">
-            <ul>
-                {% for blog in blog_category %}
-                <a href="{{ blog.get_absolute_url }}">
-                    <div class="card blog-card mb-3 text-dark">
-                        <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ blog.title }} | {{ blog.category}}</h5>
-                            <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
-                            <p class="card-text">
-                                <span>View</span>
-                                <span>Likes</span>
-                                <span>Comment</span>
-                            </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
+        <!--Blog List-->
+        <div id="blog-container" class="col-lg-8 col-md-8 col-sm-12">
+            {% for blog in blogs %}
+            <a href="{{ blog.get_absolute_url }}">
+                <div class="card blog-card mb-3 text-dark">
+                    <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ blog.title }} | <small>{{ blog.category }}</small></h5>
+                        <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
+                        <p class="card-text">
+                            <span>View</span>
+                            <span>Likes</span>
+                            <span>Comment</span>
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
-                </a>
-                {% endfor %}
-            </ul>
+                </div>
+            </a>
+            {% empty %}
+            <div class="text-center blog-card">
+                <div class="card-body">
+                    <h5 class="card-title">Sorry, Nothing Found</h5>
+                    <p class="card-text">We could not find "{{ search_term|title }}" in any of our blog
+                        post.</p>
+                    <a href="{% url 'blog:list' %}" class="btn btn-info">Back to Blogs</a>
+                </div>
+            </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>
+
+
 {% endblock %}

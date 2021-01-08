@@ -1,4 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+from django.db.models import Q
+from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Blog, BlogView, Like, Comment, Category
 from .forms import BlogForm
@@ -53,6 +56,7 @@ class BlogCreateView(CreateView):
 class BlogUpdateView(UpdateView):
     form_class = BlogForm
     model = Blog
+    success_url = '/blog/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -65,3 +69,26 @@ class BlogUpdateView(UpdateView):
 class BlogDeleteView(DeleteView):
     model = Blog
     success_url = '/blog'
+
+
+class BlogSearchView(View):
+
+        def get(self, request, *args, **kwargs):
+            blogs = Blog.objects.all()
+            blog_category_menu = Category.objects.all()
+            query = None
+
+            if 'q' in request.GET:
+                query= request.GET['q']
+                if not query:
+                    messages.error(request, "You didn't enter any search criteria!")
+                    return redirect(reverse('blog:list'))
+                search = Q(title__icontains=query) | Q(content__icontains=query)
+                blogs = blogs.filter(search)
+    
+            context = {
+                'search_term': query,
+                'blogs': blogs,
+                'blog_category_menu': blog_category_menu,
+            }
+            return render(request, 'blog/blog_search.html', context)
