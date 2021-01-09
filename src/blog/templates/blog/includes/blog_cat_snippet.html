@@ -1,0 +1,28 @@
+{% load static %}
+
+<!--Blog Search Form / create a blog link -->
+
+<div class="col-lg-4 col-md-4 col-sm-12 mb-2">
+    {% if user.is_authenticated %}
+    <div class="text-center my-2">
+        <a class="text-info text-uppercase letter-space" href="{% url 'blog:create' %}"><i
+                class="fas fa-plus-square fa-lg add-blog"></i>&nbspAdd a
+            Blog</a>
+    </div>
+    {% endif %}
+    <div>
+        <ul class="list-group list-inline">
+            <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
+                aria-current="true">
+                Categories
+            </li>
+            {% for item in blog_category_menu %}
+            <li><a href="{% url 'blog:category' item %}"
+                    class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}<span
+                        class="text-dark font-weight-bolder">
+                        &gt;</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

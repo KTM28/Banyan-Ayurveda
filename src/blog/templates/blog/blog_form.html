@@ -4,13 +4,31 @@
 
 
 {% block content  %}
+
+<div class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ view_type|title }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 <div class="container">
+    <h1 class="text-info text-center">{{ view_type|title }} a Blog</h1>
     <form class="" action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.media }}
         {{form |crispy}}
-        <button class="text-uppercase btn btn-info" type="submit">{{ view_type|title }}
+        <button class="text-uppercase btn btn-info block-btn" type="submit"><i
+                class="mr-3 fas fa-plus fa-lg"></i>&nbsp{{ view_type|title }}
         </button>
     </form>
+    <span><a href="{% url 'blog:list' %}" class="btn cancelbtn my-2 text-dark text-uppercase ">
+            <i class="mr-3 fas fa-times-circle fa-lg "></i>Cancel</a></span>
 </div>
 {% endblock %}

@@ -1,0 +1,17 @@
+ {% load static %}
+
+<!--Search Form-->
+<div class="col-sm-12 col-md-6 mx-auto col-lg-4 my-2 py-1 py-lg-0">
+    <form method="GET" action="{% url 'blog:search' %}">
+        <div class="input-group w-100">
+            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search Blogs">
+            <div class="input-group-append">
+                <button class="form-control btn search-btn border" type="submit">
+                    <span class="icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

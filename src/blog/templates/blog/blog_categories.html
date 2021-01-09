@@ -3,41 +3,27 @@
 {% block extra_title %}- Blog|categories{% endblock %}
 {% block content %}
 
+<div class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ category }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <div class="container my-2">
     <!--Search Form-->
-    <div class="col-sm-12 col-md-6 mx-auto col-lg-4 my-3 py-1 py-lg-0">
-        <form method="GET" action="{% url 'blog:search' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q"
-                    placeholder="Search Blogs">
-                <div class="input-group-append">
-                    <button class="form-control btn search-btn border" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+    {% include 'blog/includes/blog_search_form.html' %}
 
     <div class="row">
         <!--Blog Category Menu-->
-        <div class="col-lg-4 col-md-4 col-sm-12 mb-2 ">
-            <div class="">
-                <ul class="list-group list-inline">
-                    <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
-                        aria-current="true">
-                        Categories
-                    </li>
-                    {% for item in blog_category_menu %}
-                    <li><a href="{% url 'blog:category' item %}"
-                            class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        {% include 'blog/includes/blog_cat_snippet.html' %}
 
         <!--Blog category display-->
         <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
@@ -64,7 +50,8 @@
                                         class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
                             </p>
                         </div>
-                       <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}} ago</small></p>
+                        <p class="card-text"><small class="text-muted font-italic">Posted
+                                {{ blog.publish_date|timesince}} ago</small></p>
                     </div>
                 </div>
                 {% endfor %}

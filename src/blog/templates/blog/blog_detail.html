@@ -2,6 +2,19 @@
 {% load static %}
 {% block extra_title %}- Blog| Detail {% endblock %}
 {% block content %}
+<div class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ blog.title }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
 <div class="container blog-container">
     <div class="row">
@@ -9,19 +22,24 @@
             <figure> <img src="{{ blog.thumbnail.url }}" class="img-fluid" alt=""></figure>
         </div>
     </div>
+    {% if user.is_authenticated and user == blog.author %}
+    <div class="col-sm-6">
+        <span><a class="font-small ml-3 mb-0 text-success" href="{{ blog.get_update_url }}"><i
+                    class="far fa-edit"></i>&nbspEdit</a></span>
+        <span class="font-small mb-0">/</span>
+        <span><a class="font-small mb-0 text-danger" href="{{ blog.get_delete_url }}"><i
+                    class="fas fa-trash-alt"></i></i>&nbspDelete</a></span>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-12">
-            <div class="border blog-title bg-info text-white text-center">
+            <div class="border blog-title bg-info text-white text-center pt-2">
                 <h4>{{ blog.title }} | <small class="text-warning">{{ blog.category }}</small></h4>
             </div>
-            <p class="card-text"><small class="text-info font-italic font-weight-bold">Posted
-                    {{ blog.publish_date|timesince}} ago</small></p>
+            <p class="text-dark text-muted">Posted
+                {{ blog.publish_date|timesince}} ago</p>
         </div>
         <div class="col-12">
-            <a href="{% url 'blog:author' blog.author.id %}" class="lead float-left my-1 text-success"><i
-                    class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}
-            </a>
-
             <div
                 class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
                 <span class="post-date text-white"><i class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
@@ -29,6 +47,9 @@
                         class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
                 <span class="post-view text-white"><i class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
             </div>
+            <a href="{% url 'blog:author' blog.author.id %}" class="lead text-center my-1 text-success"><i
+                    class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}
+            </a>
         </div>
     </div>
     <div class="row">
@@ -50,7 +71,6 @@
             <h6>Leave a comment below</h6>
             <form class="" action="" method="POST">
                 {% csrf_token %}
-                {{ form.media }}
                 {{form |crispy}}
                 <button class="text-uppercase btn btn-info block-btn" type="submit"><i class="fas fa-comments"></i>
                     Comment

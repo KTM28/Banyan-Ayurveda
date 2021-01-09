@@ -17,6 +17,26 @@ class BlogForm(forms.ModelForm):
         fields = ('title', 'category', 'content', 'thumbnail')
 
 
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+
+        placeholders = {
+            'title': 'Blog Title',
+            'content': 'Blog Content Here',
+            'thumbnail': 'Blog Image',
+        }
+
+        self.fields['title'].widget.attrs['autofocus'] = True
+        self.fields['category'].widget.attrs['choices'] = choices_list
+
+        for field in self.fields:
+            if field != 'category':
+                placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].label = False
+
+
 class CommentForm(forms.ModelForm):
     content = forms.CharField(required=True, widget=forms.Textarea(attrs={
         'rows': 3,

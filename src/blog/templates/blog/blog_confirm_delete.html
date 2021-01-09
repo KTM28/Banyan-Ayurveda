@@ -3,6 +3,20 @@
 {% block extra_title %}- Blog{% endblock %}
 {% block content %}
 
+<div class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Confirm Delete</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <div class="container d-flex justify-content-center">
     <div class="b-container">
         <p class="text-red display-2 text-center">Delete Blog </p>
@@ -11,10 +25,14 @@
             {{ object.title|title }} ? </h4>
         <form class="" action="" method="POST">
             {% csrf_token %}
-            <button class="mt-3 w-100 text-bk aw btn btn-danger border border-dark" type="submit"><i
-                    class="mr-3 text-grn fas fa-check fa-lg"></i>Yes 
+            <button class="btn btn-block deletebtn text-white text-uppercase letter-space" type="submit"><i
+                    class="mr-3 text-grn fas fa-check fa-lg"></i>Yes
             </button>
+
         </form>
+
+        <span><a href="{{ blog.get_absolute_url }}" class="btn btn-block cancelbtn my-2 text-dark text-uppercase letter-space">
+                <i class="mr-3 fas fa-times-circle fa-lg "></i>Cancel</a></span>
     </div>
 
 </div>

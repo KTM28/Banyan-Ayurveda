@@ -2,6 +2,20 @@
 {% load static %}
 {% block extra_title %}- Blog|Search{% endblock %}
 {% block content %}
+
+<div class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Search Page</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 <div class="container">
 
     <!--Search Form-->
@@ -24,21 +38,7 @@
 
     <div class="row">
         <!--Blog Category Menu-->
-        <div class="col-lg-4 col-md-4 col-sm-12 mb-2 ">
-            <div>
-                <ul class="list-group list-inline">
-                    <li class="list-group-item list-group-item-action list-group-item-info text-center text-uppercase font-weight-bolder"
-                        aria-current="true">
-                        Categories
-                    </li>
-                    {% for item in blog_category_menu %}
-                    <li><a href="{% url 'blog:category' item %}"
-                            class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+         {% include 'blog/includes/blog_cat_snippet.html' %}
         <!--Blog List-->
         <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
             {% for blog in blogs %}

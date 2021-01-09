@@ -2,10 +2,31 @@
 {% load static %}
 {% block extra_title %}- Blog| Author{% endblock %}
 {% block content %}
-<div class="container my-2">
+<div class="container-fluid py-3">
     <div class="row">
-        <div class="col-12 col-lg-8 my-3 border rounded bg-info text-white mx-auto">
-            <h2 class="text-center">{{ page_user|title }}'s Blogs</h2>
+        <div class="col-12">
+            <nav aria-label="breadcrumb" id="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a href="{% url 'landing' %}" class="pl-2">Home</a></li>
+                    <li class="breadcrumb-item"> <a href="{% url 'blog:list' %}" class="pl-2">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ page_user|title}}'s blog list</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2">
+    {% include 'blog/includes/blog_search_form.html' %}
+
+    <div class="row">
+        <div class="col-12 col-lg-8 my-3 border rounded bg-info text-white mx-auto ">
+            <h2 class="text-center pt-1">{{ page_user|title }}'s Blogs</h2>
+        </div>
+        <div class="text-center col-12 col-lg-8 my-2 mx-auto">
+            <a class="text-info text-uppercase letter-space" href="{% url 'blog:create' %}"><i
+                    class="fas fa-plus-square fa-lg add-blog"></i>&nbspAdd a
+                Blog</a>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 mx-auto blog-container">
             {% for blog in user_blog %}
@@ -27,7 +48,8 @@
                                         class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
                             </p>
                         </div>
-                        <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}} ago</small></p>
+                        <p class="card-text"><small class="text-muted font-italic">Posted
+                                {{ blog.publish_date|timesince}} ago</small></p>
                     </div>
                 </div>
             </a>
