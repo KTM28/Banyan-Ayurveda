@@ -16,12 +16,18 @@
                         <h5 class="card-title text-center text-info">{{ blog.title }} |
                             <small>{{ blog.category }}</small></h5>
                         <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
-                        <p class="card-text">
-                            <span>View</span>
-                            <span>Likes</span>
-                            <span>Comment</span>
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div
+                            class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
+                            <p class="card-text">
+                                <span class="post-date text-white"><i
+                                        class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
+                                <span class="post-comment text-white"><i
+                                        class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
+                                <span class="post-view text-white"><i
+                                        class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
+                            </p>
+                        </div>
+                        <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}} ago</small></p>
                     </div>
                 </div>
             </a>

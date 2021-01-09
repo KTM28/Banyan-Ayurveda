@@ -110,3 +110,16 @@ class BlogAuthorProfileView(View):
             'user_blog': user_blog,
         }
         return render(request, 'blog/blog_author.html', context)
+
+def LikeBlog(request, slug):
+
+    blog = get_object_or_404(Blog, slug=slug)
+    like_queryset = Like.objects.filter(user=request.user, blog=blog)
+
+    if like_queryset.exists():
+        # If there is like in post then take away the like
+        like_queryset[0].delete()
+        return redirect('blog:detail', slug=slug)
+
+    Like.objects.create(user=request.user, blog=blog)
+    return redirect('blog:detail', slug=slug)

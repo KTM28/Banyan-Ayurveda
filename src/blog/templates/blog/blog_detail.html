@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}- Blog| {{ view_type|title }} {% endblock %}
+{% block extra_title %}- Blog| Detail {% endblock %}
 {% block content %}
 
 <div class="container blog-container">
@@ -14,14 +14,16 @@
             <div class="border blog-title bg-info text-white text-center">
                 <h4>{{ blog.title }} | <small class="text-warning">{{ blog.category }}</small></h4>
             </div>
+            <p class="card-text"><small class="text-info font-italic font-weight-bold">Posted {{ blog.publish_date|timesince}} ago</small></p>
         </div>
         <div class="col-12">
             <a  href="{% url 'blog:author' blog.author.id %}" class="lead float-left my-1 text-success"><i class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}
             </a>
-            <div class="float-right border rounded bg-success text-white text-center b-width">
-                <span class="post-date text-white"><i class="far fa-thumbs-up"></i>&nbspLikes |</span>
-                <span class="post-comment text-white"><i class="fas fa-comments"></i>&nbspComments |</span>
-                <span class="post-comment text-white"><i class="far fa-eye"></i>&nbspView</span>
+            
+            <div class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
+                <span class="post-date text-white"><i class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
+                <span class="post-comment text-white"><i class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
+                <span class="post-view text-white"><i class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
             </div>
         </div>
     </div>
@@ -30,19 +32,10 @@
             <div class="blog-content">
                 <p class="blog-text">{{ blog.content | safe }}</p>
             </div>
-            
-            <div class="cs-tags">
-                <a href="#blog_comment" id="">
-                    <div class="tags">
-                        <span>Tags</span>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </a>
+            <hr>
+            <div class="cs-tags delivery-font">
+            <h5>Enjoy this Post? Give it a like</h5>
+               <a class="text-success" href="{{ blog.get_like_url }}"><i class="far fa-thumbs-up fa-lg"></i>&nbsp{{ blog.get_like_count }}</a>
             </div>
         </div>
     </div>

@@ -32,6 +32,24 @@ class Blog(models.Model):
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'slug': self.slug})
 
+    def get_like_url(self):
+        return reverse('blog:like', kwargs={'slug': self.slug})
+
+
+    @property
+    def get_comment_count(self):
+        return self.comment_set.all().count()
+
+    @property
+    def get_view_count(self):
+        return self.blogview_set.all().count()
+
+    @property
+    def get_like_count(self):
+        return self.like_set.all().count()
+
+
+
 def create_slug(instance, new_slug=None):
     """Slugifys the title, if slug exists it adds a id to make it unique
     (Logic source: 
@@ -67,6 +85,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class BlogView(models.Model):
     """To Keep track of blog views."""
