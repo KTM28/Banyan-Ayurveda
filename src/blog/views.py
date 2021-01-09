@@ -36,8 +36,12 @@ def CategoryView(request, category):
 class BlogDetailView(DetailView):
     model = Blog
     
-    def post(self, *args, **kwargs):
-        return redirect("blog:detail", slug=self.get_object())
+    def get_object(self, **kwargs):
+        """Counts the number of authenticated users view the blog."""
+        object = super().get_object(**kwargs)
+        if self.request.user.is_authenticated:
+            BlogView.objects.get_or_create(user=self.request.user, blog=object)
+        return object
 
 class BlogCreateView(CreateView):
     form_class = BlogForm
