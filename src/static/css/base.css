@@ -564,12 +564,20 @@ thead {
   width: 50%;
   margin: auto;
   border-radius: 5px;
-  /* position: absolute; */
 }
 
 .b-width {
   width: 23%;
 }
+
+.blog-hr {
+  background-image: linear-gradient(90deg, #17a2b8, transparent);
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 /* ---Media Queries */
@@ -578,6 +586,10 @@ thead {
   .login-box {
     padding: 20px 10px 20px 10px;
   }
+  .block-btn {
+    display: block;
+    width: 100%;
+}
 }
 
 @media (max-width:768px) {

@@ -14,15 +14,19 @@
             <div class="border blog-title bg-info text-white text-center">
                 <h4>{{ blog.title }} | <small class="text-warning">{{ blog.category }}</small></h4>
             </div>
-            <p class="card-text"><small class="text-info font-italic font-weight-bold">Posted {{ blog.publish_date|timesince}} ago</small></p>
+            <p class="card-text"><small class="text-info font-italic font-weight-bold">Posted
+                    {{ blog.publish_date|timesince}} ago</small></p>
         </div>
         <div class="col-12">
-            <a  href="{% url 'blog:author' blog.author.id %}" class="lead float-left my-1 text-success"><i class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}
+            <a href="{% url 'blog:author' blog.author.id %}" class="lead float-left my-1 text-success"><i
+                    class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}
             </a>
-            
-            <div class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
+
+            <div
+                class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
                 <span class="post-date text-white"><i class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
-                <span class="post-comment text-white"><i class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
+                <span class="post-comment text-white"><i
+                        class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
                 <span class="post-view text-white"><i class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
             </div>
         </div>
@@ -32,12 +36,44 @@
             <div class="blog-content">
                 <p class="blog-text">{{ blog.content | safe }}</p>
             </div>
-            <hr>
-            <div class="cs-tags delivery-font">
-            <h5>Enjoy this Post? Give it a like</h5>
-               <a class="text-success" href="{{ blog.get_like_url }}"><i class="far fa-thumbs-up fa-lg"></i>&nbsp{{ blog.get_like_count }}</a>
+            <div class="delivery-font">
+                <h5>Enjoy this Post? Give it a like</h5>
+                <a class="text-success" href="{{ blog.get_like_url }}"><i
+                        class="far fa-thumbs-up fa-lg"></i>&nbsp{{ blog.get_like_count }}</a>
             </div>
         </div>
     </div>
+    <hr class="blog-hr">
+    {% if request.user.is_authenticated %}
+    <div class="row">
+        <div class="col">
+            <h6>Leave a comment below</h6>
+            <form class="" action="" method="POST">
+                {% csrf_token %}
+                {{ form.media }}
+                {{form |crispy}}
+                <button class="text-uppercase btn btn-info block-btn" type="submit"><i class="fas fa-comments"></i>
+                    Comment
+                </button>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <a href="{% url 'account_login' %}" class="btn btn-checkout block-btn">Login to Comment</a>
+    {% endif %}
+    <hr class="blog-hr">
+    <h4 class="text-uppercase">Comments</h4>
+    <div class="row">
+        {% for comment in blog.comment %}
+        <div class="col-12">
+            <h6 class="mt-0"><i class="fas fa-user-circle fa-2x text-secondary"></i>&nbsp{{ comment.user|title }}</h5>
+                <p class="lead">{{ comment.content }}</p>
+                <small class="text-muted">{{ comment.timestamp|timesince }} ago</small>
+                <hr>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
 </div>
 {% endblock content  %}

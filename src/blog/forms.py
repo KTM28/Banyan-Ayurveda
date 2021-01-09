@@ -15,3 +15,13 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ('title', 'category', 'content', 'thumbnail')
+
+
+class CommentForm(forms.ModelForm):
+    content = forms.CharField(required=True, widget=forms.Textarea(attrs={
+        'rows': 3,
+    }), label="")
+
+    class Meta:
+        model = Comment
+        fields = ('content', )

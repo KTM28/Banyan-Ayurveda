@@ -9,7 +9,7 @@
         {% csrf_token %}
         {{ form.media }}
         {{form |crispy}}
-        <button class="text center mt-3 w-50 text-bk aw btn btn-danger border border-dark" type="submit">{{ view_type|title }}
+        <button class="text-uppercase btn btn-info" type="submit">{{ view_type|title }}
         </button>
     </form>
 </div>

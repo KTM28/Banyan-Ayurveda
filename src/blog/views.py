@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import User
 from profiles.models import UserProfile
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Blog, BlogView, Like, Comment, Category
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 
 class BlogListView(ListView):
@@ -36,12 +37,32 @@ def CategoryView(request, category):
 class BlogDetailView(DetailView):
     model = Blog
     
+    def post(self, *args, **kwargs):
+        """ Add Comment to the Post """
+        form = CommentForm(self.request.POST)
+        if form.is_valid():
+            blog = self.get_object()
+            comment = form.instance
+            comment.user = self.request.user
+            comment.blog = blog
+            comment.save()
+            return redirect("blog:detail", slug=blog.slug)
+        return redirect("blog:detail", slug=self.get_object().slug)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            'form': CommentForm()
+        })
+        return context
+
     def get_object(self, **kwargs):
-        """Counts the number of authenticated users view the blog."""
+        """Counts the number of authenticated users views of the blog."""
         object = super().get_object(**kwargs)
         if self.request.user.is_authenticated:
             BlogView.objects.get_or_create(user=self.request.user, blog=object)
         return object
+
 
 class BlogCreateView(CreateView):
     form_class = BlogForm
@@ -115,6 +136,7 @@ class BlogAuthorProfileView(View):
         }
         return render(request, 'blog/blog_author.html', context)
 
+@ login_required()
 def LikeBlog(request, slug):
 
     blog = get_object_or_404(Blog, slug=slug)

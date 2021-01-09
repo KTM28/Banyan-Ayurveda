@@ -37,6 +37,10 @@ class Blog(models.Model):
 
 
     @property
+    def comment(self):
+        return self.comment_set.all()
+
+    @property
     def get_comment_count(self):
         return self.comment_set.all().count()
 
@@ -47,7 +51,8 @@ class Blog(models.Model):
     @property
     def get_like_count(self):
         return self.like_set.all().count()
-
+    
+    
 
 
 def create_slug(instance, new_slug=None):
