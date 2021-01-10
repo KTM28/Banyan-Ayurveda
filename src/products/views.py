@@ -131,6 +131,21 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+def delete_product(request, product_id):
+    """ A view to allow admin to delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can delete products.')
+        return redirect(reverse('landing'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.discontinued = True
+    product.save()
+    messages.info(request, f'{product.name} was successfully deleted.')
+    
+    return redirect(reverse('products'))
+
+
 def add_service(request):
     """ A view to allow admin to add a service in the store """
     if not request.user.is_superuser:
@@ -190,16 +205,16 @@ def edit_service(request, service_id):
     return render(request, template, context)
 
 
-def delete_product(request, product_id):
-    """ A view to allow admin to delete a product from the store """
+def delete_service(request, service_id):
+    """ A view to allow admin to delete service from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Access denied!\
-            Only store owners can delete products.')
+            Only store owners can delete services.')
         return redirect(reverse('landing'))
-
-    product = get_object_or_404(Product, pk=product_id)
-    product.discontinued = True
-    product.save()
-    messages.info(request, f'{product.name} was successfully deleted.')
     
-    return redirect(reverse('products'))
+    service = get_object_or_404(Product, pk=service_id)
+    service.discontinued = True
+    service.save()
+    messages.info(request, f'{service.name} was successfully deleted.')
+    return redirect(reverse('services'))
+

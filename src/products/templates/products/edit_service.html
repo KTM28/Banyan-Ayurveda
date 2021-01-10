@@ -7,15 +7,18 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mx-auto col-md-6">
-            <h2 class=" mb-4">Service Management</h2>
-            <h5 class="text-muted">Edit a Service</h5>
-            <hr>
+            <h2 class="mb-4 text-center">Service Management</h2>
+            <div class="border blog-title bg-info text-white text-center pt-2">
+            <h5>Edit a Service</h5>
+            </div>
+            <br>
         </div>
     </div>
     <div class="row">
         <!--Product Form-->
         <div class="col-12 col-md-6 mx-auto">
-            <form method="POST" action="{% url 'edit_service' service.id %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_service' service.id %}" class="form mb-2"
+                enctype="multipart/form-data">
                 {{ form.media }}
                 {{ form | crispy }}
                 {% csrf_token %}

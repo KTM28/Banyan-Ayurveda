@@ -4,6 +4,23 @@
 
 {% block content %}
 <div class="container">
+    <div class="row pt-3">
+        <div class="col-12 col-lg-4 mx-auto">
+            {% if request.user.is_superuser %}
+            {% if not product.discontinued %}
+            <p>
+                <a class="text-info lead" href="{% url 'edit_service' service.id %}"><i
+                        class="far fa-edit"></i>&nbspEdit</a> |
+                <a class="text-danger lead" href="{% url 'delete_service' service.id %}"><i
+                        class="fas fa-trash-alt"></i></i>&nbspDelete</a>
+            </p>
+            {% else %}
+            <a class="text-info lead" href="{% url 'edit_service' seervice.id %}"><i
+                    class="far fa-edit"></i>&nbspEdit</a>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
     <div class="row my-3">
         <div class="col-12 col-md-6 col-lg-6 my-4">
             {% if service.image %}
@@ -12,8 +29,7 @@
             </a>
             {% else %}
             <a href="#">
-                <img class="img-fluid service-detail-img" src="{{ MEDIA_URL }}no-image.jpg"
-                    alt="{{ service.name }}">
+                <img class="img-fluid service-detail-img" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ service.name }}">
             </a>
             {% endif %}
         </div>
