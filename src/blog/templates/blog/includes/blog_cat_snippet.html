@@ -19,8 +19,8 @@
             {% for item in blog_category_menu %}
             <li><a href="{% url 'blog:category' item %}"
                     class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold text-white lead">{{ item }}<span
-                        class="text-dark font-weight-bolder">
-                        &gt;</span></a>
+                        class="text-white font-weight-bolder">
+                        <i class="fas fa-long-arrow-alt-right"></i></span></a>
             </li>
             {% endfor %}
         </ul>
