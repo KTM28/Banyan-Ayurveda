@@ -15,13 +15,13 @@
     <div class="row">
         <!--Product Form-->
         <div class="col-12 col-md-6 mx-auto">
-            <form method="POST" action="{% url 'add_service' %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_service' service.id %}" class="form mb-2" enctype="multipart/form-data">
                 {{ form.media }}
                 {{ form | crispy }}
                 {% csrf_token %}
                 <div class="text-right">
-                    <a class="btn cancelbtn" href="{% url 'landing' %}">Cancel</a>
-                    <button class="btn btn-info" type="submit">Add Service</button>
+                    <a class="btn cancelbtn" href="{% url 'services' %}">Cancel</a>
+                    <button class="btn btn-info" type="submit">Update Service</button>
                 </div>
             </form>
         </div>

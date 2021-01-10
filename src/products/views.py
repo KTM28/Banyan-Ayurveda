@@ -157,3 +157,33 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+def edit_service(request, service_id):
+    """ A view to allow admin to edit a service in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can edit services.')
+        return redirect(reverse('landing'))
+    service = get_object_or_404(Product, pk=service_id)
+    
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, request.FILES, instance=service)
+        if form.is_valid():
+            service = form.save(commit=False)
+            service.is_a_treatment = True
+            service.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('service_details', args=[service.id]))
+        else:
+            messages.error(request, 'Failed to update product.\
+                Please ensure the form is valid.')
+    else:
+        form = ServiceForm(instance=service)
+        messages.info(request, f'You are editing {service.name}')
+
+    template = 'products/edit_service.html'
+    context = {
+        'form': form,
+        'service': service,
+    }
+    return render(request, template, context)
