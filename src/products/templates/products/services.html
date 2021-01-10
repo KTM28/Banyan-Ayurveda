@@ -17,18 +17,18 @@
         {% for service in services %}
         <div class="card mb-3 bg-light">
             <div class="row no-gutters">
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     {% if service.image %}
-                    <img class="card-img-top img-responsive" src="{{ service.image.url }}" alt="{{ service.name }}">
+                    <img class="card-img-top img-fluid service-card" src="{{ service.image.url }}" alt="{{ service.name }}">
                     {% else %}
-                    <img class="card-img-top img-responsive" src="{{ MEDIA_URL }}no-image.jpg"
+                    <img class="card-img-top img-fluid service-card" src="{{ MEDIA_URL }}no-image.jpg"
                         alt="{{ service.name }}">
                     {% endif %}
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{ service.name }}</h5>
-                        <p class="card-text service-info">{{ service.description }}</p>
+                        <p class="card-text service-info">{{ service.description | safe }}</p>
                     </div>
                     <div class="card-image-overlay mx-2 my-2">
                         <span class="card-detail-badge">€{{ service.price }}</span>
