@@ -78,6 +78,11 @@ def service_details(request, service_id):
 
 def add_products(request):
     """ Add a Product and Service to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can do that!')
+        return redirect(reverse('landing'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -99,6 +104,11 @@ def add_products(request):
 
 def add_service(request):
     """ Add a Product and Service to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can do that!')
+        return redirect(reverse('landing'))
+        
     if request.method == 'POST':
         form = ServiceForm(request.POST, request.FILES)
         if form.is_valid():
