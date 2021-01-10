@@ -86,43 +86,15 @@ def add_products(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_details', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
         
     template = 'products/add_product.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-def add_service(request):
-    """ Add a Product and Service to the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Access denied!\
-            Only store owners can do that!')
-        return redirect(reverse('landing'))
-
-    if request.method == 'POST':
-        form = ServiceForm(request.POST, request.FILES)
-        if form.is_valid():
-            service = form.save(commit=False)
-            service.is_a_treatment = True
-            form.save()
-            messages.success(request, 'Successfully added Service!')
-            return redirect(reverse('add_product'))
-        else:
-            messages.error(request, 'Failed to add service. Please ensure the form is valid.')
-    else:
-        form = ServiceForm()
-        
-    template = 'products/add_service.html'
     context = {
         'form': form,
     }
@@ -158,6 +130,35 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
+def add_service(request):
+    """ A view to allow admin to add a service in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can do that!')
+        return redirect(reverse('landing'))
+
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, request.FILES)
+        if form.is_valid():
+            service = form.save(commit=False)
+            service.is_a_treatment = True
+            form.save()
+            messages.success(request, 'Successfully added Service!')
+            return redirect(reverse('service_details', args=[service.id]))
+        else:
+            messages.error(request, 'Failed to add service. Please ensure the form is valid.')
+    else:
+        form = ServiceForm()
+        
+    template = 'products/add_service.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
 def edit_service(request, service_id):
     """ A view to allow admin to edit a service in the store """
     if not request.user.is_superuser:
@@ -187,3 +188,18 @@ def edit_service(request, service_id):
         'service': service,
     }
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ A view to allow admin to delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Access denied!\
+            Only store owners can delete products.')
+        return redirect(reverse('landing'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.discontinued = True
+    product.save()
+    messages.info(request, f'{product.name} was successfully deleted.')
+    
+    return redirect(reverse('products'))

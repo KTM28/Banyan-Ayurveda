@@ -14,6 +14,19 @@
             {% include 'includes/search_form.html' %}
         </div>
     </div>
+    {% if request.user.is_superuser %}
+    {% if not product.discontinued %}
+    <p>
+        <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i
+                    class="far fa-edit"></i>&nbspEdit</a> |
+        <a class="text-danger lead" href="{% url 'delete_product' product.id %}"><i
+                    class="fas fa-trash-alt"></i></i>&nbspDelete</a>
+    </p>
+    {% else %}
+    <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i
+                    class="far fa-edit"></i>&nbspEdit</a>
+    {% endif %}
+    {% endif %}
     <div class="row" id="productAll">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -37,7 +50,7 @@
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
-                <p class="mt-3">{{ product.description }}</p>
+                <p class="mt-3">{{ product.description | safe }}</p>
                 <!--form-->
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
@@ -46,20 +59,21 @@
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
-                                    <input class="form-control" type="number" name="quantity" value="1"
-                                        min="1" max="99" >
+                                    <input class="form-control" type="number" name="quantity" value="1" min="1"
+                                        max="99">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-12 mt-2">
-                            <a href="{% url 'products' %}" class="btn btn-info rounded-0">
+                            <a href="{% url 'products' %}" class="btn btn-info rounded-0 my-2">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn add-cart-btn text-uppercase fa" value="&#xf217&nbsp;Add to Cart" />
+                            <input type="submit" class="btn add-cart-btn text-uppercase fa"
+                                value="&#xf217&nbsp;Add to Cart" />
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
