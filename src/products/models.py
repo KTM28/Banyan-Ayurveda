@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
@@ -24,8 +25,8 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    description = models.TextField(max_length=900)
-    benefit = models.TextField(max_length=800, null=True, blank=True)
+    description = RichTextField(max_length=900)
+    benefit = RichTextField(max_length=800, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(0.01)])
     rating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True, validators=[MinValueValidator(0),MaxValueValidator(5)])
     is_a_treatment = models.BooleanField(default=False)
