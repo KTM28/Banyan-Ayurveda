@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm, ServiceForm
+from django.contrib.auth.decorators import login_required
 
 def all_products(request):
     """ A view to show all products with it's sort and search queries"""
@@ -12,8 +14,24 @@ def all_products(request):
     
     query = None
     categories = None
+    direction = None
+    sort = None
     
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             active_products = active_products.filter(category__name__in=categories)
@@ -31,10 +49,13 @@ def all_products(request):
             # pass quieries to the filter method to filter products
             active_products = active_products.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': active_products,
         'current_categories': categories,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/all_products.html', context)
@@ -75,7 +96,7 @@ def service_details(request, service_id):
     return render(request, 'products/service_details.html', context)
 
 
-
+@login_required
 def add_products(request):
     """ Add a Product and Service to the store """
     if not request.user.is_superuser:
@@ -101,7 +122,7 @@ def add_products(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_product(request, product_id):
     """ A view to allow admin to edit a product in the store """
     if not request.user.is_superuser:
@@ -130,7 +151,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_product(request, product_id):
     """ A view to allow admin to delete a product from the store """
     if not request.user.is_superuser:
@@ -145,7 +166,7 @@ def delete_product(request, product_id):
     
     return redirect(reverse('products'))
 
-
+@login_required
 def add_service(request):
     """ A view to allow admin to add a service in the store """
     if not request.user.is_superuser:
@@ -173,7 +194,7 @@ def add_service(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_service(request, service_id):
     """ A view to allow admin to edit a service in the store """
     if not request.user.is_superuser:
@@ -204,7 +225,7 @@ def edit_service(request, service_id):
     }
     return render(request, template, context)
 
-
+@login_required
 def delete_service(request, service_id):
     """ A view to allow admin to delete service from the store """
     if not request.user.is_superuser:
