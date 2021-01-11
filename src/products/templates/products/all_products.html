@@ -18,8 +18,8 @@
     <div class="row" id="productAll">
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card rounded mb-2">
-                <div class="card-image">
+            <div class="card rounded mb-2 product-card">
+                <div class="card-image my-1">
                     {% if product.image %}
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
@@ -36,7 +36,7 @@
                 </div>
                 <div class="card-body text-center">
                     <div class="m-auto">
-                        <h5>{{ product.name }}</h5>
+                        <p class="font-weight-bold">{{ product.name}}</p>
                     </div>
                     <a href="{% url 'product_details' product.id %}" class="btn btn-sm product-btn d-block m-auto">
                         <span class="icon">

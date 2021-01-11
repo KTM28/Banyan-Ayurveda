@@ -243,7 +243,7 @@
       "model": "products.product",
       "fields": {
          "sku": "AT123471",
-         "name": "Muzda Enterprises Mahanarayan Balm (2 Oz)",
+         "name": "Muzda Mahanarayan Balm (2 Oz)",
          "description": "Pain Relief Balm with Mahanarayan oil, beeswax, eucalytus essential oil, camphore essential oil, peppermint essential oil, wintergreen essential oil, frankincence essential oil, menthol essential oil, lemongrass essential oil.",
          "price": 12.25,
          "category": 3,
