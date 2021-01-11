@@ -35,7 +35,7 @@ class ProductForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].label = labels[field]
         
-        self.fields['description'].widget.attrs['rows'] = 3
+        
         self.fields['price'].widget.attrs['min'] = 0
         self.fields['price'].widget.attrs['max'] = 1000
         self.fields['rating'].widget.attrs['min'] = 0
@@ -64,12 +64,12 @@ class ServiceForm(forms.ModelForm):
             'price': 'Price € *',
             'rating': 'Rating 0-5 ',
             'discontinued': 'Discontinued',
+            'discontinued': 'Discontinued',
         }
         for field in self.fields:
             self.fields[field].label = labels[field]
 
-        self.fields['description'].widget.attrs['rows'] = 3
-        self.fields['benefit'].widget.attrs['rows'] = 3
+        
         self.fields['price'].widget.attrs['min'] = 0
         self.fields['price'].widget.attrs['max'] = 1000
         self.fields['rating'].widget.attrs['min'] = 0

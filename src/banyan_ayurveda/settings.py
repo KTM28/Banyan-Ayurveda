@@ -175,6 +175,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # 3rd party apps settings
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
@@ -184,7 +185,7 @@ CKEDITOR_CONFIGS = {
             ['Link', 'Unlink'],
             ['RemoveFormat', 'Source']
         ],
-        'width': 'auto'
+        'width': 'auto',
     }
 }
 
