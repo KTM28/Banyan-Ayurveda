@@ -1,0 +1,108 @@
+[
+    {
+      "model": "blog.category",
+      "pk": 1,
+      "fields": {
+        "name": "Ayurvedic Lifestyle"
+      }
+    },
+    {
+      "model": "blog.category",
+      "pk": 2,
+      "fields": {
+        "name": "Diet"
+      }
+    },
+    {
+      "model": "blog.category",
+      "pk": 3,
+      "fields": {
+        "name": "Seasonal Topics"
+      }
+    },
+    {
+      "model": "blog.category",
+      "pk": 4,
+      "fields": {
+        "name": "Daily Routine"
+      }
+    },
+    {
+      "model": "blog.category",
+      "pk": 5,
+      "fields": {
+        "name": "Yoga & Pranayama"
+      }
+    },
+    {
+      "model": "blog.blog",
+      "pk": 1,
+      "fields": {
+        "title": "Ayurvedic Ways to Care for Your Skin this Winter",
+        "category": "Ayurvedic Lifestyle",
+        "content": "<p>Whatever winter activities you enjoy, there is one unpleasant experience that seems to be the norm for many this season&mdash;having dry skin.</p><p><br></p><p>Why does the skin dry so easily in winter? When we look at the Ayurvedic perspective of the skin and how the doshas play a role, we are given not only a broader understanding of the season, but also a treasure trove of tools to help us nurture and protect our skin, inside and out.</p><p><br></p><h3>Winter Skin and the Doshas </h3><p>Ayurveda states that winter is the optimal time of year to pay close attention to the care of our skin, since the skin is drier and ready to absorb all the nourishment we are willing to give it.</p><p><br></p><p>Moreover, while it is important to take care of our skin from the outside, we all know beauty comes from within, literally, making internal self-care just as essential to healthy, radiant skin. This is where the doshas come into play, as the winter season is a time of year when the qualities of vata and kapha doshas are high in the atmosphere and can cause imbalances both internally and externally.&nbsp;</p><p><br></p><p>This means that in winter, we must be careful to keep vata in balance, while trying not to aggravate kapha.</p><p><br></p><p>Vata comes from a combination of the two elements ether (or space) and air. When we imagine the qualities of these elements, dry, light, cool, and mobile come to mind.</p><p>Therefore, when we aim to keep vata balanced, we want to consider ways to counter these traits by trying to include moisturizing, grounding, warming, and calming principles into our daily routine.</p><p><br></p><p>Learning your Ayurvedic constitution can help you home in on the best way to take care of your skin. Beyond that, here are seven easy ways to keep your skin healthy during this time of year.</p><p><br></p><h4>1. Give Yourself a Massage</h4><p>What better way to start your day than to give yourself a warm oil massage? Abhyanga, or self-massage with oil, is an ancient practice that helps warm the body by improving circulation and offers amazing support for reducing stress, calming the mind, providing moisture and protection for the skin, and many other benefits!</p><p><br></p><p>During the winter season, use either Sesame Oil or Vata Massage Oil before a daily morning shower or bath. These oils are warm, grounding, and nourishing&mdash;perfect for balancing vata.&nbsp;</p><p><br></p> <h4>2. Use Soaps and Hot Water Wisely</h4><p>When bathing or washing your face, be sure to use water that is not too hot, and try to limit soap use to the areas that actually get grubby. Hot water, as well as misuse of soap, will strip away the much-needed oil from your skin.</p><p><br></p><p>When you do wash, using a gentle Ayurvedic soap can be very cleansing and supportive for your skin. Banyan&apos;s soaps use dosha-balancing herbs and essential oils that are gentle enough to be used daily to support clean, clear, moisturized skin from head to toe.</p><p><br></p><h4>3. Support Your Scalp</h4> <p>While dandruff may be a sign of a fungal infection, it is more often dryness as a result of lack of blood flow to the scalp. Spending a few extra minutes every evening massaging your scalp with oil brings blood flow (and supports healthy hair!). Try an herbal oil like Healthy Hair Oil, Brahmi Oil, or Bhringaraj Oil.</p><p><br></p><h4>How to Massage Your Scalp</h4><p><br></p><ul><li>Warm the oil of your choice and lightly apply it to your scalp and the ends of your hair.</li><li>Massage your head using slow, gentle, clockwise circles.</li><li>Leave the oil on for at least 15 minutes or overnight. (The oil will stain, so protect your linens!)</li><li>To remove the oil,&ldquo;dryshampoo&rdquo; your hair by applying shampoo before getting it wet, then wash.</li></ul><p><br></p><p>4. Be Sweet to Your Feet</p><p>Whether you&rsquo;re going for crisp winter walks in your neighborhood or you&rsquo;re out braving the slopes, give your feet some rejuvenation before bed.</p><p><br></p><p>Soak them in a warm bath with dry ginger or any combination of rosemary, eucalyptus, and lavender essential oils. After soaking for at least 10 minutes, use a moist pumice stone to remove any dead skin cells that commonly build up on the bottoms of feet.</p><p><br></p><p>After this, take a few drops of Castor Oil or Beauty Balm and rub it into the heels and pads of your feet. Now put on a pair of old socks and take your brand-new feet to bed!</p><p><br></p><p>This treatment is extremely grounding and calming and is a wonderful way to relax. It is a perfect treatment to help calm kids before bed, too! &nbsp;&nbsp;</p>",
+        "thumbnail": "ayurvedic-lifstyle-blog.jpg",
+        "publish_date": "2020-08-08T15:09:41.086Z",
+        "last_updated": "2020-08-08T15:09:41.086Z",
+        "author": 4,
+        "slug": "Ayurvedic-Ways-to-Care-for-Your-Skin-this-Winter"
+      }
+    },
+    {
+      "model": "blog.blog",
+      "pk": 2,
+      "fields": {
+        "title": "Introduction to Daily Routine",
+        "category": "Daily Routine",
+        "content": "<p>The tradition of dinacharya (daily routine) is one of the single most powerful Ayurvedic tools for improving overall health and well-being. Even if you are brand new to Ayurveda, it won&rsquo;t be long before you hear something about the importance of doing a number of things&mdash;like eating, sleeping, and working&mdash;at roughly the same times each day.</p> <p>A daily routine invites health, vitality, and a sense of clarity into our lives. Adopting an appropriate daily routine is undoubtedly one of the most grounding and nurturing things you could do for yourself, and while the concept of having a daily routine is at the heart of an Ayurvedic lifestyle, no single prescription is right for everyone. The general template can and should be adapted to meet the needs of each individual&rsquo;s constitution and current state of balance. And that&rsquo;s the beauty of it, because the right daily routine can dramatically improve your life.</p> <p><br></p> <p>We have developed a number of resources to help you create and implement a personalized daily routine &ndash; or fine-tune an existing one. Our daily routine resources are organized by the dosha(s) that they primarily seek to pacify. Because the spirit of a daily routine is to support your system in returning to balance, the best starting place is usually your current state of balance (if you don&rsquo;t know yours, take our Ayurvedic Profile&trade; quiz). Once you know which of your doshas need the most support, you can select the corresponding daily routine resource on this page. We recommend that you revisit this process at least a couple of times per year to track your progress and make any necessary adjustments to your routine. If you would rather build a routine based on your constitution, you can do that as well.</p> <p>Often, ensuring that there is a sense of routine from one day to the next is more important than crafting the perfect combination of habits and practices. We recommend that you approach this process in whatever way best serves you &ndash; knowing that even the most humble effort to embrace a routine is likely to have a positive impact. For the best results, have fun with it, be nourished by the process, and add more to your routine only when you feel truly inspired to do so.</p>",
+        "thumbnail": "skincare-blog.jpg",
+        "publish_date": "2020-08-08T15:10:56.075Z",
+        "last_updated": "2020-08-12T15:22:46.429Z",
+        "author": 4,
+        "slug": "Introduction-to-Daily-Routine"
+      }
+    },
+    {
+      "model": "blog.blog",
+      "pk": 3,
+      "fields": {
+        "title": "Your Annual Ayurvedic Gift Guide",
+        "category": "Seasonal Topics",
+        "content": "<p>Ayurvedic gifts that come from the heart can make a big impact on the people you love this holiday season, especially during these challenging times when large family get-togethers are impossible for so many of us.</p> <p><br></p> <p>No matter what you&rsquo;re celebrating&mdash;from Hanukah, to Kwanzaa, to Christmas&mdash;or how you&rsquo;re celebrating it (in quarantine, at a socially distanced gathering, or on a video call), there&rsquo;s a perfect Ayurvedic gift that will delight the people you care about. Show your loved ones just how much you value their wellness, happiness, and success with Ayurvedic herbal gifts and tools for health.</p> <p><br></p> <p>While shopping, bear in mind that Banyan Botanicals is committed to providing the highest quality Ayurvedic herbs and eco-friendly products possible. As a Certified B Corp&reg;, we believe in sustainable sourcing, fair trade, and ethical treatment of the environment. Below is our list of holiday gifts for under $50 that support a green, earth friendly, and health-conscious lifestyle.</p> <h4>Ayurvedic Oils Gift Set</h4> <p>Give the ones you love the opportunity to cherish themselves! Beautifully packaged in special gift boxes, our Ayurvedic Oils Gift Set is a luxurious kit of our most popular oils. Daily Massage Oil is perfect for everyday abhyanga (self-massage), Healthy Hair Oil promotes lustrous hair and mental calmness, and Sleep Easy Oil is excellent for a relaxing self-massage before going to bed. This is an ideal gift for both daily routine enthusiasts as well as the Ayurveda newbies in your circle who are just starting to build a daily routine.</p> <h4>Stress Ease</h4> <p>Even though many of us won&rsquo;t be traveling or hosting large get-togethers this holiday season, the holidays can still be a stressful time of year! Stress Ease is a tablet that harnesses the power of rejuvenating Ayurvedic adaptogens to help the body deal naturally with the stresses in life. A great gift for anyone on your list in need of a little soothing.</p>",
+        "thumbnail": "seasonal-blog.jpg",
+        "publish_date": "2020-08-08T15:13:24.387Z",
+        "last_updated": "2020-08-12T07:45:36.455Z",
+        "author": 4,
+        "slug": "Your-Annual-Ayurvedic-Gift-Guide"
+      }
+    },
+    {
+      "model": "blog.blog",
+      "pk": 4,
+      "fields": {
+        "title": "How Diet Affects Immune Health",
+        "category": "Diet",
+        "content": "<p>At any given time, we can all see the benefit of having a robust immune system. We want to work hard and enjoy life, so even if it&rsquo;s only the sniffles, an illness can bring us down and keep us from feeling like ourselves. But when there are times of extra stress and a pandemic to boot, the desire to amplify our body&rsquo;s defenses is renewed.</p> <p>With such interest in maintaining health, many are quick to seek out what can be added to boost immunity. This is often in the way of supplements, be it vitamins, minerals, or herbs. Though these routes are effective, there is something even simpler and possibly more potent&mdash;your diet.A combination of many factors causes our diet to be one of our biggest allies in cultivating immune health, some complex and others more straightforward. Still, at the heart is moderation and balance, as Ayurveda often suggests. The following considerations will help you refine your diet to support optimal immune function.</p> <h4>Nutrition and Immunity</h4> <p>First and foremost, it&rsquo;s essential to eat enough nutrients for healthy immune function. This means a diet that doesn&rsquo;t have a lot of variety or is made up of processed foods with less nutritional value will not be as adequate as one that is diverse and full of fresh, whole foods.</p> <p><br></p> <p>Ayurveda values food as its whole instead of extracting nutrients or specific constituents. That said, it has been shown that certain nutrients are critical for a properly functioning immune system. So be sure you&rsquo;re including foods that have higher amounts of vitamin C, vitamin D, vitamin A, zinc, selenium, iron, and protein. These are all nutrients that support cellular function and help to prime the body to go on the defense should it come under attack.1</p> <p><br></p> <p>Though some of these can be found in animal foods, a plant-based diet&mdash;or one that is primarily plant-based&mdash;reigns supreme when it comes to replenishing these essential nutritional building blocks. This is in part due to the ease in digestibility of plants, and thus our ability to assimilate nutrients more easily. But equally important, plants are rich in fiber which makes them more supportive of a healthy microbiome.</p> <p><br></p> <h4>Digestion and Immunity</h4> <p>As if it isn&rsquo;t enough that our gut is referred to as the &ldquo;second brain&rdquo; for the webbing of nerves that surround our intestines, 70 percent of our immune system resides in our gut in what&rsquo;s called the gut-associated lymphoid tissue, or GALT.2</p> <p><br></p> <p>This massive amount of immune cells within our digestive tract is clear evidence that what we eat and how we digest it is essential for health, as diet plays a large role in the cellular composition of this tissue.3 It&rsquo;s what triggers and mediates our immune response as infections are introduced to the body or pathogens invade the gut.</p> <p><br></p> <p>This is why maintaining &ldquo;good bacteria&rdquo; or a healthy microbiota is so often emphasized and why many opt to incorporate prebiotics or probiotics into the diet. Keep in mind, however, that you don&rsquo;t specifically need to consume probiotics for this to happen. Unless you&rsquo;re experiencing a condition that would warrant more long-term use, you shouldn&rsquo;t have to take a probiotic all the time. A diverse diet is more than enough to provide the beneficial bacteria to help you nurture the health of your microbiome.</p> <p><br></p> <h4>Fueling Healthy Digestion and Elimination</h4> <p>Paying attention to shifts in your digestion and elimination is incredibly important. Often considered key pillars of our health in Ayurveda, we want to keep our digestive strength and elimination patterns healthy.</p> <p>This is a place where you may find herbal support to be essential. Banyan&rsquo;s Vata Digest, Pitta Digest, or Kapha Digest tablets can help you manage your digestion, while an herbal formula like triphala supports regular, healthy elimination.</p> <p>In the same vein, adding spices like cumin, coriander, ginger, or fennel to your dishes will help ensure that your body is properly breaking down and absorbing the nutrients from the diet you&rsquo;ve so carefully curated.</p>",
+        "thumbnail": "diet-blog.jpg",
+        "publish_date": "2020-08-08T15:15:07.095Z",
+        "last_updated": "2020-09-02T10:46:57.833Z",
+        "author": 4,
+        "slug": "How-Diet-Affects-Immune-Health"
+      }
+    },
+    {
+      "model": "blog.blog",
+      "pk": 5,
+      "fields": {
+        "title": "Pranayama Rediscovered the Modern Science of Breathing",
+        "category": "Yoga & Pranayama",
+        "content": "<p>Don&rsquo;t you just love it when modern science catches up with ancient wisdom? That is what seems to be going on with the just-published book Breath: The New Science of a Lost Art, by James Nestor. I was heartened to see that early on in the book Nestor quotes Ayurveda expert Dr. John Douillard, who has been writing about proper use of the breath for years.</p> <p>Nestor points to Dr. Douillard&rsquo;s ground-breaking studies about nose-breathing, which he wrote about in his book, Mind, Body, Sport. Dr. Douillard touts the benefits of breathing through the nose while exercising to increase stamina and endurance in addition to other life-enhancing qualities.</p> <blockquote>Many scientific papers have established both emotional and physical benefits of deep, slow breaths.</blockquote> <p>A 2016 paper looks at amygdala-prefrontal cortex activity activated by the breath which can regulate emotions.1 A 2014 study shows how activating the vagas nerve through controlled breathing can alleviate insomnia. And many people are familiar with the Harvard Medical School cardiologist Dr. Herbert Benson, who popularized deep breathing exercises with his relaxation response technique in the 1970s.2</p> <p>All this interest in the breath. Must be something in the air!</p> <h4>The Breath in Ancient Wisdom</h4> <p>These days, I find myself pondering the breath more than ever. Could it be that COVID-19 literally steals the breath away? That we now know more about ventilators than we ever wanted to? Or that we are learning more about how the vagas nerve activates the parasympathetic nervous system, creating a feeling of calm and relaxation? Whatever the reason, breathing is now a hot topic.</p> <p><br></p> <p>We have the ancient Vedic texts to thank for highlighting breath work, which is called pranayama in Sanskrit. &nbsp;Even if the rishis (wise sages of ancient India) didn&rsquo;t have the modern scientific evidence for its healing powers, the undeniable healing benefits were clearly known.</p> <p><br></p> <p>One ancient text, the Rishi Samkhya, explores the science of the breath as a way to control prana, or vital life force. In the Brihadaranyaka Upanishads, from 700 B.C.E., it is noted that &ldquo;one should indeed breathe in when rising up.&rdquo; The text also says that &ldquo;prana invigorates and recuperates the body.&rdquo;</p> <p><br></p> <p>The Brihadaranyaka Upanishads also describe the Self as &ldquo;the one who breathes, who is prana of the pranas, and whom prana serves.&rdquo;3 This text contains some of the first studies and insight on prana, breath, and the foundation of its importance to Ayurveda.</p> <p><br></p> <h4>The Science of Breathing</h4> <p>I have always been fascinated by the breath, especially the word, which in many languages correlates to the soul, spirit, or the element of wind. It is also associated with the feeling of inspiration, and with life itself.</p> <p><br></p> <blockquote>We come into the world with an in-breath and we exit with an out-breath.</blockquote> <p>When I began studying meditation and yoga decades ago, I learned to base both practices on the breath. The movement of the mind and body, I was told, were inextricably connected to breathing. a.</p>",
+        "thumbnail": "yoga-blog.jpg",
+        "publish_date": "2020-08-22T10:00:31.733Z",
+        "last_updated": "2020-09-02T10:41:33.938Z",
+        "author": 4,
+        "slug": "Pranayama-Rediscovered-the-Modern-Science-of-Breathing"
+      }
+    }
+    
+  ]

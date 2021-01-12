@@ -31,7 +31,7 @@
                 <div class="card-body blog-content">
                     <a href="{{ blog.get_absolute_url }}">
                         <h5 class="card-title text-center text-info">{{ blog.title }} |
-                            <small>{{ blog.category }}</small></h5>
+                            <small class="text-warning">{{ blog.category }}</small></h5>
                     </a>
                     <a href="{% url 'blog:author' blog.author.id %}" class="card-text text-success"><i
                             class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}</a>
