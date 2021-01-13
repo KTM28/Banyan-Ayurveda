@@ -39,9 +39,9 @@ body {
 }
 
 .navbar {
-  background-color: #ebc58cc5 !important;
+  /* background-color: #ebc58cc5 !important; */
+  background-color: #f9d6b0 !important;
   width: 100%;
-  z-index: 10;
 }
 
 .nav-link {
@@ -104,16 +104,18 @@ nav.stroke ul li .hover-nav:hover:after {
 /* --------Landing Page---------- */
 
 .hero_img_bg {
-  background: url('../img/landing/medicine-shop.jpg') no-repeat center center fixed;
-  height: calc(100vh - 110.38px);
-  background-size: cover;
+  background: url('../img/landing/hero-img11.png') no-repeat center center fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: 0 20px;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
 }
 
-@media (max-width: 991px) {
-  .hero_img_bg {
-    height: calc(100vh - 172.38px);
-  }
-}
+
 
 .view-height {
   min-height: 100vh;
@@ -132,7 +134,7 @@ nav.stroke ul li .hover-nav:hover:after {
 
 .text-purple {
   color: #4f217c;
-  /* color: rgb(255, 230, 92); */
+ 
 }
 
 /* ----Landing Button--- */
@@ -146,7 +148,7 @@ nav.stroke ul li .hover-nav:hover:after {
   text-align: center;
   transition: top .01s linear;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  background-color: #f3725ec5;
+  background-color: #f1b3a6;
   box-shadow: 0 0 0 1px #f3725ec5 inset, 0 0 0 2px #f3725ec5 inset, 0 8px 0 0 #f3725ec5, 0 8px 0 1px #f3725ec5, 0 8px 8px 1px #f3725ec5;
   cursor: pointer;
   text-decoration: none !important;
@@ -185,6 +187,10 @@ nav.stroke ul li .hover-nav:hover:after {
   height: 30.000em !important;
 }
 
+.category-nav {
+  color: #000 !important;
+}
+
 
 #productAll .card-detail-badge {
   background: #f2d900;
@@ -212,7 +218,7 @@ nav.stroke ul li .hover-nav:hover:after {
 }
 
 .product-btn {
-  background-color: #f3725ec5;
+  background-color: #f1b3a6;
   color: #ffffff;
   border-radius: 5.000em;
   width: 6.875em;
@@ -222,7 +228,7 @@ nav.stroke ul li .hover-nav:hover:after {
 .product-btn:active,
 .product-btn:focus,
 .product-btn:active:focus {
-  background-color: #F7AE68;
+  background-color: #f9d6b0;
   color: #ffffff;
   box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
   transition: all 0.3s ease;
@@ -237,14 +243,14 @@ nav.stroke ul li .hover-nav:hover:after {
 
 .search-btn {
   color: #ffffff;
-  background-color: #f3725ec5;
+  background-color:  #f1b3a6;
 }
 
 .search-btn:hover,
 .search-btn:active,
 .search-btn:focus,
 .search-btn:active:focus {
-  background-color: #F7AE68;
+  background-color: #f9d6b0;
   color: #ffffff;
 }
 
@@ -260,7 +266,7 @@ nav.stroke ul li .hover-nav:hover:after {
   font-size: 1.125em;
   border-radius: 0.313em;
   text-align: center;
-  color: #aab7c4;
+  color: #c49686;
   margin-top: 1.875em;
   margin-bottom: 1.875em;
 
@@ -606,6 +612,14 @@ thead {
   border-radius: 0.313em;
 }
 
+.list-group-item-danger {
+  background-color: #c49686 !important;
+}
+
+.list-group-item-danger:hover {
+  background-color:#facd96 !important;
+}
+
 .b-width {
   width: 23%;
 }
@@ -657,11 +671,11 @@ thead {
     padding-right: 1rem;
     overflow-y: auto;
     visibility: hidden;
-    background-color: #a05c51;
+    background-color: #b98b7b;
     transition: visibility .2s ease-in-out;
   }
 
-  .nav-link {
+  .navbar .nav-link {
     color: #ffffff !important;
     font-size: 15px;
     text-transform: none;
