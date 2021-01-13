@@ -1,85 +1,57 @@
 {% load static %}
 
-<!--Navigation Sections for Medium and Small screens-->
-<div class="bg-nav container-fluid d-block d-lg-none pt-1 ">
-    <div class="clearfix">
-        <ul class="list-unstyled">
-            <li class="list-inline-item dropdown float-left">
-                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="text-center">
-                        <div><i class="fas fa-user"></i></div>
-                        <p class="my-0">My Account</p>
-                    </div>
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <a href="#" class="dropdown-item">Product Management</a>
-                    {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+<nav class="navbar navbar-expand-lg navbar-dark stroke">
+    <a class="navbar-brand" href="{% url 'landing' %}">
+        <img src="{% static 'img/logo-nav.png' %}" alt="logo">
+    </a>
+    <ul class="navbar-nav d-block d-lg-none float-left">
+        <a class="font-weight-bold nav-link" href="{% url 'view_cart' %}">
+            <div class="text-center">
+                <div><i class="fas fa-shopping-cart"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                    €{{ grand_total|floatformat:2 }}
                     {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    €0.00
                     {% endif %}
-                </div>
-            </li>
-            <li class="list-inline-item float-right">
-                <a class="font-weight-bold nav-link" href="{% url 'view_cart' %}">
-                    <div class="text-center">
-                        <div><i class="fas fa-shopping-cart"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                            €{{ grand_total|floatformat:2 }}
-                            {% else %}
-                            €0.00
-                            {% endif %}
-                        </p>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-light mr-auto ">
-    <a class="navbar-brand" href="{% url 'landing' %}"><img src="{% static 'img/logo2.png' %}" alt="brand logo"></a>
-    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+                </p>
+            </div>
+        </a>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
     </button>
-    <div class="collapse navbar-collapse list-inline list-unstyled" id="navbarNav">
-        <ul class="navbar-nav ml-1">
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'products' %}">Shop</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'services' %}">Treatments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'blog:list' %}">Blogs</a>
-            </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>
-        </ul>
 
-        <!--Navigation Section for larger screens-->
-        <ul class="navbar-nav ml-auto mr-2 d-none d-lg-block">
-            <li class="list-inline-item dropdown">
-                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="text-center">
-                        <div><i class="fas fa-user"></i></div>
-                        <p class="my-0">My Account</p>
-                    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="offcanvas-header py-3">
+            <button type="button" class="btn-close float-left"><i class="fas fa-times"></i></button>
+            <h5 class="py-2 float-right landing-text">Menu</h5>
+        </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link hover-nav" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hover-nav" href="{% url 'products' %}">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hover-nav" href="{% url 'services' %}">Treatments</a>
+            </li>
+            <li C>
+                <a class="nav-link hover-nav" href="{% url 'blog:list' %}">Blogs</a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hover-nav" href="{% url 'contact' %}">Contact</a>
+            </li>
+
+            <li class="nav-item dropdown d-block d-lg-none">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i> My Account
                 </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                <div class="dropdown-menu border-0 mx-auto" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -93,17 +65,39 @@
                     {% endif %}
                 </div>
             </li>
-            <li class="list-inline-item">
+        </ul>
+        <ul class="navbar-nav ml-auto d-none d-lg-block">
+            <li class="list-inline-item dropdown">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> My Account
+                    </a>
+                </a>
+                <div class="dropdown-menu border-0 mx-auto" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    <a href="{% url 'add_service' %}" class="dropdown-item">Service Management</a>
+                    {% endif %}
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+            <li class="list-inline-item float-right">
                 <a class="font-weight-bold nav-link" href="{% url 'view_cart' %}">
-                    <div class="text-center">
-                        <div><i class="fas fa-shopping-cart"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                            €{{ grand_total|floatformat:2 }}
-                            {% else %}
-                            €0.00
-                            {% endif %}
-                        </p>
+                    <div class="text-center pt-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        {% if grand_total %}
+                        €{{ grand_total|floatformat:2 }}
+                        {% else %}
+                        €0.00
+                        {% endif %}
                     </div>
                 </a>
             </li>

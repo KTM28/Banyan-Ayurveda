@@ -3,6 +3,12 @@ $(document).ready(function () {
         var newstr = $(this).text().substring(0, 350);
         $(this).text(newstr + '.....');
     });
+
+    $('.btn-close').click(function(e){
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("offcanvas-active");
+    })
+
     const dateTimePickerInit = () => {
         $('#datetime, div[id^=cart_datetime-]').datetimepicker({
             format: 'DD/MM/YYYY HH:mm',
