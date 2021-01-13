@@ -1,26 +1,37 @@
 {% load static %}
-
-<div class="container mt-3 py-3">
-    <h1 class="text-center">Ayurvedic Treatments and Products in the heart of Dublin</h1>
-    <hr>
-    <div class="row">
-        <div class="col-sm-12 col-lg-5 col-md-6">
-            <p class="landing-info"><strong>Banyan Ayurveda</strong> is one of the Dublin's only full service Ayurvedic
+<div class="container-fluid mx-auto">
+    <h1 class="text-center text-purple landing-header">Ayurvedic Treatments and Products in the heart of Dublin</h1>
+    <div class="row mx-2">
+        <div class="col-lg-5 lead pt-lg-5 col-md-5">
+            <p class="landing-info"><strong>Banyan Ayurveda</strong> is one of the Dublin's only full service
+                Ayurvedic
                 Wellness Centers, specializing in Ayurvedic constitutional evaluation, herbal treatments; Abhayanga,
                 Marma (energy) point therapy, Shirodhara and Bastis, Facial treatments, Panchakarma therapies and
                 overall health management, using the principles of Ayurveda.
             </p>
-            <p class="landing-info">Our mission is to work with our clients in offering Ayurvedic treatments that can be
-                easily incorporated into any schedule, budget and lifestyle. We try to help you work with Ayurvedic and
-                Yogic practices to achieve the perfect balance between health and harmony.
-            </p>
+            <div class="col-sm-12 col-lg-6  my-2 mx-auto">
+                <a class="landing-btn btn-block text-center">
+                    <p>Learn More</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7 col-md-7">
+            <img src="{% static 'img/landing/landing-img-1.jpg' %}" class="img-fluid" alt="">
+        </div>
+    </div>
+    <hr class="block-divider block-divider-purple">
+
+    <div class="row my-3 mx-2">
+        <div class="col-lg-8 lead my-2 mx-auto">
             <p class="landing-info">In addition to our treatments, we also carry traditional Ayurvedic herbal
                 formulations, herbal teas, oils
                 and some skin care products that can be used in conjunction with managing your overall health.
             </p>
         </div>
-        <div>
-         <img src="{% static 'img/landing/landing_about.jpg' %}" class="img-fluid" alt="">
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <img src="{% static 'img/landing/landing-img.jpg' %}" class="img-fluid" alt="">
         </div>
     </div>
 </div>

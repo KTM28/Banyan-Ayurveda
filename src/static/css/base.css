@@ -18,16 +18,13 @@
 body {
   font-family: 'Rokkitt', serif;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
 }
 
 #breadcrumb-nav .breadcrumb {
   background: #faf8f8;
-
   border-color: transparent;
-  /* padding-left: 20px; */
-  /* display: inline; */
 }
 
 .letter-space {
@@ -113,44 +110,63 @@ body {
   }
 }
 
-
-.btn-landing,
-.btn-landing:hover,
-.btn-landing:active,
-.btn-landing:focus {
-  color: #ffffff;
-  background-color: #0000005b;
-  border: 1px solid#ffd700;
-  box-shadow: 2px green;
-  font-size: x-large;
-  font-weight: 700;
+.view-height {
+  min-height: 100vh;
 }
 
-div.carousel-item>img {
-  width: 100%;
-  height: 300px;
-  /* border: 8px solid #f7ad6844;
-  border-radius: 8px; */
+.block-divider {
+  width: 120px;
+  height: 5px;
+  border: 0;
+  margin: auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  opacity: 1 !important;
+.block-divider-purple {
+  background-color: #4f217c;
 }
 
-div .carousel-header {
-  font-family: 'Grandstander', cursive;
-  font-weight: 900;
-  color: #f3725ec5;
-  text-shadow: 2px 2px #ffd700;
+.text-purple {
+  color: #4f217c;
+  /* color: rgb(255, 230, 92); */
 }
 
-div .carousel-text {
-  font-family: 'Grandstander', cursive;
-  font-weight: 400;
-  font-size: x-large;
-  color: #c8ff00;
+/* ----Landing Button--- */
+.landing-btn {
+  position: relative;
+  display: inline-block;
+  font-size: 3px;
+  padding: 10px 20px;
+  margin: 10px 10px 10px;
+  border-radius: 6px;
+  text-align: center;
+  transition: top .01s linear;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #f3725ec5;
+  box-shadow: 0 0 0 1px #f3725ec5 inset, 0 0 0 2px #f3725ec5 inset, 0 8px 0 0 #f3725ec5, 0 8px 0 1px #f3725ec5, 0 8px 8px 1px #f3725ec5;
+  cursor: pointer;
+  text-decoration: none !important;
 }
+
+.landing-btn:hover {
+  background-color: #f9c4d2;
+}
+
+.landing-btn:active {
+  top: 9px;
+  box-shadow: 0 0 0 1px #b18597;
+}
+
+.landing-btn p {
+  font-family: 'Grandstander', serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  user-select: none;
+  letter-spacing: 2px;
+}
+
 
 /* -----All products view----- */
 
@@ -217,7 +233,6 @@ div .carousel-text {
 .search-btn {
   color: #ffffff;
   background-color: #f3725ec5;
-  /* border-radius: 80px; */
 }
 
 .search-btn:hover,
@@ -629,6 +644,13 @@ thead {
     height: auto !important;
   }
 
+  .landing-header {
+    font-size: 25px;
+  } 
+
+  .landing-info {
+    font-size: 18px;
+  }
 
   .block-btn {
     display: block;
