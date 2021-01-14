@@ -1,0 +1,95 @@
+{% load static %}
+
+<div class="container-fluid pt-2">
+    <h2 class="text-center pt-1 landing-header landing-text">What Our Customers Say</h2>
+    <p class="text-center"><i class="fas fa-grin-hearts fa-3x text-center text-warning"></i></p>
+    <div class="row">
+        <div class="col-lg-10 col-xl-8 mx-auto">
+            <div class="p-5 bg-white shadow rounded">
+                <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+                    <ol class="carousel-indicators mb-0 text-theme">
+                        <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel-item-review">
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-md-4 mb-3">
+                                    <img src="{% static 'img/landing/avatar-1.jpg' %}" alt="user-avatar"
+                                        class="rounded-circle ">
+                                </div>
+                                <div class="col-sm-12 col-md-8 review-content">
+                                    <blockquote class="blockquote border-0 p-0">
+                                        <p class="font-italic lead"> <i class="fa fa-quote-left text-theme">
+                                            </i> Kudos to the customer service department for for always quick
+                                            response
+                                            and follow up.
+                                            First rate products
+                                        </p>
+                                        <footer class="blockquote-footer">John Doe
+                                            <cite title="Source Title">Customer Banyan Ayurveda</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carousel-item-review">
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-md-4 mb-3">
+                                    <img src="{% static 'img/landing/avatar-2.jpg' %}" alt="user-avatar"
+                                        class="rounded-circle img-thumbnail">
+                                </div>
+                                <div class="col-sm-12 col-md-8 review-content">
+                                    <blockquote class="blockquote border-0 p-0">
+                                        <p class="font-italic lead"> <i
+                                                class="fa fa-quote-left mr-3 text-theme mr-2"></i>First off I have
+                                            NEVER
+                                            been
+                                            disappointed by any of their products!! Their customer service and fast
+                                            shipping is certainly awesome!
+                                        </p>
+                                        <footer class="blockquote-footer">Meghan Fox
+                                            <cite title="Source Title">Customer Banyan Ayurveda</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carousel-item-review">
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-md-4 mb-3">
+                                    <img src="{% static 'img/landing/avatar-3.jpg' %}" alt="user-avatar"
+                                        class="rounded-circle img-thumbnail">
+                                </div>
+                                <div class="col-sm-12 col-md-8 review-content">
+                                    <blockquote class="blockquote border-0 p-0">
+                                        <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-theme">
+                                            </i>Beautiful company with
+                                            magical oils. 11/10 if I could score that highly!
+                                        </p>
+                                        <footer class="blockquote-footer">Jane Doe
+                                            <cite title="Source Title">Customer Banyan Ayurveda</cite>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev width-auto d-none d-lg-block d-xl-block"
+                        href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left text-dark"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next width-auto d-none d-lg-block d-xl-block"
+                        href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <i class="fa fa-angle-right text-dark"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

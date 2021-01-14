@@ -183,8 +183,32 @@ nav.stroke ul li .hover-nav:hover:after {
 }
 
 
+/* ----Review Section---- */
 
+.width-auto {
+  width: auto;
+}
 
+.text-lg {
+  font-size: 2rem;
+}
+
+.carousel-indicators li {
+  border: none;
+  background: #ccc;
+}
+
+.carousel-indicators li.active {
+  background: #28a745;
+}
+
+.text-theme {
+  color: #f9d6b0!important;
+}
+
+.carousel-indicators li.active {
+  background: #f9d6b0;
+}
 
 /* -----All products view----- */
 
@@ -812,5 +836,9 @@ thead {
 
   .hero_img_bg {
     background: url('../img/landing/hero-img11-mobile.png') no-repeat center center fixed;
+  }
+
+  .blockquote p {
+    font-size: 12px;
   }
 }
