@@ -10,9 +10,9 @@
 
 
 
-<div class="main">
+<div class="main mt-5 py-4 mx-auto">
 
-  <p class="lead">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in <span class="text-success">here</span></a>.{% endblocktrans %}</p>
+  <p class="lead text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in here</a>.{% endblocktrans %}</p>
   <!--Social account ballot-->
   <div class="socialaccount_ballot">
 
@@ -24,7 +24,7 @@
     <h3 class="text-uppercase text-center my-3">Sign Up</h3>
   </div>
   <!--Register Form-->
-  <div class="register-box">
+  <div class="register-box mb-3">
     <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
       {% csrf_token %}
       {{ form|crispy }}

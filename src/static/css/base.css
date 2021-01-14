@@ -64,10 +64,6 @@ body {
   border-color: transparent !important;
 }
 
-.landing-text {
-  text-align: right;
-  color: #3FA291;
-}
 
 
 /* ---Nav hover effect-- */
@@ -113,13 +109,17 @@ nav.stroke ul li .hover-nav:hover:after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: 100% 100%;
+  margin-top: 73px;
 }
 
 
+.hero-img-container {
+  top: 15%;
+  right: 10%;
+  position: relative !important;
 
-.view-height {
-  min-height: 100vh;
 }
+
 
 .block-divider {
   width: 120px;
@@ -132,9 +132,17 @@ nav.stroke ul li .hover-nav:hover:after {
   background-color: #4f217c;
 }
 
-.text-purple {
-  color: #4f217c;
- 
+.block-divider-gray {
+  background-color: #54595f;
+}
+
+.landing-text {
+  color: #54595f;
+}
+
+.landing-img-responsive {
+  height: 350px;
+  width: 750px;
 }
 
 /* ----Landing Button--- */
@@ -142,25 +150,25 @@ nav.stroke ul li .hover-nav:hover:after {
   position: relative;
   display: inline-block;
   font-size: 3px;
-  padding: 10px 20px;
-  margin: 10px 10px 10px;
+  padding: 5px 5px;
+  margin: 5px 5px 5px;
   border-radius: 6px;
   text-align: center;
   transition: top .01s linear;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  background-color: #f1b3a6;
-  box-shadow: 0 0 0 1px #f3725ec5 inset, 0 0 0 2px #f3725ec5 inset, 0 8px 0 0 #f3725ec5, 0 8px 0 1px #f3725ec5, 0 8px 8px 1px #f3725ec5;
+  background-color: #f9d6b0;
+  box-shadow: 0 0 0 1px #f1c799 inset, 0 0 0 2px#f1c799 inset, 0 8px 0 0 #f1c799, 0 8px 0 1px #f1c799, 0 8px 8px 1px#f1c799;
   cursor: pointer;
   text-decoration: none !important;
 }
 
 .landing-btn:hover {
-  background-color: #f9c4d2;
+  background-color: #ffe1d7;
 }
 
 .landing-btn:active {
   top: 9px;
-  box-shadow: 0 0 0 1px #b18597;
+  box-shadow: 0 0 0 1px #e9e1e4;
 }
 
 .landing-btn p {
@@ -169,10 +177,13 @@ nav.stroke ul li .hover-nav:hover:after {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #000;
+  color: #9aa899;
   user-select: none;
   letter-spacing: 2px;
 }
+
+
+
 
 
 /* -----All products view----- */
@@ -243,7 +254,7 @@ nav.stroke ul li .hover-nav:hover:after {
 
 .search-btn {
   color: #ffffff;
-  background-color:  #f1b3a6;
+  background-color: #f1b3a6;
 }
 
 .search-btn:hover,
@@ -459,6 +470,19 @@ thead {
 
 /* --login/register FORM-- */
 
+.login-register-img {
+  background: url('../img/signup-regester-bg-img.jpg') no-repeat center center fixed;
+  height: 100vh;
+  background-position: 0 100px;
+  /* background-attachment: fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
+  /* overflow: hidden; */
+}
+
+
 .main {
   font-family: 'Playfair+Display', serif;
   max-width: 95%;
@@ -612,12 +636,17 @@ thead {
   border-radius: 0.313em;
 }
 
+#breadcrumb-nav .breadcrumb {
+  background: #fff;
+  border-color: transparent;
+}
+
 .list-group-item-danger {
   background-color: #c49686 !important;
 }
 
 .list-group-item-danger:hover {
-  background-color:#facd96 !important;
+  background-color: #facd96 !important;
 }
 
 .b-width {
@@ -657,6 +686,18 @@ thead {
   .nav-link {
     font-size: 11px;
   }
+
+  .hero-img-container {
+    top: 15%;
+    right: 0%;
+    position: relative !important;
+
+  }
+
+  .landing-img-responsive {
+    height: auto;
+    width: auto;
+  }
 }
 
 @media (max-width: 989px) {
@@ -673,6 +714,10 @@ thead {
     visibility: hidden;
     background-color: #b98b7b;
     transition: visibility .2s ease-in-out;
+  }
+
+  .hero-img-container {
+    display: none;
   }
 
   .navbar .nav-link {
@@ -727,10 +772,16 @@ thead {
     font-size: 18px;
   }
 
+  .login-register-img {
+    background:url('../img/signup-regester-bg-img-responsive.jpg') no-repeat center center fixed;
+  }
+
   .block-btn {
     display: block;
     width: 100%;
   }
+
+
 }
 
 @media (max-width:768px) {
@@ -741,10 +792,25 @@ thead {
   .b-width {
     width: 50%;
   }
+
+  .landing-img-responsive {
+    height: auto;
+    width: auto;
+  }
+
+
+  .hero_img_bg {
+    background: url('../img/landing/hero-img11-tablet.png') no-repeat center center fixed;
+  }
+
 }
 
 @media (max-width:475px) {
   .b-width {
     width: 100%;
+  }
+
+  .hero_img_bg {
+    background: url('../img/landing/hero-img11-mobile.png') no-repeat center center fixed;
   }
 }

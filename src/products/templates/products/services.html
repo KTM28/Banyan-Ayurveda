@@ -6,20 +6,18 @@
 <!--Main content-->
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 text-center">
-            <h1>Treatments</h1>
-            <hr>
+<div class="container ">
+    <div class="row my-5 pt-5" id="productAll">
+        <div class="col-12 text-center ">
+            <h1 class="text-center shop-header landing-header">Banyan Treatments</h1>
         </div>
-    </div>
-    <div class="row" id="productAll">
         {% for service in services %}
         <div class="card mb-3 bg-light">
             <div class="row no-gutters">
                 <div class="col-md-4 ">
                     {% if service.image %}
-                    <img class="card-img-top img-fluid service-card" src="{{ service.image.url }}" alt="{{ service.name }}">
+                    <img class="card-img-top img-fluid service-card" src="{{ service.image.url }}"
+                        alt="{{ service.name }}">
                     {% else %}
                     <img class="card-img-top img-fluid service-card" src="{{ MEDIA_URL }}no-image.jpg"
                         alt="{{ service.name }}">

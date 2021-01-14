@@ -10,11 +10,11 @@
 {% get_providers as socialaccount_providers %}
 
 
-<div class="main">
+<div class="main mt-3 py-4 mx-auto">
 
   {% if socialaccount_providers %}
-  <p class="lead">{% blocktrans with site.name as site_name %}Login below or Create an account <a
-      href="{{ signup_url }}"><span class="text-success">here</span></a>{% endblocktrans %}</p>
+  <p class="lead text-center">{% blocktrans with site.name as site_name %}Login below or Create an account <a
+      href="{{ signup_url }}">here</a>{% endblocktrans %}</p>
   {% else %}
   <p>{% blocktrans %}If you have not created an account yet, then please
     <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
@@ -28,11 +28,11 @@
   </div>
   {% include "socialaccount/snippets/login_extra.html" %}
   <div class="login-header rounded-top ">
-    <h3 class="text-uppercase text-center my-3">Sign In</h3>
+    <h3 class="text-center my-3 text-uppercase">Sign In</h3>
   </div>
 
   <!--Login Form-->
-  <div class="login-box">
+  <div class="login-box mb-3">
     <form class="login" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form|crispy }}

@@ -1,37 +1,61 @@
 {% load static %}
-<div class="container-fluid mx-auto">
-    <h1 class="text-center text-purple landing-header">Ayurvedic Treatments and Products in the heart of Dublin</h1>
-    <div class="row mx-2">
-        <div class="col-lg-5 lead pt-lg-5 col-md-5">
-            <p class="landing-info"><strong>Banyan Ayurveda</strong> is one of the Dublin's only full service
+<div class="container-fluid mx-auto my-3">
+    <hr class="block-divider block-divider-gray my-3">
+    <div class="container">
+        <h1 class="text-center landing-text landing-header">Ayurvedic Treatments and Products in the heart of Dublin
+        </h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-4 lead pt-lg-5 col-md-5 mx-auto">
+            <p class="landing-info landing-text"><strong>Banyan Ayurveda</strong> is one of the Dublin's only full
+                service
                 Ayurvedic
                 Wellness Centers, specializing in Ayurvedic constitutional evaluation, herbal treatments; Abhayanga,
                 Marma (energy) point therapy, Shirodhara and Bastis, Facial treatments, Panchakarma therapies and
                 overall health management, using the principles of Ayurveda.
             </p>
-            <div class="col-sm-12 col-lg-6  my-2 mx-auto">
-                <a class="landing-btn btn-block text-center">
-                    <p>Learn More</p>
+            <div class="col-lg-9 my-2 mx-auto pt-3 d-none d-sm-block">
+                <a href="{% url 'services' %}" class="btn btn-outline-info rounded-0 btn-block">
+                    <span class="icon">
+                        <i class="fas fa-location-arrow"></i>
+                    </span>
+                    <span class="font-weight-bold ">Book Our Treatment</span>
                 </a>
             </div>
         </div>
         <div class="col-12 col-lg-7 col-md-7">
-            <img src="{% static 'img/landing/landing-img-1.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/landing/landing-img.jpg' %}" class="img-fluid rounded landing-img-responsive" alt="">
         </div>
+        <div class="col-lg-5 col-sm-9 mx-auto pt-3 d-block d-sm-none">
+            <a href="{% url 'services' %}" class="btn btn-outline-info rounded-0 btn-block">
+                <span class="icon">
+                   <i class="fas fa-location-arrow"></i>
+                </span>
+                <span class="font-weight-bold letter-space">Book Our Treatment</span>
+            </a>
+        </div>
+
     </div>
-    <hr class="block-divider block-divider-purple">
+    {% comment %} <hr class="block-divider block-divider-gray my-3"> {% endcomment %}
 
     <div class="row my-3 mx-2">
-        <div class="col-lg-8 lead my-2 mx-auto">
-            <p class="landing-info">In addition to our treatments, we also carry traditional Ayurvedic herbal
+        <div class="col-lg-6 col-md-6 mr-auto">
+            <img src="{% static 'img/landing/landing-img-3.jpg' %}" class="img-fluid rounded landing-img-responsive" alt="">
+        </div>
+        <div class="col-lg-6 col-md-6 pt-lg-5 lead my-2 mx-auto">
+            <p class="landing-info landing-text">In addition to our treatments, we also carry traditional Ayurvedic
+                herbal
                 formulations, herbal teas, oils
                 and some skin care products that can be used in conjunction with managing your overall health.
             </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <img src="{% static 'img/landing/landing-img.jpg' %}" class="img-fluid" alt="">
+            <div class="col-lg-7 col-sm-9 mx-auto pt-3">
+                <a href="{% url 'products' %}" class="btn btn-outline-info rounded-0 btn-block ">
+                    <span class="icon">
+                       <i class="fas fa-store"></i>
+                    </span>
+                    <span class="font-weight-bold letter-space">Visit Banyan Shop</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
