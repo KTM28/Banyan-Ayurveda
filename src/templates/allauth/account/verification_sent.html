@@ -5,9 +5,13 @@
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block inner_content %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
+<div class="container">
+    <h1 class="allauth-header">{% trans "Verify Your E-mail Address" %}</h1>
 
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup
+        process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
 
-<a class="btn btn-info text-white my-2" href="{% url 'landing' %}"><i class="fas fa-chevron-left"></i> Back to HomePage</a>
+    <a class="btn btn-info text-white my-2" href="{% url 'landing' %}"><i class="fas fa-chevron-left"></i> Back to
+        HomePage</a>
+</div>
 {% endblock %}

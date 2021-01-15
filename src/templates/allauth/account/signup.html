@@ -1,40 +1,47 @@
 {% extends "account/base.html" %}
-
+{% load static %}
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
 
+<section class="form my-4">
+  <div class="container">
 
+    <div class="row no-gutters">
+      <div class="col-lg-5 col-md-5 ">
+        <img src="{% static 'img/signup-regester-img.jpg' %}" class="img-fluid" alt="login-signup-image">
+      </div>
+      <div class="col-lg-7 col-md-7 mx-auto">
+        <form method="POST" action="{% url 'account_signup' %}">
+          <div class="form-row">
+            <div class="col-lg-7">
+              <div class="login-header mb-2">
+                <h3 class="text-center">Sign Up</h3>
+              </div>
+              {% csrf_token %}
+              {{ form|crispy }}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button class="btn btn-checkout btn-block text-uppercase" type="submit">{% trans "Sign Up" %}
+                &raquo;</button>
+              <p class="text-center lead">or</p>
+              <!--Social account ballot-->
+              <div class="socialaccount_ballot">
+                <ul class="socialaccount_providers">
+                  {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </ul>
+              </div>
+              <p>{% blocktrans %}Already have an account?
+                <a href="{{ login_url }}">Sign In here</a>{% endblocktrans %}</p>
+            </div>
+          </div>
+        </form>
 
-
-
-<div class="main mt-5 py-4 mx-auto">
-
-  <p class="lead text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in here</a>.{% endblocktrans %}</p>
-  <!--Social account ballot-->
-  <div class="socialaccount_ballot">
-
-    <ul class="socialaccount_providers">
-      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-    </ul>
+      </div>
+    </div>
   </div>
-  <div class="login-header rounded-top ">
-    <h3 class="text-uppercase text-center my-3">Sign Up</h3>
-  </div>
-  <!--Register Form-->
-  <div class="register-box mb-3">
-    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-      {% csrf_token %}
-      {{ form|crispy }}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-      <button class="btn btn-checkout btn-block my-2" type="submit">{% trans "Sign Up" %} &raquo;</button>
-    </form>
-
-
-  </div>
-</div>
+</section>
 {% endblock %}
