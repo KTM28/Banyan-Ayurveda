@@ -521,10 +521,17 @@ thead {
 /* --login/register FORM-- */
 
 .alluth-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 100px; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 170px;
+
 }
 
 
@@ -592,7 +599,7 @@ thead {
   background-color: #28a745 !important;
 }
 
-/* Blog Page */
+/*---- Blog Page-----*/
 
 .blog-card .card-img-top {
   width: 100% !important;
@@ -694,6 +701,9 @@ thead {
     font-size: 11px;
   }
 
+  .alluth-container {
+    padding-bottom: 0px;
+  }
 
   .landing-img-responsive {
     height: auto;
@@ -715,6 +725,10 @@ thead {
     visibility: hidden;
     background-color: #b98b7b;
     transition: visibility .2s ease-in-out;
+  }
+
+  .alluth-container {
+    padding-bottom: 0px;
   }
 
   .allauth-header {

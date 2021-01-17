@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container mt-5 py-4">
     <div class="row pt-3">
+    <!--Edit/delete treatments for admin-->
         <div class="col-12 col-lg-4 mx-auto">
             {% if request.user.is_superuser %}
             {% if not product.discontinued %}
@@ -21,6 +22,7 @@
             {% endif %}
         </div>
     </div>
+    <!--Service detail page-->
     <div class="row my-3">
         <div class="col-12 col-md-6 col-lg-6 my-4">
             {% if service.image %}
@@ -81,12 +83,12 @@
     </div>
     <hr />
     <div class="row float-right">
-        <!--form-->
+        <!--Date time Appointment form-->
         <form class="form" action="{% url 'add_to_cart' service.id %}" method="POST">
             {% csrf_token %}
             <h6 class="font-weight-bold mt-4">Appointment Date and Time:</h6>
 
-            <div class="input-group date" id="datetime" data-target-input="nearest">
+            <div class="pr-3 input-group date" id="datetime" data-target-input="nearest">
                 <input type="text" name="datetime" class="form-control datetimepicker-input" data-target="#datetime"
                     required />
                 <div class="input-group-append" data-target="#datetime" data-toggle="datetimepicker">

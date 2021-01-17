@@ -14,9 +14,10 @@
             {% include 'includes/search_form.html' %}
         </div>
     </div>
+     <!--Edit/delete products for admin-->
     {% if request.user.is_superuser %}
     {% if not product.discontinued %}
-    <p>
+    <p class="text-center">
         <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i
                     class="far fa-edit"></i>&nbspEdit</a> |
         <a class="text-danger lead" href="{% url 'delete_product' product.id %}"><i
@@ -51,7 +52,7 @@
                 <small class="text-muted">No Rating</small>
                 {% endif %}
                 <p class="mt-3">{{ product.description | safe }}</p>
-                <!--form-->
+                <!-- product quantity form-->
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
