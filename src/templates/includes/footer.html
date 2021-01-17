@@ -1,0 +1,69 @@
+{% load static %}
+                
+<!--Footer-->
+<footer>
+    <section class="container-fluid footer-bg-color mx-auto mt-4">
+        <div class="row footer-font-color ">
+            <div class="col-sm-12 col-md-4 col-lg-4  text-center my-2 delivery-font">
+                <h4 class="footer-text-color ">Newsletter</h4>
+                <p class="text-teal my-2">Be the First to recieve exciting news, Features, and special offers from
+                    Banyan Ayurveda!
+                </p>
+                <form action="/" method="post">
+                    <div class="input-group my-2">
+                        <input type="email" class="form-control" id="#" placeholder="name@example.com">
+                    </div>
+                    <button type="submit" class="btn btn-info my-2">
+                        <span class="sr-only">(Subscribe button)</span>Subscribe</button>
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center my-2 delivery-font">
+                <h4 class="footer-text-color ">Contact Info</h4>
+                <a href="{% url 'contact' %}">
+                    <img src="https://img.icons8.com/offices/30/000000/address.png" /></a>
+                <p class="text-teal ">4 Grafton Street | DUBLIN | Ireland</p>
+                <br>
+                <a href="tel:1234567890"
+                    onclick="ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Call', eventLabel: 'Mobile Button'});">
+                    <p class="text-teal lead"><img
+                            src="https://img.icons8.com/plasticine/30/000000/phone-not-being-used.png" />&nbsp+123 45
+                        678 90</p>
+                </a>
+                <p class="text-teal lead"><img
+                        src="https://img.icons8.com/cotton/30/000000/email-open.png" />&nbspcontactus@banyanayurveda.com
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center my-2 delivery-font">
+                <h4 class="footer-text-color ">Connect With Us</h4>
+                <ul class="social-networks mx-auto ">
+                    <li><a href="https://www.facebook.com" target="_blank"><img
+                                src="https://img.icons8.com/office/30/000000/facebook-new.png" /><span
+                                class="sr-only">(facebook icon)</span></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img
+                                src="https://img.icons8.com/offices/30/000000/youtube.png" /><span
+                                class="sr-only">(youtube
+                                icon)</span></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img
+                                src="https://img.icons8.com/office/30/000000/instagram-new.png" /><span
+                                class="sr-only">(instagram icon)</span></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/" target="_blank"><img
+                                src="https://img.icons8.com/office/30/000000/twitter.png" /><span
+                                class="sr-only">(twitter
+                                icon)</span></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mx-auto p-0 m-0">
+            <small class="mx-auto text-white">&copy;Copyright Banyan Ayurveda 2021</small>
+        </div>
+        <div class="mx-auto p-0 m-0">
+            <small class="py-0 my-0 text-info"><a class="text-info" href="https://icons8.com/icon/118495/facebook">icons
+                    by Icons8</a></small>
+        </div>
+    </section>
+</footer>

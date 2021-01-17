@@ -95,6 +95,35 @@ nav.stroke ul li .hover-nav:hover:after {
 }
 
 
+
+/* ----Footer---- */
+
+div ul.social-networks li {
+  display: inline-flex;
+  padding: 20px;
+  margin: auto;
+
+}
+
+.footer-bg-color {
+  background-color: #f9d6b0;
+}
+
+.footer-text-color {
+  color: #745330;
+  text-transform: uppercase;
+}
+
+.text-teal {
+  color: #3FA291;
+}
+
+footer a {
+  text-decoration: none !important;
+}
+
+
+
 /* --------Landing Page---------- */
 
 .hero_img_bg {
@@ -127,7 +156,7 @@ nav.stroke ul li .hover-nav:hover:after {
 }
 
 .hero-text {
-  color:#745330;
+  color: #745330;
   font-size: 25px;
   font-weight: Bold;
   letter-spacing: 2px;
@@ -135,9 +164,9 @@ nav.stroke ul li .hover-nav:hover:after {
 }
 
 .showcase-button {
-  font-size:22px;
+  font-size: 22px;
   border: 1px solid#b98b7b;
-  color:#745330;
+  color: #745330;
   padding: 10px 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -202,6 +231,7 @@ nav.stroke ul li .hover-nav:hover:after {
 .carousel-indicators li.active {
   background: #f9d6b0;
 }
+
 
 /* -----All products view----- */
 
@@ -417,8 +447,13 @@ thead {
 
 /* ---Contact Us Page--- */
 
-.contact-inside {
+.contact-outer {
+  padding:30px !important;
   width: 80%;
+}
+
+.contact-inside {
+  width: 100%;
   height: auto;
   margin: auto;
   display: flex;
@@ -456,8 +491,8 @@ thead {
   outline: none;
   margin-bottom: 1.250em;
   padding: 0.938em;
-  border: 2px solid  #ebc58cc5;
-  border-bottom: 5px solid  #ebc58cc5;
+  border: 2px solid #ebc58cc5;
+  border-bottom: 5px solid #ebc58cc5;
 }
 
 .contact-form input::placeholder {
@@ -473,8 +508,8 @@ thead {
   outline: none;
   margin-bottom: 1.250em;
   padding: 0.938em;
-  border: 2px solid  #ebc58cc5;
-  border-bottom: 5px solid  #ebc58cc5;
+  border: 2px solid #ebc58cc5;
+  border-bottom: 5px solid #ebc58cc5;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -553,7 +588,7 @@ thead {
   display: none;
 }
 
-.allauth-form-content input .reset-password{
+.allauth-form-content input .reset-password {
   background-color: #28a745 !important;
 }
 
@@ -761,6 +796,11 @@ thead {
 
   .hero_img_bg {
     background: url('../img/landing/hero-img1-tablet.png') no-repeat center center fixed;
+  }
+
+  .contact-outer {
+    width: auto;
+    margin-top: 50px !important;
   }
 
 }

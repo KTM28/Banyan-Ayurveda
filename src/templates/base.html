@@ -60,17 +60,21 @@
 <body>
 
     <header>
+        <!--Navbar-->
         {% include 'includes/navbar.html' %}
     </header>
 
     <main>
+        <!--Message container-->
         {% include 'includes/messages.html' %}
+        <!--Main Body-->
         {% block content %}
         {% endblock %}
     </main>
 
     <footer>
-        {% comment %} {% include ''%} {% endcomment %}
+        <!--Footer content-->
+        {% include 'includes/footer.html' %}
     </footer>
 
     {% block postloadjs %}
