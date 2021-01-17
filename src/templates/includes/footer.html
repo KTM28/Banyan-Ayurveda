@@ -9,9 +9,10 @@
                 <p class="text-teal my-2">Be the First to recieve exciting news, Features, and special offers from
                     Banyan Ayurveda!
                 </p>
-               <form action="/" method="post">
-                    <div class="input-group my-2">
-                        <input type="email" class="form-control" id="#" placeholder="name@example.com">
+                <form action="{% url 'newsletters:marketingsubs' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="sub-form m-auto">
+                        {{ sub_form }}
                     </div>
                     <button type="submit" class="btn btn-info my-2">
                         <span class="sr-only">(Subscribe button)</span>Subscribe</button>
