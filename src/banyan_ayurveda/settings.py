@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     
     'tempus_dominus', # Required by Bootstrap tempus_dominus datetime picker
     'landing',
+    'about',
     'products',
     'cart',
     'checkout',
