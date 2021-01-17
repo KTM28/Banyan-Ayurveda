@@ -3,7 +3,67 @@
 {% block extra_title %}- About{% endblock %}
 
 {% block content %}
-<section class="h-100">
-<h1>about page</h1>
-</section>
+<div class="container pt-5 mt-5 my-5">
+    <!--About Heading-->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="text-uppercase main-heading">About us</h1>
+            <hr class="block-divider block-divider-gray">
+        </div>
+    </div>
+    <!--Intro-->
+    <div class="row text-center mt-3 mt-md-5 d-flex align-items-center">
+        <div class="col-12 col-md-6 col-lg-5 mb-3 landing-text">
+            <h3 class="text-center delivery-font">Who We Are</h3>
+            <p class="text-center  mt-lg-4">
+                At <strong>Banyan Ayurveda</strong> we treat with traditional Ayurvedic Medicine and provide ancient
+                Indian therapies to help heal and maintain the quality and longevity of life. </p>
+            <p class="text-center mt-lg-4">
+                As a science of self-healing, Ayurveda encompasses diet and nutrition, lifestyle, meditation, postures,
+                breathing exercises and medical herbs along with cleansing and rejuvenation programs for healing body,
+                mind, and spirit.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-7 mb-3">
+            <img src="{% static 'img/about/banyan-about-3.jpg'%}" class="img-fluid" alt="about-page-image">
+        </div>
+    </div>
+    <!--Our Treatments-->
+    <div class="row text-center mt-3 mt-md-5 d-flex align-items-center">
+        <div class="col-12 col-md-6 col-lg-7 mb-3 d-none d-sm-block">
+            <img src="{% static 'img/about/banyan-about-2.jpg'%}" class="img-fluid" alt="about-page-image">
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 mb-3 landing-text">
+            <h3 class="text-center delivery-font">Our Panchakarma Treatments</h3>
+            <p class="text-center  mt-lg-4">
+                Our Panchakarma treatments provides the traditional cleansing
+                therapies of Ayurveda accompanied by diet and lifestyle recommendations and support for clients.</p>
+            <p class="text-center mt-lg-4">
+                The preparation period and methods in advance of panchakarma can provide a fulcrum point for personal
+                transformation. By following post-panchakarma recommendations and adopting of lifestyle changes and
+                practices, the client can embark upon a healthier and more balanced life.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-7 mb-3 d-block d-sm-none">
+            <img src="{% static 'img/about/banyan-about-2.jpg'%}" class="img-fluid" alt="about-page-image">
+        </div>
+    </div>
+
+    <!--Our store-->
+    <div class="row text-center mt-3 mt-md-5 d-flex align-items-center">
+        <div class="col-12 col-md-6 col-lg-5 mb-3 landing-text">
+            <h3 class="text-center delivery-font">Our store</h3>
+            <p class="text-center  mt-lg-4">
+                Our store and online shopping provide Ayurvedic and Western herbs, incense, specialty foods, and a
+                variety of Ayurvedic and other products.</p>
+            <p class="text-center mt-lg-4">
+                Our products are fully natural and sourced ethically. We offer 100% money back guarantee on all our
+                products! should it not fulfill your requirements.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-7 mb-3">
+            <img src="{% static 'img/about/banyan-about.jpg'%}" class="img-fluid" alt="about-page-image">
+        </div>
+    </div>
+</div>
 {% endblock %}
