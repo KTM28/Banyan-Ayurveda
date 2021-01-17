@@ -448,7 +448,7 @@ thead {
 /* ---Contact Us Page--- */
 
 .contact-outer {
-  padding:30px !important;
+  padding: 30px !important;
   width: 80%;
 }
 
@@ -796,6 +796,18 @@ thead {
 
   .hero_img_bg {
     background: url('../img/landing/hero-img1-tablet.png') no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
   }
 
   .contact-outer {
@@ -811,8 +823,19 @@ thead {
   }
 
   .hero_img_bg {
-    background: url('../img/landing/hero-img11-xs-device.png') no-repeat center center fixed;
+    background: url('../img/landing/hero-img1-xs.png') no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
   }
-
 
 }
