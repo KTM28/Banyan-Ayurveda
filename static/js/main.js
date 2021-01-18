@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(this).text(newstr + '.....');
     });
 
-    $('.btn-close').click(function(e){
+    $('.btn-close').click(function (e) {
         $(".navbar-collapse").removeClass("show");
         $("body").removeClass("offcanvas-active");
     })
@@ -18,7 +18,26 @@ $(document).ready(function () {
         });
         $('div[id^=cart_datetime-]').each(function () {
             $(this).children('input.datetimepicker-input').val($(this).data('value'));
-          });
+        });
     };
     dateTimePickerInit();
+
+    $('.btt-link').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '100');
+    })
+
+    bttbutton = document.getElementById("back-top-btn");
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 100) {
+            bttbutton.style.display = "block";
+        } else {
+            bttbutton.style.display = "none";
+        }
+    }
+
 });

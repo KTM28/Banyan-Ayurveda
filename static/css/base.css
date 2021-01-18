@@ -29,6 +29,27 @@ body {
   letter-spacing: 0.125em;
 }
 
+.btt-button {
+  position: fixed;
+  height: 2.2rem;
+  width: 2.2rem;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  border-radius: .3rem;
+  background-color: #745330;
+  display: none;
+  z-index: 1000;
+}
+
+.btt-button:hover {
+  background-color: #d17411;
+}
+
+.btt-link{
+  cursor: pointer;
+}
+
+
 /* ------NAVBAR------ */
 .navbar-brand {
   position: absolute;
