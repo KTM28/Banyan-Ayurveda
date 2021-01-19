@@ -2,8 +2,8 @@
 {% load static %}
 {% block extra_title %}- Shopping Cart{% endblock %}
 {% block content%}
-{% include 'products/includes_products/delivery_banner.html' %}
-<div class="container mb-2">
+<div class="container cart-container mb-2">
+    {% include 'products/includes_products/delivery_banner.html' %}
     <div class="row">
         <div class="col">
             <h2 class="cart-header mb-4">Shopping Cart</h2>

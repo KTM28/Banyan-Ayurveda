@@ -5,7 +5,7 @@
     <table class="table table-sm border">
         <thead class="">
             <tr>
-                <th scope="col">Product Info</th>
+              <th scope="col">Product Info</th>
                 <th scope="col"></th>
                 <th scope="col">Price</th>
                 <th scope="col">Qty</th>
@@ -15,7 +15,7 @@
 
         {% for item in cart_items %}
         <tr>
-            <td class="p-3 w-25 ">
+            <td class="cart-image p-3 w-25">
                 {% if item.product.image %}
                 <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                 {% else %}
@@ -24,13 +24,12 @@
             </td>
             <td>
                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <!--Cart Update Form-->
+                    {% include 'cart/includes/cart_update_form.html' %}
 
-                <!--Cart Update Form-->
-                {% include 'cart/includes/cart_update_form.html' %}
-
-                <a class="update-link text-info btn my-4"><i class="fas fa-sync"></i>&nbsp<small>Update</small></a>
-                <a class="remove-item text-danger float-right btn my-4" id="remove_{{ item.item_id }}"><i
-                        class="fas fa-trash-alt"></i>&nbsp<small>Remove</small></a>
+                    <a class="update-link text-info btn my-4"><i class="fas fa-sync"></i>&nbsp<small>Update</small></a>
+                    <a class="remove-item text-danger  btn my-4" id="remove_{{ item.item_id }}"><i
+                            class="fas fa-trash-alt"></i>&nbsp<small>Remove</small></a>
             </td>
             <td class="py-3">
                 <p class="my-0">€{{ item.product.price }}</p>

@@ -24,3 +24,4 @@ six==1.15.0
 sqlparse==0.4.1
 stripe==2.55.1
 urllib3==1.25.11
+virtualenv==20.1.0

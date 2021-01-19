@@ -419,6 +419,17 @@ thead {
   background-color: #ffc505;
 }
 
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 140px;
+  margin-top: 30px;
+}
+
+
 /* -------Toasts------ */
 
 .message-container {
@@ -536,6 +547,14 @@ thead {
 
 .contact-form textarea::placeholder {
   color: #aaa;
+}
+
+.contact-success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px !important;
+  padding-bottom: 120px;
 }
 
 
@@ -871,6 +890,10 @@ thead {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+  }
+
+  .datetimepicker-input, .cart-qty-input {
+    width: max-content !important;
   }
 
 }
