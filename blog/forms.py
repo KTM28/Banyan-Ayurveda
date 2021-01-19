@@ -11,7 +11,6 @@ for item in choices:
 class BlogForm(forms.ModelForm):
     category = forms.ModelChoiceField(
         queryset=Category.objects.all(), empty_label='Select the category')
-
     class Meta:
         model = Blog
         fields = ('title', 'category', 'content', 'thumbnail')
