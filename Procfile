@@ -1,0 +1,1 @@
+web: gunicorn banyan_ayurveda.wsgi:application
