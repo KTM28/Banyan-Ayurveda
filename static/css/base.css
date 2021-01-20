@@ -434,8 +434,8 @@ thead {
 
 .message-container {
   position: fixed;
-  top: 5.125em;
-  right: 1.063em;
+  top: 4.56rem;
+  right: 0.1rem;
   z-index: 99999;
 }
 
