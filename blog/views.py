@@ -10,7 +10,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Blog, BlogView, Like, Comment, Category
 from .forms import BlogForm, CommentForm
 
-
 class BlogListView(ListView):
     model = Blog
     template_name = 'blog/blog_list.html'
