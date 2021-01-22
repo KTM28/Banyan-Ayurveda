@@ -1,7 +1,7 @@
 {% load static %}
 {% load cart_tools %}
-<!--Cart Table-->
-<div class="table-responsive rounded">
+<!--Cart Table for medium and large devices-->
+<div class="table-responsive rounded d-none d-sm-block">
     <table class="table table-sm border">
         <thead class="">
             <tr>
@@ -57,4 +57,42 @@
             </td>
         </tr>
     </table>
+</div>
+
+<!--cart container for small devices only-->
+<div class="container border border-cart rounded d-block d-sm-none">
+    {% for item in cart_items %}
+    <div class="row p-3 border-bottom border-cart-bottom ">
+        <!--Image-->
+        <div class="col-6 mb-2">
+            {% if item.product.image %}
+            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+            {% endif %}
+        </div>
+        <div class="col-6 mb-2">
+            <p class="my-0">Qty:&nbsp{{ item.quantity }}</p>
+        </div>
+        <!--Name-->
+        <div class="col-12 mx-auto">
+            <h6 class="font-weight-bold"> {{ item.product.name }}</h6>
+            <!--Cart Update form-->
+            {% include 'cart/includes/cart_update_form_sm.html' %}
+            <a class="update-link text-info btn my-4"><i class="fas fa-sync"></i>&nbsp<small>Update</small>
+            </a>
+            <a class="remove-item text-danger  btn my-4" id="remove_{{ item.item_id }}"><i
+                    class="fas fa-trash-alt"></i>&nbsp<small>Remove</small>
+            </a>
+        </div>
+        <div class="  col-12 justify-content-between ">
+            <p class="my-0">Price:&nbsp€{{ item.product.price }}</p>
+            <p class="my-0 font-weight-bold">Subtotal:&nbsp€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!--Cart Grand Total-->
+    {% include 'cart/includes/cart_total.html' %}
+    {% include 'cart/includes/checkout_btn.html' %}
 </div>

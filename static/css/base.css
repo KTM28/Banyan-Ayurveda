@@ -419,8 +419,12 @@ thead {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 8.750em;
   margin-top: 1.875em;
+}
+
+.border-cart, .border-cart-bottom {
+  border-width: 5px !important;
+  border-color: #f3725ec5 !important;
 }
 
 
@@ -879,7 +883,11 @@ thead {
 
   .datetimepicker-input,
   .cart-qty-input {
-    width: max-content !important;
+    width: fit-content !important;
+  }
+
+  .table-responsive {
+    width: fit-content !important;
   }
 
   .text-teal {
