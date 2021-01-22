@@ -11,6 +11,7 @@ from .models import Blog, BlogView, Like, Comment, Category
 from .forms import BlogForm, CommentForm
 
 class BlogListView(ListView):
+    """A view to display blog list"""
     model = Blog
     template_name = 'blog/blog_list.html'
     ordering = ['-publish_date']
@@ -23,6 +24,7 @@ class BlogListView(ListView):
         return context
 
 def CategoryView(request, category):
+    """A view to display blog Category"""
     blog_category = Blog.objects.filter(category=category)
     blog_category_menu = Category.objects.all()
     blogs = Blog.objects.all()
@@ -65,6 +67,7 @@ class BlogDetailView(DetailView):
 
 
 class BlogCreateView(LoginRequiredMixin, CreateView):
+    """Blog create view"""
     form_class = BlogForm
     model = Blog
     success_url = '/blog/'
@@ -81,6 +84,7 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
         return context
 
 class BlogUpdateView(LoginRequiredMixin, UpdateView):
+    """Blog update view"""
     form_class = BlogForm
     model = Blog
     success_url = '/blog/'
@@ -94,11 +98,13 @@ class BlogUpdateView(LoginRequiredMixin, UpdateView):
 
 
 class BlogDeleteView(LoginRequiredMixin, DeleteView):
+    """Blog delete view"""
     model = Blog
     success_url = '/blog'
 
 
 class BlogSearchView(View):
+        """Blog search view"""
         template_name = 'blog/blog_search.html'
 
         def get(self, request, *args, **kwargs):
@@ -122,6 +128,7 @@ class BlogSearchView(View):
             return render(request, 'blog/blog_search.html', context)
 
 class BlogAuthorProfileView(LoginRequiredMixin, View):
+    """A view to diplay blog author's blog list"""
     model = UserProfile
     template_name = 'blog/blog_author.html'
     context_object_name = 'user'
@@ -138,7 +145,7 @@ class BlogAuthorProfileView(LoginRequiredMixin, View):
 
 @ login_required()
 def LikeBlog(request, slug):
-
+    """A view to allow blog like"""
     blog = get_object_or_404(Blog, slug=slug)
     like_queryset = Like.objects.filter(user=request.user, blog=blog)
 

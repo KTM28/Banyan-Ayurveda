@@ -2,13 +2,15 @@
 {% load static %}
 {% block extra_title %}- Contact Us{% endblock %}
 {% block content %}
-
+<!--Contact us page-->
 <div class="container-fluid contact-outer mt-5">
     <div class="row contact-inside my-3">
+        <!--Google Map-->
         <div id="map" class="contact-map col-md-12 col-lg-6">
         </div>
         <div class="contact-form col-md-12  col-lg-6 my-auto">
             <h1 class="landing-text">Contact Us</h1>
+            <!--Contact Us form-->
             <form method="POST" action="{% url 'contact' %}">
                 {% csrf_token %}
                 {{ contact_form|crispy }}
@@ -17,8 +19,9 @@
             </form>
         </div>
     </div>
+    <!--Store Contact detail -->
     <div class="my-3 border rounded col-12 text-center">
-        <img src="https://img.icons8.com/offices/30/000000/address.png"/>
+        <img src="https://img.icons8.com/offices/30/000000/address.png" />
         <p class="text-teal lead">4 Grafton Street | DUBLIN | Ireland</p>
         <br>
         <a href="tel:1234567890"

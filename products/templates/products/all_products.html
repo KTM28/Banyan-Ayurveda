@@ -8,17 +8,23 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-12">
+            <!--delivery banner-->
             {% include 'products/includes_products/delivery_banner.html' %}
+            <!--Shop header-->
             <h1 class="text-center shop-header">Banyan Shop</h1>
+            <!--Category select menu-->
             {% include 'products/includes_products/product_categories.html' %}
+            <!--Product search form-->
             {% include 'includes/search_form.html' %}
             <hr>
         </div>
     </div>
+    <!--All product list-->
     <div class="row" id="productAll">
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card rounded mb-2 product-card">
+                <!--Product Image-->
                 <div class="card-image my-1">
                     {% if product.image %}
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -34,22 +40,24 @@
                     <small class="text-success">No Rating</small>
                     {% endif %}
                 </div>
+                <!--product name-->
                 <div class="card-body text-center">
                     <div class="m-auto">
                         <p class="font-weight-bold">{{ product.name}}</p>
                     </div>
+                    <!--product view buttons-->
                     <a href="{% url 'product_details' product.id %}" class="btn btn-sm product-btn d-block m-auto">
                         <span class="icon">
                             <i class="fas fa-chevron-right"></i>
                         </span>
                         <span class="text-uppercase">View</span>
                     </a>
+                    <!--Add to cart form with hidden input quantity-->
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <input name="quantity" type="hidden" value="1">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="submit" class="btn add-cart-btn mt-2 fa "
-                            value="&#xf217 &nbsp;Add to Cart" />
+                        <input type="submit" class="btn add-cart-btn mt-2 fa " value="&#xf217 &nbsp;Add to Cart" />
                     </form>
                 </div>
             </div>

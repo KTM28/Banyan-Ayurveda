@@ -3,14 +3,15 @@
 {% block extra_title %}- Home{% endblock %}
 
 {% block content %}
+<!--Main Hero image-->
 <section class="hero_img_bg">
     {% include 'landing/includes/hero_img_div.html' %}
 </section>
-            
+<!--Landing page About Section-->     
 <section class="my-5">
     {% include 'landing/includes/landing_about.html' %}
 </section>
-
+<!--Feature and review section-->
 <section class="my-5 h-30">
 {% include 'landing/includes/landing_feature.html' %}
 {% include 'landing/includes/review_section.html' %}

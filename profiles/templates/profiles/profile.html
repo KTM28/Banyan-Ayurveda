@@ -10,13 +10,16 @@
 {% block content%}
 
 <div class="container blog-container mt-5 py-4">
+    <!--Profile dashboard header-->
     <div class="row my-3 ml-1 mr-1">
         <div class="col-12 text-center bg-minor-theme border-r">
             <h1>Dashboard</h1>
         </div>
     </div>
+    <!--Profile user's email-->
     <p class="text-center lead"><i class="fas fa-user minor-color"></i>&nbsp<span>{{ user.email }}</span></p>
     <div class="row m-auto">
+        <!--Profle admin container-->
         <div class="col-lg-4 col-sm-12 border-org py-3 my-2 border-r">
             <h4 class="text-center">Profile Admin</h4>
             <hr class="border-org">
@@ -36,6 +39,7 @@
                 </ul>
             </div>
         </div>
+        <!--Profile User's blog list-->
         <div class="col-lg-4 col-sm-12 border-org py-3 my-2 border-r">
             <div class="scrollable">
                 <h4 class="text-center">My Blogs</h4>
@@ -43,6 +47,7 @@
                 {% include 'profiles/includes/user_blog.html' %}
             </div>
         </div>
+        <!--Profile User's order-history list-->
         <div class="col-lg-4 col-sm-12 border-org py-3 my-2 border-r order-history">
             <h4 class="text-center">Order History</h4>
             <hr class="border-org">

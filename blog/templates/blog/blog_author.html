@@ -2,6 +2,8 @@
 {% load static %}
 {% block extra_title %}- Blog| Author{% endblock %}
 {% block content %}
+
+<!--Breadcrumb-->
 <div class="container-fluid mt-5 py-4">
     <div class="row">
         <div class="col-12">
@@ -17,17 +19,14 @@
 </div>
 
 <div class="container my-2">
+    <!--Blog search form-->
     {% include 'blog/includes/blog_search_form.html' %}
 
     <div class="row">
         <div class="col-12 col-lg-8 my-3 border rounded bg-info text-white mx-auto ">
             <h2 class="text-center pt-1">{{ page_user|title }}'s Blogs</h2>
         </div>
-        <div class="text-center col-12 col-lg-8 my-2 mx-auto">
-            <a class="text-info text-uppercase letter-space" href="{% url 'blog:create' %}"><i
-                    class="fas fa-plus-square fa-lg add-blog"></i>&nbspAdd a
-                Blog</a>
-        </div>
+        <!--Blog author's blog list-->
         <div class="col-lg-8 col-md-8 col-sm-12 mx-auto blog-container">
             {% for blog in user_blog %}
             <a href="{{ blog.get_absolute_url }}">

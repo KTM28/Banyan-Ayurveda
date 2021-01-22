@@ -14,18 +14,16 @@
             {% include 'includes/search_form.html' %}
         </div>
     </div>
-     <!--Edit/delete products for admin-->
+    <!--Edit/delete products for admin-->
     {% if request.user.is_superuser %}
     {% if not product.discontinued %}
     <p class="text-center">
-        <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i
-                    class="far fa-edit"></i>&nbspEdit</a> |
+        <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i class="far fa-edit"></i>&nbspEdit</a> |
         <a class="text-danger lead" href="{% url 'delete_product' product.id %}"><i
-                    class="fas fa-trash-alt"></i></i>&nbspDelete</a>
+                class="fas fa-trash-alt"></i></i>&nbspDelete</a>
     </p>
     {% else %}
-    <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i
-                    class="far fa-edit"></i>&nbspEdit</a>
+    <a class="text-info lead" href="{% url 'edit_product' product.id %}"><i class="far fa-edit"></i>&nbspEdit</a>
     {% endif %}
     {% endif %}
     <div class="row" id="productAll">
@@ -65,7 +63,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!--Back to product page-->
                         <div class="col-12 mt-2">
                             <a href="{% url 'products' %}" class="btn btn-info rounded-0 my-2">
                                 <span class="icon">
@@ -81,10 +79,6 @@
                 </form>
             </div>
         </div>
-    </div>
-
-    <div class="col-4 mx-auto">
-
     </div>
 </div>
 {% endblock content %}

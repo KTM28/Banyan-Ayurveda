@@ -4,6 +4,7 @@
 
 
 {% block content %}
+<!--Add service header-->
 <div class="container mt-5 py-4">
     <div class="row">
         <div class="col-12 mx-auto col-md-6">
@@ -15,7 +16,7 @@
         </div>
     </div>
     <div class="row">
-        <!--Product Form-->
+        <!--Service Form-->
         <div class="col-12 col-md-6 mx-auto">
             <form method="POST" action="{% url 'add_service' %}" class="form mb-2" enctype="multipart/form-data">
                 {{ form.media }}

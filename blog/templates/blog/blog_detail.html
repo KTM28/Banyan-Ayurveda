@@ -2,6 +2,7 @@
 {% load static %}
 {% block extra_title %}- Blog| Detail {% endblock %}
 {% block content %}
+<!--Breadcrumb-->
 <div class="container-fluid mt-5 py-4">
     <div class="row">
         <div class="col-12">
@@ -15,7 +16,7 @@
         </div>
     </div>
 </div>
-
+<!--Blog details-->
 <div class="container blog-container">
     <div class="row">
         <div class="blog-detail col-12 d-flex justify-content-center">
@@ -65,6 +66,7 @@
         </div>
     </div>
     <hr class="blog-hr">
+    <!--Blog Comment-->
     {% if request.user.is_authenticated %}
     <div class="row">
         <div class="col">

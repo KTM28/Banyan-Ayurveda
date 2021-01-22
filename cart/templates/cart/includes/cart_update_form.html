@@ -1,5 +1,5 @@
 {% load static %}
-
+<!--Cart update form-->
 <form class="form update-form" id="cart-update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
     {% csrf_token %}
 

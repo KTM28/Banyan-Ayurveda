@@ -2,7 +2,7 @@
 {% load static %}
 {% block extra_title %}- Blog|Search{% endblock %}
 {% block content %}
-
+<!--Breadcrumb-->
 <div class="container-fluid py-3">
     <div class="row">
         <div class="col-12">
@@ -38,7 +38,7 @@
 
     <div class="row">
         <!--Blog Category Menu-->
-         {% include 'blog/includes/blog_cat_snippet.html' %}
+        {% include 'blog/includes/blog_cat_snippet.html' %}
         <!--Blog List-->
         <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
             {% for blog in blogs %}
@@ -63,7 +63,8 @@
                                     class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
                         </p>
                     </div>
-                    <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}} ago</small></p>
+                    <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}}
+                            ago</small></p>
                 </div>
             </div>
             {% empty %}
