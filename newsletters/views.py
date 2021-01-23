@@ -1,16 +1,16 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from .models import MarketingSubs
 from .forms import MarketingEmailSubForm
 
+
 def marketing_sub(request):
-    """ News letter subscription view- if email exists in db 
+    """ News letter subscription view- if email exists in db
         Send a message else saves the email """
 
     form = MarketingEmailSubForm(request.POST or None)
-    if request.method =='POST':
+    if request.method == 'POST':
         if form.is_valid():
             marketingsubs_qs = MarketingSubs.objects.filter(
                 email=form.instance.email

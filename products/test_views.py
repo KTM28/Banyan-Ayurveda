@@ -5,7 +5,7 @@ from products.views import *
 
 class TestProduct(TestCase):
 
-    fixtures = ['categories.json','products.json',]
+    fixtures = ['categories.json', 'products.json', ]
 
     def test_get_product(self):
         product = Product.objects.get(id=3)

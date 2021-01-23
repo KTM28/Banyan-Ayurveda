@@ -11,7 +11,7 @@ class TestContacForm(TestCase):
                             'message': 'test message',
                             })
         self.assertTrue(form.is_valid())
-        
+
     def test_contact_form_invalid(self):
 
         form = ContactForm({'full_name': 'test name',

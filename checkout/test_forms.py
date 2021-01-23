@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import OrderForm
 
+
 class TestOrderForm(TestCase):
 
     def test_order_form_valid_data(self):
@@ -36,4 +37,4 @@ class TestOrderForm(TestCase):
             'full_name', 'email', 'phone_number',
             'address_line1', 'address_line2',
             'town_or_city', 'postcode', 'country',
-                'county',))
+            'county',))

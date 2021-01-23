@@ -17,7 +17,7 @@ def contact(request):
             message = contact_form.cleaned_data['message']
             try:
                 send_mail(
-                    f"Message from {full_name}, <{user_email}>", 
+                    f"Message from {full_name}, <{user_email}>",
                     message,
                     user_email,
                     [settings.DEFAULT_FROM_EMAIL],

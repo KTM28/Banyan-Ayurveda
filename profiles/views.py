@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import UserProfile
-from .forms import  UserProfileForm
+from .forms import UserProfileForm
 from blog.models import Blog
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
+
 
 @login_required
 def profile(request):
@@ -17,14 +18,15 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.'
+                )
     else:
         form = UserProfileForm(instance=profile)
-    
-    orders=profile.orders.all().order_by('-purchase_date')
+
+    orders = profile.orders.all().order_by('-purchase_date')
     user_blog = Blog.objects.filter(
             author=request.user).order_by('-publish_date')
-
 
     template = 'profiles/profile.html'
     context = {
@@ -35,10 +37,11 @@ def profile(request):
 
     return render(request, template, context)
 
+
 @login_required
 def shipping_info(request):
     """Display User Shipping details"""
-    
+
     template = 'profiles/shipping_info.html'
     profile = get_object_or_404(UserProfile, user=request.user)
 
@@ -57,6 +60,7 @@ def shipping_info(request):
 
     return render(request, template, context)
 
+
 @login_required
 def order_history(request, order_number):
     """Display User's order history"""
@@ -74,4 +78,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-

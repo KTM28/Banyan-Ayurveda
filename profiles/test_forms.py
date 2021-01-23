@@ -1,6 +1,7 @@
 from django.test import TestCase
 from profiles.forms import UserProfileForm
 
+
 class TestUserProfileForm(TestCase):
 
     def test_user_profile_form_not_required_data(self):

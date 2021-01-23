@@ -3,16 +3,17 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-    
+
     class Meta:
         model = Product
-        fields = ('name', 'description', 'sku',
-                'category', 'price',
-                'rating',
-                'image_url',
-                'image',
-                'discontinued',
-                )
+        fields = (
+            'name', 'description', 'sku',
+            'category', 'price',
+            'rating',
+            'image_url',
+            'image',
+            'discontinued',
+            )
     image = forms.ImageField(label='Image', required=False)
 
     def __init__(self, *args, **kwargs):
@@ -28,27 +29,28 @@ class ProductForm(forms.ModelForm):
             'rating': 'Rating 0-5',
             'discontinued': 'Discontinued',
         }
-    
+
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
         self.fields['category'].choices = friendly_names
         for field in self.fields:
             self.fields[field].label = labels[field]
-        
-        
+
         self.fields['price'].widget.attrs['min'] = 0
         self.fields['price'].widget.attrs['max'] = 1000
         self.fields['rating'].widget.attrs['min'] = 0
         self.fields['rating'].widget.attrs['max'] = 5
 
+
 class ServiceForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = ('name', 'description', 'benefit', 'price',
-                    'rating', 'duration', 'image_url',
-                    'image', 'discontinued',
-                    )
+        fields = (
+            'name', 'description', 'benefit', 'price',
+            'rating', 'duration', 'image_url',
+            'image', 'discontinued',
+            )
     image = forms.ImageField(label='Image', required=False)
     duration = forms.IntegerField(required=True)
 
@@ -68,7 +70,6 @@ class ServiceForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].label = labels[field]
 
-        
         self.fields['price'].widget.attrs['min'] = 0
         self.fields['price'].widget.attrs['max'] = 1000
         self.fields['rating'].widget.attrs['min'] = 0

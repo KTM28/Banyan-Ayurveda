@@ -1,10 +1,10 @@
 from django.test import TestCase
 from newsletters.forms import MarketingEmailSubForm
-from newsletters.models import *
+from newsletters.models import MarketingSubs
 
 
 class TestMarketingEmailSubForm(TestCase):
-    
+
     def test_marketing_sub_form(self):
 
         form = MarketingEmailSubForm({'email': ''})
@@ -15,5 +15,6 @@ class TestMarketingEmailSubForm(TestCase):
     def test_marketing_sub_form_meta(self):
 
         form = MarketingEmailSubForm()
-        self.assertEqual(form.Meta.fields,
-                            ('email',))
+        self.assertEqual(
+            form.Meta.fields, ('email',)
+            )

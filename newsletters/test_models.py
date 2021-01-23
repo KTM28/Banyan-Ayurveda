@@ -1,5 +1,6 @@
 from django.test import TestCase
-from newsletters.models import *
+from newsletters.models import MarketingSubs
+
 
 class TestNewslettersModels(TestCase):
 

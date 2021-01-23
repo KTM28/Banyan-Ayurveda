@@ -2,6 +2,7 @@ from django.test import TestCase
 from .models import Product, Category
 from .forms import ProductForm, ServiceForm
 
+
 class TestProductForm(TestCase):
 
     def test_product_form_invalid_data(self):
@@ -27,6 +28,7 @@ class TestProductForm(TestCase):
                     'image_url',
                     'image',
                     'discontinued',))
+
 
 class TestServiceForm(TestCase):
 

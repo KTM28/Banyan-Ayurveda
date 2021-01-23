@@ -3,7 +3,8 @@
 <!--Cart Table for medium and large devices-->
 <div class="table-responsive rounded d-none d-sm-block">
     <table class="table table-sm border">
-        <thead class="">
+        {% comment %} <div class="clearfix my-3">...</div> {% endcomment %}
+        <thead>
             <tr>
                 <th scope="col">Product Info</th>
                 <th scope="col"></th>
@@ -12,7 +13,6 @@
                 <th scope="col">Subtotal</th>
             </tr>
         </thead>
-
         {% for item in cart_items %}
         <tr>
             <td class="cart-image p-3 w-25">

@@ -1,16 +1,15 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from blog.views import *
 from django.urls import reverse
-from .models import Blog, BlogView, Like, Comment, Category
+
 
 class TestBlogListView(TestCase):
-
 
     @classmethod
     def setUpTestData(cls):
         User.objects.create_user(
-            username="test_user", email="test@gmail.com", password="password123")
+            username="test_user", email="test@gmail.com",
+            password="password123")
 
     def test_blog_list_view(self):
         resp = self.client.get(reverse('blog:list'))

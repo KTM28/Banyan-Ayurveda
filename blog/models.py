@@ -14,7 +14,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-        
+
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
@@ -41,8 +41,6 @@ class Blog(models.Model):
     def get_delete_url(self):
         return reverse('blog:delete', kwargs={'slug': self.slug})
 
-
-
     @property
     def comment(self):
         return self.comment_set.all()
@@ -58,15 +56,14 @@ class Blog(models.Model):
     @property
     def get_like_count(self):
         return self.like_set.all().count()
-    
-    
 
 
 def create_slug(instance, new_slug=None):
     """Slugifys the title, if slug exists it adds a id to make it unique
-    (Logic source: 
-    https://www.codingforentrepreneurs.com/blog/a-unique-slug-generator-for-django.)"""
-    
+    (Logic source:
+    https://www.codingforentrepreneurs.com/blog/a-unique-slug-generator-for-django.)
+    """
+
     if new_slug is not None:
         slug = new_slug
     else:
@@ -74,7 +71,7 @@ def create_slug(instance, new_slug=None):
     query_set = Blog.objects.filter(slug=slug)
     query_set_exists = query_set.exists()
     if query_set_exists:
-        new_slug = str.format (slug, query_set.first().id)
+        new_slug = str.format(slug, query_set.first().id)
         return create_slug(instance, new_slug=new_slug)
     return slug
 
@@ -85,7 +82,6 @@ def post_save_blog_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(post_save_blog_receiver, sender=Blog)
-
 
 
 class Comment(models.Model):
@@ -107,6 +103,7 @@ class BlogView(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Like(models.Model):
 

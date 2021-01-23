@@ -1,6 +1,6 @@
 from django.test import TestCase
 from blog.forms import BlogForm, CommentForm
-from blog.models import *
+
 
 class TestBlogForm(TestCase):
 
@@ -17,6 +17,7 @@ class TestBlogForm(TestCase):
         self.assertIn('title', form.errors.keys())
         self.assertIn('category', form.errors.keys())
         self.assertIn('thumbnail', form.errors.keys())
+
 
 class TestCommentForm(TestCase):
 

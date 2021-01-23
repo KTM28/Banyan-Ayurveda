@@ -6,8 +6,9 @@ class ContactForm(forms.Form):
     A form for contact page
     """
 
-    full_name = forms.CharField(label=""
-    )
+    full_name = forms.CharField(
+        label=""
+        )
     email = forms.EmailField(
         label=""
     )

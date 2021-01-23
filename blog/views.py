@@ -6,9 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from django.views import View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (
+    ListView, DetailView, CreateView, UpdateView, DeleteView
+    )
 from .models import Blog, BlogView, Like, Comment, Category
 from .forms import BlogForm, CommentForm
+
 
 class BlogListView(ListView):
     """A view to display blog list"""
@@ -23,6 +26,7 @@ class BlogListView(ListView):
         context['blog_category_menu'] = blog_category_menu
         return context
 
+
 def CategoryView(request, category):
     """A view to display blog Category"""
     blog_category = Blog.objects.filter(category=category)
@@ -36,9 +40,10 @@ def CategoryView(request, category):
     }
     return render(request, 'blog/blog_categories.html', context)
 
+
 class BlogDetailView(DetailView):
     model = Blog
-    
+
     def post(self, *args, **kwargs):
         """ Add Comment to the Post """
         form = CommentForm(self.request.POST)
@@ -83,6 +88,7 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
         })
         return context
 
+
 class BlogUpdateView(LoginRequiredMixin, UpdateView):
     """Blog update view"""
     form_class = BlogForm
@@ -104,28 +110,32 @@ class BlogDeleteView(LoginRequiredMixin, DeleteView):
 
 
 class BlogSearchView(View):
-        """Blog search view"""
-        template_name = 'blog/blog_search.html'
+    """Blog search view"""
+    template_name = 'blog/blog_search.html'
 
-        def get(self, request, *args, **kwargs):
-            blogs = Blog.objects.all()
-            blog_category_menu = Category.objects.all()
-            query = None
+    def get(self, request, *args, **kwargs):
+        blogs = Blog.objects.all()
+        blog_category_menu = Category.objects.all()
+        query = None
 
-            if 'q' in request.GET:
-                query= request.GET['q']
-                if not query:
-                    messages.error(request, "You didn't enter any search criteria!")
-                    return redirect(reverse('blog:list'))
-                search = Q(title__icontains=query) | Q(content__icontains=query)
-                blogs = blogs.filter(search)
-    
-            context = {
-                'search_term': query,
-                'blogs': blogs,
-                'blog_category_menu': blog_category_menu,
-            }
-            return render(request, 'blog/blog_search.html', context)
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error
+                (
+                    request, "You didn't enter any search criteria!"
+                )
+                return redirect(reverse('blog:list'))
+            search = Q(title__icontains=query) | Q(content__icontains=query)
+            blogs = blogs.filter(search)
+
+        context = {
+            'search_term': query,
+            'blogs': blogs,
+            'blog_category_menu': blog_category_menu,
+        }
+        return render(request, 'blog/blog_search.html', context)
+
 
 class BlogAuthorProfileView(LoginRequiredMixin, View):
     """A view to diplay blog author's blog list"""
@@ -142,6 +152,7 @@ class BlogAuthorProfileView(LoginRequiredMixin, View):
             'user_blog': user_blog,
         }
         return render(request, 'blog/blog_author.html', context)
+
 
 @ login_required()
 def LikeBlog(request, slug):

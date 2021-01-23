@@ -8,13 +8,14 @@ choices_list = []
 for item in choices:
     choices_list.append(item)
 
+
 class BlogForm(forms.ModelForm):
     category = forms.ModelChoiceField(
         queryset=Category.objects.all(), empty_label='Select the category')
+
     class Meta:
         model = Blog
         fields = ('title', 'category', 'content', 'thumbnail')
-
 
     def __init__(self, *args, **kwargs):
 

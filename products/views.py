@@ -6,17 +6,18 @@ from .models import Product, Category
 from .forms import ProductForm, ServiceForm
 from django.contrib.auth.decorators import login_required
 
+
 def all_products(request):
     """ A view to show all products with it's sort and search queries"""
-    
+
     all_products = Product.objects.filter(is_a_treatment=False)
     active_products = all_products.filter(discontinued=False)
-    
+
     query = None
     categories = None
     direction = None
     sort = None
-    # logic source: Code Institue Boutique Ado Project 
+    # logic source: Code Institue Boutique Ado Project
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -34,14 +35,18 @@ def all_products(request):
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            active_products = active_products.filter(category__name__in=categories)
+            active_products = active_products.filter(
+                category__name__in=categories
+                )
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
             # display error message if the query is blank
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('products'))
             # Allow search by name or description through query
             queries = Q(name__icontains=query) | \
@@ -90,7 +95,7 @@ def service_details(request, service_id):
     service = get_object_or_404(all_services, pk=service_id)
 
     context = {
-        'service' : service,
+        'service': service,
     }
 
     return render(request, 'products/service_details.html', context)
@@ -111,16 +116,20 @@ def add_products(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+                )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -142,7 +151,7 @@ def edit_product(request, product_id):
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
-        
+
     template = 'products/edit_product.html'
     context = {
         'form': form,
@@ -150,6 +159,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
@@ -163,8 +173,9 @@ def delete_product(request, product_id):
     product.discontinued = True
     product.save()
     messages.info(request, f'{product.name} was successfully deleted.')
-    
+
     return redirect(reverse('products'))
+
 
 @login_required
 def add_service(request):
@@ -183,16 +194,20 @@ def add_service(request):
             messages.success(request, 'Successfully added Service!')
             return redirect(reverse('service_details', args=[service.id]))
         else:
-            messages.error(request, 'Failed to add service. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add service. Please ensure the form is valid.'
+                )
     else:
         form = ServiceForm()
-        
+
     template = 'products/add_service.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_service(request, service_id):
@@ -202,7 +217,7 @@ def edit_service(request, service_id):
             Only store owners can edit services.')
         return redirect(reverse('landing'))
     service = get_object_or_404(Product, pk=service_id)
-    
+
     if request.method == 'POST':
         form = ServiceForm(request.POST, request.FILES, instance=service)
         if form.is_valid():
@@ -225,6 +240,7 @@ def edit_service(request, service_id):
     }
     return render(request, template, context)
 
+
 @login_required
 def delete_service(request, service_id):
     """ A view to allow admin to delete service from the store """
@@ -232,10 +248,9 @@ def delete_service(request, service_id):
         messages.error(request, 'Access denied!\
             Only store owners can delete services.')
         return redirect(reverse('landing'))
-    
+
     service = get_object_or_404(Product, pk=service_id)
     service.discontinued = True
     service.save()
     messages.info(request, f'{service.name} was successfully deleted.')
     return redirect(reverse('services'))
-

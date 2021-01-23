@@ -1,6 +1,5 @@
 
 import os
-from pathlib import Path
 import dj_database_url
 
 
@@ -38,8 +37,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    
-    'tempus_dominus', # Required by Bootstrap tempus_dominus datetime picker
+    'tempus_dominus',   # Required by Bootstrap tempus_dominus datetime picker
     'landing',
     'about',
     'products',
@@ -105,10 +103,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-
-
-
-
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 SITE_ID = 1
@@ -131,16 +125,16 @@ WSGI_APPLICATION = 'banyan_ayurveda.wsgi.application'
 
 
 if 'DATABASE_URL' in os.environ:
-    DATABASES = {	
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))	
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
-    DATABASES = {	
-            'default': {	
-                'ENGINE': 'django.db.backends.sqlite3',	
-                'NAME':  os.path.join(BASE_DIR, 'db.sqlite3'),	
-            }	
-        }	
+    DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME':  os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
 
 
 # Password validation
@@ -180,7 +174,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 
 MEDIA_URL = '/media/'
@@ -210,9 +204,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
-
-
 
 # 3rd party apps settings
 

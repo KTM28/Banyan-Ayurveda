@@ -5,11 +5,12 @@ from django.urls import reverse
 
 class TestProfileView(TestCase):
 
-
     @classmethod
     def setUpTestData(cls):
         User.objects.create_user(
-            username="test_user", email="test@gmail.com", password="password12345")
+            username="test_user",
+            email="test@gmail.com", password="password12345"
+            )
 
     def test_user_profile_view_logged_in(self):
         user = self.client.login(
@@ -31,12 +32,15 @@ class TestProfileView(TestCase):
         self.assertTrue('profile' in resp.context)
         self.assertTrue('orders' in resp.context)
 
+
 class TestProfileDetailViews(TestCase):
 
     @classmethod
     def setUpTestData(cls):
         User.objects.create_user(
-            username="test_user", email="test@gmail.com", password="password12345")
+            username="test_user",
+            email="test@gmail.com", password="password12345"
+            )
 
     def test_Profile_shipping_view_logged_in(self):
         user = self.client.login(
