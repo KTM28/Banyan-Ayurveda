@@ -16,7 +16,7 @@ def all_products(request):
     categories = None
     direction = None
     sort = None
-    
+    # logic source: Code Institue Boutique Ado Project 
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']

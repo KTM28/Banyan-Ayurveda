@@ -64,7 +64,6 @@ class ServiceForm(forms.ModelForm):
             'price': 'Price € *',
             'rating': 'Rating 0-5 ',
             'discontinued': 'Discontinued',
-            'discontinued': 'Discontinued',
         }
         for field in self.fields:
             self.fields[field].label = labels[field]
