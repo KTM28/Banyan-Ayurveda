@@ -24,7 +24,9 @@ $(document).ready(function () {
 
     $('.btt-link').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '100');
+        $('html, body').animate({
+            scrollTop: 0
+        }, '100');
     })
 
     bttbutton = document.getElementById("back-top-btn");

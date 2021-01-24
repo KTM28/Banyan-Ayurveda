@@ -16,15 +16,15 @@
         <div class="col">
             <!--Cart items-->
             {% if cart_items %}
-            {% include 'cart/includes/cart_table.html' %}
+                {% include 'cart/includes/cart_table.html' %}
             {% else %}
-            <p class="lead mb-5">Your cart is empty.</p>
-            <a href="{% url 'products' %}" class="text-info" id="BackToProduct">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="lead">Continue Shopping</span>
-            </a>
+                <p class="lead mb-5">Your cart is empty.</p>
+                <a href="{% url 'products' %}" class="text-info" id="BackToProduct">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="lead">Continue Shopping</span>
+                </a>
             {% endif %}
         </div>
     </div>

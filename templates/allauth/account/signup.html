@@ -8,7 +8,6 @@
 
 <section class="form my-4">
   <div class="container">
-
     <div class="row no-gutters">
       <!--register page image-->
       <div class="col-lg-5 col-md-5 ">
@@ -25,7 +24,7 @@
               {% csrf_token %}
               {{ form|crispy }}
               {% if redirect_field_value %}
-              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
               {% endif %}
               <button class="btn btn-checkout btn-block text-uppercase" type="submit">{% trans "Sign Up" %}
                 &raquo;</button>
@@ -41,7 +40,6 @@
             </div>
           </div>
         </form>
-
       </div>
     </div>
   </div>

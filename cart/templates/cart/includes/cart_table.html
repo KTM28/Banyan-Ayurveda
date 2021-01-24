@@ -17,9 +17,9 @@
         <tr>
             <td class="cart-image p-3 w-25">
                 {% if item.product.image %}
-                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                 {% else %}
-                <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
                 {% endif %}
             </td>
             <td>
@@ -66,9 +66,9 @@
         <!--Image-->
         <div class="col-6 mb-2">
             {% if item.product.image %}
-            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
             {% else %}
-            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+                <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
             {% endif %}
         </div>
         <div class="col-6 mb-2">

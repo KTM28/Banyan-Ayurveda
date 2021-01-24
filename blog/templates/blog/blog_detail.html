@@ -24,13 +24,13 @@
         </div>
     </div>
     {% if user.is_authenticated and user == blog.author %}
-    <div class="col-sm-6">
-        <span><a class="font-small ml-3 mb-0 text-success" href="{{ blog.get_update_url }}"><i
-                    class="far fa-edit"></i>&nbspEdit</a></span>
-        <span class="font-small mb-0">/</span>
-        <span><a class="font-small mb-0 text-danger" href="{{ blog.get_delete_url }}"><i
-                    class="fas fa-trash-alt"></i></i>&nbspDelete</a></span>
-    </div>
+        <div class="col-sm-6">
+            <span><a class="font-small ml-3 mb-0 text-success" href="{{ blog.get_update_url }}"><i
+                        class="far fa-edit"></i>&nbspEdit</a></span>
+            <span class="font-small mb-0">/</span>
+            <span><a class="font-small mb-0 text-danger" href="{{ blog.get_delete_url }}"><i
+                        class="fas fa-trash-alt"></i></i>&nbspDelete</a></span>
+        </div>
     {% endif %}
     <div class="row">
         <div class="col-12">
@@ -68,31 +68,31 @@
     <hr class="blog-hr">
     <!--Blog Comment-->
     {% if request.user.is_authenticated %}
-    <div class="row">
-        <div class="col">
-            <h6>Leave a comment below</h6>
-            <form class="" action="" method="POST">
-                {% csrf_token %}
-                {{form |crispy}}
-                <button class="text-uppercase btn btn-info block-btn" type="submit"><i class="fas fa-comments"></i>
-                    Comment
-                </button>
-            </form>
+        <div class="row">
+            <div class="col">
+                <h6>Leave a comment below</h6>
+                <form class="" action="" method="POST">
+                    {% csrf_token %}
+                    {{form |crispy}}
+                    <button class="text-uppercase btn btn-info block-btn" type="submit"><i class="fas fa-comments"></i>
+                        Comment
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
     {% else %}
-    <a href="{% url 'account_login' %}" class="btn btn-checkout block-btn">Login to Comment</a>
+        <a href="{% url 'account_login' %}" class="btn btn-checkout block-btn">Login to Comment</a>
     {% endif %}
     <hr class="blog-hr">
     <h4 class="text-uppercase">Comments</h4>
     <div class="row">
         {% for comment in blog.comment %}
-        <div class="col-12">
-            <h6 class="mt-0"><i class="fas fa-user-circle fa-2x text-secondary"></i>&nbsp{{ comment.user|title }}</h5>
-                <p class="lead">{{ comment.content }}</p>
-                <small class="text-muted">{{ comment.timestamp|timesince }} ago</small>
-                <hr>
-        </div>
+            <div class="col-12">
+                <h6 class="mt-0"><i class="fas fa-user-circle fa-2x text-secondary"></i>&nbsp{{ comment.user|title }}</h5>
+                    <p class="lead">{{ comment.content }}</p>
+                    <small class="text-muted">{{ comment.timestamp|timesince }} ago</small>
+                    <hr>
+            </div>
         {% endfor %}
     </div>
 

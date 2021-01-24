@@ -20,14 +20,14 @@ function initMap() {
             lng: -6.260278
         },
         map: map,
-        icon:'http://maps.google.com/mapfiles/kml/paddle/B.png'
+        icon: 'http://maps.google.com/mapfiles/kml/paddle/B.png'
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content:('<h5>Banyan Ayurveda</h5> <p class="my-2"><i class="fas fa-map-marker"></i>&nbsp Grafton Street | DUBLIN</p><p><i class="fas fa-phone-alt"></i>&nbsp 1234567890</p>')
+        content: ('<h5>Banyan Ayurveda</h5> <p class="my-2"><i class="fas fa-map-marker"></i>&nbsp Grafton Street | DUBLIN</p><p><i class="fas fa-phone-alt"></i>&nbsp 1234567890</p>')
     });
 
-    marker.addListener('click', function(){
+    marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
 }

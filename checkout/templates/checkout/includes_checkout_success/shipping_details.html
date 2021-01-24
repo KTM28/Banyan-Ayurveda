@@ -9,17 +9,17 @@
         <p class="card-text"><strong>Delivering To:</strong> {{ order.full_name }}</p>
         <p class="card-text"><strong>Shipping Address:</strong> {{ order.address_line1 }}</p>
         {% if order.address_line2 %}
-        <p class="mb-1">{{ order.address_line2 }}</p>
+            <p class="mb-1">{{ order.address_line2 }}</p>
         {% endif %}
-        <p class="mb-1">{{ order.town_or_city }}</p>
+            <p class="mb-1">{{ order.town_or_city }}</p>
 
         {% if order.county %}
-        <p class="mb-1">{{ order.county }}</p>
+            <p class="mb-1">{{ order.county }}</p>
         {% endif %}
 
         <p class="mb-1">{{ order.country }}</p>
         {% if order.postcode %}
-        <p class="mb-1">{{ order.postcode }}</p>
+            <p class="mb-1">{{ order.postcode }}</p>
         {% endif %}
     </div>
 </div>

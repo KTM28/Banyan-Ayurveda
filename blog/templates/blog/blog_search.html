@@ -42,40 +42,40 @@
         <!--Blog List-->
         <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
             {% for blog in blogs %}
-            <div class="card blog-card mb-3 text-dark">
-                <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
-                <div class="card-body blog-content">
-                    <a href="{{ blog.get_absolute_url }}">
-                        <h5 class="card-title text-center text-info">{{ blog.title }} |
-                            <small>{{ blog.category }}</small></h5>
-                    </a>
-                    <a href="{% url 'blog:author' blog.author.id %}" class="card-text text-success"><i
-                            class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}</a>
-                    <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
-                    <div
-                        class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
-                        <p class="card-text">
-                            <span class="post-date text-white"><i
-                                    class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
-                            <span class="post-comment text-white"><i
-                                    class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
-                            <span class="post-view text-white"><i
-                                    class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
-                        </p>
+                <div class="card blog-card mb-3 text-dark">
+                    <img src="{{ blog.thumbnail.url}}" class="card-img-top" alt="blog-image">
+                    <div class="card-body blog-content">
+                        <a href="{{ blog.get_absolute_url }}">
+                            <h5 class="card-title text-center text-info">{{ blog.title }} |
+                                <small>{{ blog.category }}</small></h5>
+                        </a>
+                        <a href="{% url 'blog:author' blog.author.id %}" class="card-text text-success"><i
+                                class="fas fa-user-circle fa-2x text-warning"></i>&nbsp{{ blog.author|title }}</a>
+                        <p class="card-text blog-text">{{ blog.content|safe |truncatechars:120 }}</p>
+                        <div
+                            class="float-right border rounded bg-success text-white text-center b-width d-flex justify-content-around">
+                            <p class="card-text">
+                                <span class="post-date text-white"><i
+                                        class="far fa-thumbs-up"></i>&nbsp{{ blog.get_like_count }}</span>
+                                <span class="post-comment text-white"><i
+                                        class="fas fa-comments"></i>&nbsp{{ blog.get_comment_count }}</span>
+                                <span class="post-view text-white"><i
+                                        class="far fa-eye"></i>&nbsp{{ blog.get_view_count }}</span>
+                            </p>
+                        </div>
+                        <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}}
+                                ago</small></p>
                     </div>
-                    <p class="card-text"><small class="text-muted font-italic">Posted {{ blog.publish_date|timesince}}
-                            ago</small></p>
                 </div>
-            </div>
             {% empty %}
-            <div class="text-center blog-card">
-                <div class="card-body">
-                    <h5 class="card-title">Sorry, Nothing Found</h5>
-                    <p class="card-text">We could not find "{{ search_term|title }}" in any of our blog
-                        post.</p>
-                    <a href="{% url 'blog:list' %}" class="btn btn-info">Back to Blogs</a>
+                <div class="text-center blog-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sorry, Nothing Found</h5>
+                        <p class="card-text">We could not find "{{ search_term|title }}" in any of our blog
+                            post.</p>
+                        <a href="{% url 'blog:list' %}" class="btn btn-info">Back to Blogs</a>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
 
         </div>

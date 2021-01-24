@@ -8,17 +8,17 @@
         <!--Edit/delete treatments for admin-->
         <div class="col-12 col-lg-4 mx-auto">
             {% if request.user.is_superuser %}
-            {% if not product.discontinued %}
-            <p>
-                <a class="text-info lead" href="{% url 'edit_service' service.id %}"><i
-                        class="far fa-edit"></i>&nbspEdit</a> |
-                <a class="text-danger lead" href="{% url 'delete_service' service.id %}"><i
-                        class="fas fa-trash-alt"></i></i>&nbspDelete</a>
-            </p>
-            {% else %}
-            <a class="text-info lead" href="{% url 'edit_service' seervice.id %}"><i
-                    class="far fa-edit"></i>&nbspEdit</a>
-            {% endif %}
+                {% if not product.discontinued %}
+                    <p>
+                        <a class="text-info lead" href="{% url 'edit_service' service.id %}"><i
+                                class="far fa-edit"></i>&nbspEdit</a> |
+                        <a class="text-danger lead" href="{% url 'delete_service' service.id %}"><i
+                                class="fas fa-trash-alt"></i></i>&nbspDelete</a>
+                    </p>
+                {% else %}
+                    <a class="text-info lead" href="{% url 'edit_service' seervice.id %}"><i
+                            class="far fa-edit"></i>&nbspEdit</a>
+                {% endif %}
             {% endif %}
         </div>
     </div>
@@ -26,13 +26,13 @@
     <div class="row my-3">
         <div class="col-12 col-md-6 col-lg-6 my-4">
             {% if service.image %}
-            <a href="{{ service.image.url }}" target="_blank">
-                <img class="img-fluid service-detail-img" src="{{ service.image.url }}" alt="{{ service.name }}">
-            </a>
+                <a href="{{ service.image.url }}" target="_blank">
+                    <img class="img-fluid service-detail-img" src="{{ service.image.url }}" alt="{{ service.name }}">
+                </a>
             {% else %}
-            <a href="#">
-                <img class="img-fluid service-detail-img" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ service.name }}">
-            </a>
+                <a href="#">
+                    <img class="img-fluid service-detail-img" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ service.name }}">
+                </a>
             {% endif %}
         </div>
         <div class="col-12 col-md-6 col-lg-6">
@@ -42,9 +42,9 @@
                 <p class="lead mb-0 text-left font-weight-bold bg-light">
                     Duration:<span>&nbsp{{ service.duration }}&nbspHour</span></p>
                 {% if service.rating %}
-                <span class="text-success"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5</span>
+                    <span class="text-success"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5</span>
                 {% else %}
-                <span class="text-muted">No Rating</span>
+                    <span class="text-muted">No Rating</span>
                 {% endif %}
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="nav-item">
