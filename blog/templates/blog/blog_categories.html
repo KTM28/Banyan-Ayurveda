@@ -20,11 +20,12 @@
 <div class="container">
     <!--Search Form-->
     {% include 'blog/includes/blog_search_form.html' %}
-
+        {% if blog_category %}  
+            <h4 class="text-center text-category">{{ category }} Blogs</h4>
+        {% endif %}   
     <div class="row">
         <!--Blog Category Menu-->
         {% include 'blog/includes/blog_cat_snippet.html' %}
-
         <!--Blog category display-->
         <div class="col-lg-8 col-md-8 col-sm-12 blog-container">
             <ul>

@@ -188,6 +188,9 @@
      font-family: 'Playfair Display', serif;
      color: #f2d900;
 }
+ .text-category {
+     color:#745330;
+ }
  .product-card {
      width: 100%;
      height: 30.000em !important;

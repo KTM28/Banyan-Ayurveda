@@ -25,3 +25,23 @@
         </div>
     </div>
 </div>
+
+   
+<div class="col-12 mt-">
+    {% if current_categories %}
+        {% for category in current_categories %}
+            <h4 class="text-center text-category">{{ category.friendly_name }}</h4>
+        {% endfor %}
+    {% else %}
+        {% if search_term %}
+            <p class="text-center text-info">
+                Your search for  <span class="text-dark">"<strong>{{ search_term }}</strong>"</span> produced 
+                <strong class="text-dark">{{ products|length }}</strong>
+                {% if products|length > 1 %} results
+                {% else %}
+                    result
+                {% endif %}
+            </p>
+        {% endif %}
+    {% endif %}
+</div>
