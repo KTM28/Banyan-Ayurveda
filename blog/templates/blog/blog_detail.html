@@ -23,6 +23,7 @@
             <figure> <img src="{{ blog.thumbnail.url }}" class="img-fluid" alt=""></figure>
         </div>
     </div>
+    <!-- the if statement below displays edit and delete button if the session user is the owner of the Blog -->
     {% if user.is_authenticated and user == blog.author %}
         <div class="col-sm-6">
             <span><a class="font-small ml-3 mb-0 text-success" href="{{ blog.get_update_url }}"><i
@@ -81,7 +82,7 @@
             </div>
         </div>
     {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-checkout block-btn">Login to Comment</a>
+        a href="{% url 'account_login' %}" class="btn btn-checkout block-btn">Login to Comment</a>
     {% endif %}
     <hr class="blog-hr">
     <h4 class="text-uppercase">Comments</h4>
@@ -95,7 +96,7 @@
             </div>
         {% endfor %}
     </div>
-
 </div>
 </div>
 {% endblock content  %}
+
