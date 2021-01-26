@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from .forms import ContactForm
 from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 
 def contact(request):
@@ -30,9 +31,11 @@ def contact(request):
     else:
         if request.user.is_authenticated:
             profile = UserProfile.objects.get(user=request.user)
+            user_name = User.objects.get(username=request.user)
             user_email = profile.user.email
             contact_form = ContactForm(initial={
                 'email': user_email,
+                'full_name': user_name,
                 })
         else:
             contact_form = ContactForm()

@@ -4,7 +4,7 @@ The Live website for this Project is [here](https://banyan-ayurveda.herokuapp.co
 
 This Project is created as part of the 4th Milestone Project of The FullStack Software Development Bootcamp offered by The [Code Institute](https://codeinstitute.net/)
 ### Project Overview
-Banyan Ayurveda is a traditional Ayurvedic herbal dispensary and treatment center. It uses the principle of the ancient Ayurvedic knowledge originated in India more than 5,000 years ago. It's website is an expansion of its physical store where people can buy ayurvedic medicines or book a treatments and pay online. It's goal is also to increase awareness in the community and improve the health and wellbeing of the people.
+Banyan Ayurveda is a traditional Ayurvedic herbal dispensary and treatment centre. The website is an expansion of its physical store where people can buy ayurvedic medicines or book treatments and pay online. Its goal is also to increase awareness in the community and improve the health and wellbeing of the people.
 
 ---
 ## Table of contents
