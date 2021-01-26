@@ -11,13 +11,11 @@
      - [**Shop Treatments Cart and Checkout Page**](#shop-treatments-cart-and-checkout-page)
      - [**Contact page**](#contact-page)
      - [**Profile page**](#profile-page)
-     - [**The Admin**](#admin-page)
+     - [**The Admin**](#the-admin)
  3. [**Automated Testing**](#automated-testing)
       - [**Travis**](#travis)
  4. [**Validators**](#validators)
- 5. [**Compatibility and Responsiveness**](#compatibility-and-responsiveness)
- 6. [**Other Testing**](#other-testing)
- 7. [**Bugs**](#bugs)
+ 5. [**Bugs**](#bugs)
 ---
 ### Development Testing
 Django framework provides quite useful Debug utility. When debug is on the error is logged in the console and on the localhost. This feature allows a developer to pinpoint the cause of the error and fix it as they appear.

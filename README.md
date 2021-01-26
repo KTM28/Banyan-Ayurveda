@@ -358,6 +358,7 @@ There are some features that I could not implement due to time constrain. These 
 - [jQuery](https://jquery.com/download/) - to simplify DOM manipulation and to initialize Bootstrap function.
 - [Psycopg2](https://pypi.org/project/psycopg2/) - is the most popular PostgreSQL database adapter for the Python programming language.
 - [Tempus Dominus](https://pypi.org/project/django-tempus-dominus/) - to use datetime picker.
+- [Ck Editor](https://ckeditor.com/) - to create semantic content for blog post and product description.
 - [Gunicorn](https://gunicorn.org/) - a Python WSGI HTTP Server to enable deployment to Heroku.
 - [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)- For rendering map into the site.
 - [Coverage](https://coverage.readthedocs.io/en/coverage-5.1/) - to see the percentage of the automated testsing.
