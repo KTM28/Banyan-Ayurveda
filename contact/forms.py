@@ -25,5 +25,6 @@ class ContactForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['full_name'].widget.attrs['placeholder'] = ('Full Name')
-        self.fields['email'].widget.attrs['placeholder'] = ('Your Email Address')
+        self.fields['email'].widget.attrs['placeholder'] = (
+                                        'Your Email Address')
         self.fields['message'].widget.attrs['placeholder'] = ('Your Message')

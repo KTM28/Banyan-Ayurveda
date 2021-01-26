@@ -1,10 +1,11 @@
-import os
+# import os
 
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.conf import settings
 from .forms import ContactForm
+from profiles.models import UserProfile
 
 
 def contact(request):
@@ -27,7 +28,14 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     else:
-        contact_form = ContactForm()
+        if request.user.is_authenticated:
+            profile = UserProfile.objects.get(user=request.user)
+            user_email = profile.user.email
+            contact_form = ContactForm(initial={
+                'email': user_email,
+                })
+        else:
+            contact_form = ContactForm()
     context = {
             'contact_form': contact_form,
             'api_key': settings.GOOGLE_MAP_API_KEY,
