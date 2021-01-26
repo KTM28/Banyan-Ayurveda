@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('.btn-close').click(function (e) {
         $(".navbar-collapse").removeClass("show");
         $("body").removeClass("offcanvas-active");
-    })
+    });
 
     const dateTimePickerInit = () => {
         $('#datetime, div[id^=cart_datetime-], div[id^=cart_datetime_sm-]').datetimepicker({
@@ -27,11 +27,11 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: 0
         }, '100');
-    })
+    });
 
     bttbutton = document.getElementById("back-top-btn");
     window.onscroll = function () {
-        scrollFunction()
+        scrollFunction();
     };
 
     function scrollFunction() {

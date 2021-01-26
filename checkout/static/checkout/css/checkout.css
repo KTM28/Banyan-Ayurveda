@@ -1,9 +1,5 @@
-/**
- Source:  CSS from here: 
-    https://stripe.com/docs/stripe-js
- */
-.StripeElement,
-.stripe-style-input {
+/** Source: CSS from here: https://stripe.com/docs/stripe-js */
+.StripeElement, .stripe-style-input {
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
@@ -14,49 +10,31 @@
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
 }
-
-.StripeElement--focus,
-.stripe-style-input:focus,
-.stripe-style-input:active {
+.StripeElement--focus, .stripe-style-input:focus, .stripe-style-input:active {
     box-shadow: 0 1px 3px 0 #cfd7df;
 }
-
-
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
 }
-
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
-
 /* -----Custom CSS---- */
-
 .fieldset-label {
     position: relative;
     right: .5rem;
 }
-
-#payment-form .form-control,
-#card-element {
+#payment-form .form-control, #card-element {
     color: #000000;
     border: 1px solid#aab7c4;
 }
-
-
-select,
-select option {
+select, select option {
     color: #000000;
 }
-
-select:invalid,
-select option[value=""] {
+select:invalid, select option[value=""] {
     color: #aab7c4 !important;
 }
-
-
 /* ---Loading Overlay--- */
-
 #loader-wrapper {
     z-index: 9999;
     width: 100%;
@@ -67,7 +45,6 @@ select option[value=""] {
     left: 0;
     background: rgba(238, 148, 13, 0.767);
 }
-
 .loader {
     display: flex;
     align-items: center;

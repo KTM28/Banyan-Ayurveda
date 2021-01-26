@@ -1,9 +1,40 @@
 [![Build Status](https://travis-ci.com/KTM28/Banyan-Ayurveda.svg?branch=main)](https://travis-ci.com/KTM28/Banyan-Ayurveda)
 # Banyan Ayurveda
+The Live website for this Project is [here](https://banyan-ayurveda.herokuapp.com/)
+
+This Project is created as part of the 4th Milestone Project of The FullStack Software Development Bootcamp offered by The [Code Institute](https://codeinstitute.net/)
+### Project Overview
+Banyan Ayurveda is a traditional Ayurvedic herbal dispensary and treatment center. It uses the principle of the ancient Ayurvedic knowledge originated in India more than 5,000 years ago. It's website is an expansion of its physical store where people can buy ayurvedic medicines or book a treatments and pay online. It's goal is also to increase awareness in the community and improve the health and wellbeing of the people.
+
 ---
 ## Table of contents
+
+1. [**UX**](#ux)
+    - [**Project Goals**](#project-goals)
+    - [**User Stories**](#user-stories)
+    - [**Design**](#design)
+    - [**Wireframes**](#wireframes)
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+3. [**Information Architecture**](#information-architecture)
+    - [**Data Modelling**](#data-modelling)
+4. [**Technologies Used**](#technologies-used)
+    - [**Languages**](#languages)
+    - [**Libraries and Frameworks**](#libraries-and-frameworks)
+    - [**Tools**](#tools)
+    - [**Databases**](#databases)
+5. [**Testing**](#testing)
+6. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Heroku Deployment**](#heroku-deployment)
+7. [**Credits**](#credits)
+    - [**Code**](#code)
+    - [**Content and Media**](#content-and-media)
+    - [**Acknowledgements**](#acknowledgements)
+8. [**Disclaimer**](#disclaimer)
 ---
-## UX 
+## UX
 ### Project Goals
 
 ##### Target Audience
@@ -87,7 +118,7 @@
  
 ### Wireframes
  
-The wireframes for this project can be found - [Here](wireframes).
+The wireframes for this project can be found - [Here](https://github.com/KTM28/Banyan-Ayurveda/tree/main/wireframes).
 
 ###### back to [top](#table-of-contents)
 
@@ -95,45 +126,45 @@ The wireframes for this project can be found - [Here](wireframes).
 
 ## Features
 
-#### Existing Features
+### Existing Features
 
-##### Signup and Login page
+#### Signup and Login page
 The signup page allows users to register an account with the site. The authentication logic of this is handled by Django allauth package. The users can also signup via their **Google account**. When the form is submitted, a verification email is sent to the user's email to verify the email and finish the registration process.
 
 The login page is also somewhat similar to the signup page as it's authentication logic is also handled by Django allauth package. The users can also login via their **Google account**.
 
-##### Navbar
+#### Navbar
 The site has a navigation menu at the very top of the page allowing the user to navigate the site with ease and to signup and sign in into the page. The logo is displayed at the centre of the navigation menu. The logo also serves as a **link** to be redirected to the landing page from any page of the site. The Navbar's link to the **cart page** displays a cart icon and total amount for the product or services the user have added into their cart.
 
 On smaller screen sizes (tablets and mobile) the navbar collapse into an icon. On clicking the icon the nav scrolls from the right side of the device displaying all the menu item. The cart links always stay outside for users to be able to monitor the total price in their cart and to navigate to cart page as necessary.
 
-##### Toast Notification
+#### Toast Notification
 The site displays a notification to the users on the top right corner in desktop and medium-size device and top of the page in mobile devices for actions such login/register, add to cart items, update items quantity, delete items and any other error messages.
 
-##### Footer
+#### Footer
 The Footer has been divided into three sections the first consists of **Subscription Form and button**. Next, it has all the contact details with icons - the **map icons** directs users to the Contact page and the **telephone** icon serves as a click to call link.
 The last section on Footer consists of social media icons linking a user to the respective sites.
 
 
-##### Landing Page 
+#### Landing Page 
 The landing page consists of the Hero Image and an intro text with **buttons** which redirects users to the About page of the site. On Scroll It has furthermore text with some animation, images and buttons that take a user to shop page and treatments page. It also has a Feature section with eye-catching icons and pieces of information for users to read. Finally, the last section of the page consists of customer review displayed on a carousel.    
 
-##### About Page
+#### About Page
 The About Page displays images and information of the company boasting it's **goal, purpose and business ethics**. The images in about page are assigned with a simple on scroll animation. 
 
-##### Shop Page 
+#### Shop Page 
 The shop Page lists all items displayed in an individual card with some mouse hover effect. The top of the page consists of **free delivery threshold information/ A Product search container/ A Category menu** for the shop items. The Item cards consist of item image with a colourful badge displaying item price and ratings for the item. It has two buttons one to view details of the item and the other to add items into the cart.
 
 The product detail page shows a large image of the item, it's **descriptions and a quantity form** with add to cart buttons and button linking back to shop page. The users can update the quantity of the items from here or directly from the cart page.
 
 If the logged-in user is **granted an admin or staff** of the page then there are two links with icons on the top of the item that allows the user to edit or delete the item as necessary. 
 
-##### Treatments Page
+#### Treatments Page
 The treatment page lists out all the available treatments provided by the store. Users can navigate into each displayed treatments and look for **descriptions and benefit** of the treatments. It also has a form to select **appointment date** which the users must fill in before adding the treatment into the shopping cart.
 
 If the logged-in user is **granted an admin or staff** of the page then there are two links with icons on the top of the item that allows the user to edit or delete the treatments item as necessary. 
 
-##### Blog Page
+#### Blog Page
 The Blog Page list out all the **blog post** in the site displayed on a card background together with a **category navigation menu** sitting beside it or on top in mobile screens. A **search form** on the top of the blog page allows users to search any blog in the site. 
 
 When a user is **logged in** there is also a link for users to **create a blog**. The blog title serves as a link to the blog details page. The **Author name and icon** on the blog page serves as a link to direct logged in users to page displaying all the list of the author's blog posts. The card also shows **posted or updated date** for the blog. And Users can also see how many likes, views and comments are there for the blog post.
@@ -143,16 +174,16 @@ At the very top of the blog page are breadcrumbs links for ease of navigation fo
 
 The blog detail page shows all the content of the blog post **featuring like and comments function for logged in users**. The view counts **only adds** for a logged-in user. When the user clicks the like icon twice then the like count just decrements to the original like of the post. If the logged-in user is the **owner of the blog** then there are two icon links right below the blog image on the blog detail page allowing the user to edit or delete the blog post.
 
-##### Contact Page
+#### Contact Page
  The Contact Page consists of a store location displayed in **google map** with customised icon and beside it is a **contact form** to contact the store. Below the Form, there is contact information with click to call link for the store.
 
-##### Profile Page
+#### Profile Page
 The Profile page can be accessed via the link displaying the **user icons**. The **Profile dashboard** displays functionality to **change password or shipping details** for logged in user. The user can also see the list of their **blog posts and order history** on the profile dashboard. Clicking on the order number the user will be directed to the page displaying the past confirmation of their orders. Clicking on the blog post the user will be directed to the Blog detail of that blog.
 
-##### Cart Page
+#### Cart Page
 Cart page can be accessed by all the users on the site. It displays image, price, quantity, SKU, and date if the selected item is treatment. Users can easily **update or remove items from the cart page as necessary** via the form and links. There are two buttons at the page allowing a user to navigate to checkout or shopping page as necessary.
 
-##### Checkout Page
+#### Checkout Page
 The checkout page can only be accessed using cart page once the user has added at least one item from the site to the cart.
 The checkout page consists of checkout form with user's name, email and shipping details. If a user is **logged** in and already has a profile with the shipping information saved, the form will be pre-populated with this information.
 
@@ -160,9 +191,8 @@ Below the checkout form, users can put in their card details and complete the or
 
 Beside the checkout form, user can view their order summary which includes **item, quantity, price, delivery cost and total**. There is also a link for the user to navigate back to the cart page if the users wish to adjust the item in their cart.
 
-##### Product and Service management
+#### Product and Service management
 The links to these pages are **exclusively displayed to page admin and users granted such status**. These links can be found directly under the login and register links when the admin user is logged in. Under product management, the authorised user can access a form to **add a new product** into the online store and under service management the authorised user can access a form to **add a new service** into the store's treatment facility.
-
 
 ## Features left to implement
 There are some features that I could not implement due to time constrain. These features were kept aside when developing as i considered to first implement features those that are necessary for the goal of the site.
@@ -174,39 +204,7 @@ There are some features that I could not implement due to time constrain. These 
 * Add pagination on the shop page and blog page.
 
 ###### back to [top](#table-of-contents)
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ ---
 # Information Architecture
 
 ## Data Modelling
@@ -373,8 +371,10 @@ There are some features that I could not implement due to time constrain. These 
 - [GitHub](https://github.com/) - for remotely storing project's code.
 - [Travis](https://travis-ci.org/) - for integration testing.
 - [ImgBB](https://imgbb.com/) - to host images for products and treatments 
+- [Icons8](https://icons8.com/) - for adding icons.
 - [Balsamiq](https://balsamiq.com/) - to create wireframes.
 - [PIP](https://pip.pypa.io/en/stable/installing/) - for installation of necessary tools.
+- [flake8](https://flake8.pycqa.org/en/latest/) - a python code linting tool to refactor the code.
 - [Heroku](https://dashboard.heroku.com/apps) - to host the project.
 - [AWS S3 Bucket](https://aws.amazon.com/) - to store static and media files in prodcution.
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for compatibility with AWS.
@@ -382,6 +382,168 @@ There are some features that I could not implement due to time constrain. These 
 ### Databases
 - [SQlite3](https://www.sqlite.org/index.html) - a development database.
 - [PostgreSQL](https://www.postgresql.org/) - a production database.
+
+###### back to [top](#table-of-contents)
+ ---
+## Testing
+Testing information can be found in a separate [TESTING.md](https://github.com/KTM28/Banyan-Ayurveda/blob/main/TESTING.md) file
+
+---
+
+## Deployment
+The project was developed using the [Vscode](https://code.visualstudio.com/) IDE and using [Git](https://git-scm.com/) & [GitHub](https://github.com/) for version control. It is hosted on the Heroku platform, with static files and user-uploaded images being hosted in AWS S3 Basket.
+### Local Deployment
+To be able to clone this project there are a few things you will need.
+- An IDE of your choice 
+- [Git](https://git-scm.com/)  - Install Git, installation docs and be found here
+- [PIP](https://pip.pypa.io/en/stable/installing/) - install pip, installation docs can be found here
+- [Stripe](https://stripe.com/ie) to integrate payment system
+- [AWS](https://aws.amazon.com/) to setup S3 basket
+- [Gmail](https://mail.google.com/) account with app secret key.
+
+Once The Git and Pip files installed -
+
+1. From the terminal create a directory you want to work in.
+`$ mkdir <filename>`
+2. Change into Directory
+`$ cd <filename>`
+3. Clone the repository from github.
+`$ git clone https://github.com/KTM28/Banyan-Ayurveda`
+4. Change into banyan_ayurveda directory.
+`$ cd banyan_ayurveda`
+5. Install virtualenv
+`$ pip install virtualenv`
+6. Create a virtual environmanet(env)
+`$ virtualenv env`
+7. Activate env with
+`$ source env/Scripts/activate`
+8. In banyan folder make a .env file  and add the variables below
+ ```
+import os  
+- os.environ["DEVELOPMENT"] = "True"    
+ - os.environ["SECRET_KEY"] = "<Your Secret key>"    
+- os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public key>"    
+- os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"    
+- os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"    
+- os.environ["GOOGLE_MAP_KEY"] = "<Your Google Map key>" 
+```
+Read more about how to set up the Stripe keys in the [Stripe Documentation](https://stripe.com/docs/keys)
+
+9. Install all requirements from the **requirements.txt** file putting this command into your terminal:     
+`pip3 install -r requirements.txt`  
+10. In the terminal in your IDE migrate the models to create a database using the following commands:    
+`python3 manage.py makemigrations`
+11. Load the data fixtures(**categories**, **products**, **blogs**) in that order into the database using the following command:    
+`python3 manage.py loaddata <fixture_name>`
+12. Create a superuser to have an access to the the admin panel(you need to follow the instructions then and insert username,email and password):    
+`python3 manage.py createsuperuser`
+13. Finally, run the application using the following command:     
+`python3 manage.py runserver`     
+14. To access the admin panel, add /admin to your localhost url.
+###### back to [top](#table-of-contents)
+### Heroku Deployment
+*To Deploy to heroku, firstly the project needs to be cloned as described in the [Local deployment](#local-deployment) section above.*  
+1. Navigate to [Heroku](https://dashboard.heroku.com/apps)
+2. Install the Heroku Command Line Interface (CLI) from the official heroku site.
+3. Click on the **New** button.
+4. Click - **Create New App**.
+5. Create a corresponding app name that is use to deploy the application. The apps name must be **unique**.
+6. Pick a server location that is closest to you.
+7. Once the app is created click on the resources button and choose the Heroku Postgres to attach a postgres database to your project.
+8. Create a **requirement.txt** file, which contains a list of the dependencies, using the following command in the terminal:    
+`pip3 freeze > requirements.txt`
+9. Create a **Procfile**, in order to tell Heroku how to run the project, using the following command in the terminal:      
+`web: gunicorn banyan_ayurveda.wsgi:application` 
+10. To run the app on Heroku install Guniorn a (WSGI HTTP Server), dj-databas-url to connect with PostgreSQL and Psycopg(PostgreSQL adapter)
+`$ pip install Gunicorn, dj-database, Psycopg`
+11. To migrate to the postgres db. First import dj-database-url at the top of the setting.py.
+12. Then comment out the default database configuration and add:
+```
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('< Put your DATABASE_URL here >'))
+}
+```
+13. In Heroku Settings click on Reveal Config Vars and set the config variables there:
+
+| Key                   | Value                                     |
+|-----------------------|-------------------------------------------|
+| AWS_ACCESS_KEY_ID     | <your aws access key>                     |
+| AWS_SECRET_ACCESS_KEY | <your aws secret access key>              |
+| DATABASE_URL          | <your postgres database url>              |
+| EMAIL_HOST_PASSWORD   | <your email password(generated by Gmail)> |
+| EMAIL_HOST_USER       | <your email address>                      |
+| EMAIL_HOST_USER       | <your google map key>                     |
+| SECRET_KEY            | <your secret key>                         |
+| STRIPE_PUBLIC_KEY     | <your stripe public key>                  |
+| STRIPE_SECRET_KEY     | <your stripe secret key>                  |
+| STRIPE_WH_SECRET      | <your stripe wh key>                      |
+| USE_AWS               | True                                      |
+
+14.  Migrate the database models to the Postgres database using the following commands in the terminal:
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
+
+15. Load the data fixtures(**categories**, **products**, **blogs**) in that order into the database using the following command:    
+`python3 manage.py loaddata <fixture_name>`
+16. Create a superuser for the Postgres database by running the following command
+`python3 manage.py createsuperuser`
+17. After the completion of the step change database configurations to:
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+```
+18. Add your Heroku app URL to ALLOWED_HOSTS in the settings.py file. 
+19. In the terminal run:
+`$ heroku login`
+20. After adding and comitting to Git, run the following command:
+`$ git push heroku master`
+15. When the deployment is successful you can view the app by clicking Open App on Heroku platform.
+
+**Hosting media files with AWS**
+Please refer to this documentation [AWS S3 Bucket](https://aws.amazon.com/)
+
+**Google Maps API key set up**
+Please refer to this documentation [Google Cloud Platform Console](https://console.cloud.google.com/google/maps-apis/)
+
+###### back to [top](#table-of-contents)
+---
+## Credits
+#### Code
+* The project’s code was developed by following the Code Institute **Boutique Ado** project lessons and based on the understanding of the course material. In some places the logic and code have been directly used from the Boutique Ado Lessons. However, it has been customized and enhanced to fit with the purpose of the project. Some comments with credits have been added where deemed necessary.
+
+* The Blog app models and views were achieved by watching videos from **[Justdjango - Make any blog](https://www.youtube.com/watch?v=HWg3zXWwre8)** and  **[Codemy- Simple Blog](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)**
+**Please note** that It too has been modified and extended to fit the purpose of the project
+
+ * Animation on scroll was implemented using [AOS](https://github.com/michalsnik/aos)
+ * Finally I have also used mix solutions found in [Stack Overflow](https://stackoverflow.com/) and Code Institue [slack channel](https://app.slack.com/) to achieve some logic and fix bugs in the code.
+ 
+### Content and Media
+* The images for products were taken from etsy.com and [google search engine](https://www.google.com/) ensuring the images were all copyright free.
+
+* The images for treatments and blogs are from here [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/es/) and [Unsplash](https://unsplash.com/)
+
+* The images in review section was taken from [freepik](https://www.freepik.com/free-photos-vectors/leadership)
+
+* The text description for the products were taken from [Ayurvedic Institue Website](https://www.ayurveda.com/)
+
+* The blog content was taken from [Banyan Botanicals Website](https://www.banyanbotanicals.com/)
+
+### Acknowledgements
+I would like to Thank everyone in the **Code Institute** tutoring team and the community in **stackover flow** and **slack channel** who have helped me  throughout the development of this project.
+
+---
+
+###### Disclaimer
+###### *This Project is made for educational use only as part of the **Code Institute Full Stack Software Development Course***.
 
 ###### back to [top](#table-of-contents)
 
